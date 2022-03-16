@@ -9,7 +9,7 @@ export default class DoctorPatientDetails extends Component {
     //{"\n"}Specality: {this.specality}
       render(){
           return (
-             <View style={{backgroundColor:'#FAFAFA'}} >
+             <View style={{backgroundColor:'#FFFFFF',marginTop:10}} >
                   <View style= {{flexDirection: "row", flex: 1}}>
                     <Text style={{ color: 'black'}}>{this.UnitClerk}</Text>
                     <Text style={{flex:1,textAlign:'right', color: 'black',alignSelf: 'flex-end',justifyContent:'flex-end',alignItems:'flex-end'}}>Location: AKU{"\n"}Tue, 07 Dec - 02:30</Text>
@@ -25,12 +25,13 @@ export default class DoctorPatientDetails extends Component {
 
 const styles = StyleSheet.create({
     header: {
-        width:"100%",
+        width:"90%",
         height: '10%',
         flexDirection: 'row',
         alignItems: 'center',
+        marginTop:10,
         justifyContent: 'center',
-        backgroundColor:"#252726",
+        backgroundColor:"#FFFFFF",
 
     },
     headerText: {

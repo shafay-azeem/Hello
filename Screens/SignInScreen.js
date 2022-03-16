@@ -6,7 +6,7 @@ import styles from './Styles/CompleteStyling';
 
 
 
-import Header from './AllHeaders/Header';
+import Header from './Header';
 
 
 
@@ -22,7 +22,7 @@ export default class SignInScreen extends Component {
 
   render(){
      return (
-      <ScrollView style={styles.ContainerWhole} >
+      <ScrollView style={styles.ContainerWhite} >
       <SafeAreaView>
            <Header name="SIGN IN" class= ""/>
            

@@ -4,7 +4,7 @@ import CheckBox from 'react-native-check-box';
 
 export default function AppointmentHeader(props){
     return (
-        <View style= {styles.header}>
+        <View >
         <Text style={styles.headerText}>{props.name} </Text>
         </View>
 
@@ -26,6 +26,8 @@ const styles = StyleSheet.create({
     headerText: {
         fontSize: 20,
         fontWeight:'bold',
-       color:'black',
+       color:'#FFFFFF',
+       justifyContent: 'center',
+       alignSelf:'center'
     }
 })

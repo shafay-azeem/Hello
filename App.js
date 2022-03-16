@@ -7,6 +7,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import SignInScreen from "./Screens/SignInScreen";
 import HomeScreen from "./Screens/HomeScreen";
+import Balance from "./Screens/Balance";
 
 const Stack = createStackNavigator();
 
@@ -22,6 +23,12 @@ const App = () => {
       <Stack.Screen
         name="SignInScreen"
         component={SignInScreen}
+
+      />
+      
+      <Stack.Screen
+        name="Balance"
+        component={Balance}
 
       />
 

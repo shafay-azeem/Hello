@@ -4,7 +4,14 @@ export default StyleSheet.create({
   ContainerWhole:{
     width:'100%',
     height:'100%',
-    backgroundColor:'#89F717',
+    backgroundColor:'#329A85',
+    flex: 1,
+
+  },  
+  ContainerWhite:{
+    width:'100%',
+    height:'100%',
+    backgroundColor:'#FFFFFF',
     flex: 1,
 
   },
@@ -44,7 +51,7 @@ export default StyleSheet.create({
     buttonSignIn: {
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: 15,
+        borderRadius: 25,
         backgroundColor:'#252726',
         height:50,
         margin:80,
@@ -53,7 +60,7 @@ export default StyleSheet.create({
      buttonGeneral: {
          alignItems: 'center',
          justifyContent: 'center',
-         borderRadius: 15,
+         borderRadius: 25,
          backgroundColor:'#252726',
          height:50,
         //  margin:50,
@@ -65,12 +72,16 @@ export default StyleSheet.create({
       },
        button_Side_by_Side: {
      backgroundColor: '#252726',
-     borderRadius: 15,
+     borderRadius: 25,
      justifyContent: 'center',
      alignItems: 'center',
      width: '30%',
      height:50,
-     margin:50
+     marginLeft:50,
+     marginRight:50,
+     marginTop:10,
+    marginBottom:10
+    // margin:30
 
        },
        Edittext: {
@@ -193,7 +204,7 @@ InsideConatiner1:{
   resizeMode: 'contain'
 },
 InsideConatiner2:{
-  backgroundColor:'#FFFFFF',
+  backgroundColor:'#E5E5E5',
   width:'60%',
   resizeMode: 'contain'
 },   
@@ -202,7 +213,7 @@ InsideConatiner2:{
     backgroundColor:'#FFFFFF',
     borderColor:'black',
     borderRadius:10,
-    marginTop:30,
+    marginTop:20,
     alignSelf:'center',
     // borderWidth:3
 

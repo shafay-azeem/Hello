@@ -2,11 +2,12 @@ import {SafeAreaView, StyleSheet,ScrollView, Text,Button, View, TouchableOpacity
 import React, {Component, useState} from 'react';
 
 
-import Header from './AllHeaders/Header';
+import Header from './Header';
 import UnitClerkHeader from './AllHeaders/UnitClerkHeader';
 import AppointmentHeading from './AllHeaders/AppointmentHeading';
 import PatientDoc from './PatientDoc';
 import styles from './Styles/CompleteStyling';
+import Balance from './Balance';
 
 
 
@@ -23,10 +24,12 @@ export default class HomeScreen extends Component {
              
              
           <View>
+           <View style={{backgroundColor:'#38AB94'}}> 
           <Header name="HOME SCREEN" class= ""/>
             <UnitClerkHeader/>
  
-
+            <Balance/>
+            </View>
             <View style={styles.containerForButton}>
             <TouchableOpacity style={styles.button_Side_by_Side}
               onPress={() =>this.props.navigation.navigate("SignInScreen")}
@@ -53,17 +56,16 @@ export default class HomeScreen extends Component {
 
 {/* 
       <SafeAreaView>
-      <ScrollView> */}
-    <View style={[styles.containerForScrollView]}> 
-    <ScrollView>
+      // <ScrollView> */}
+    <ScrollView style={[styles.containerForScrollView]}> 
+ 
     <PatientDoc/>
     <PatientDoc/>
     <PatientDoc/>
     <PatientDoc/>
-    <PatientDoc/>
-    <PatientDoc/>
+    
     </ScrollView>
-    </View>
+
   {/* </ScrollView>
      </SafeAreaView> */}
      
