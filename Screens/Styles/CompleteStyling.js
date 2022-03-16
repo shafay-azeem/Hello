@@ -4,7 +4,7 @@ export default StyleSheet.create({
   ContainerWhole:{
     width:'100%',
     height:'100%',
-    backgroundColor:'#1572F2',
+    backgroundColor:'#89F717',
     flex: 1,
 
   },
@@ -56,9 +56,10 @@ export default StyleSheet.create({
          borderRadius: 15,
          backgroundColor:'#252726',
          height:50,
+        //  margin:50,
         marginBottom:30,
-        marginLeft:40,
-         marginRight:40,
+        marginLeft:400,
+         marginRight:400,
          marginTop:10
         
       },
@@ -67,8 +68,9 @@ export default StyleSheet.create({
      borderRadius: 15,
      justifyContent: 'center',
      alignItems: 'center',
-     width: '40%',
+     width: '30%',
      height:50,
+     margin:50
 
        },
        Edittext: {
@@ -106,6 +108,7 @@ export default StyleSheet.create({
       },
          containerForSearchPatient:{
         width:'80%',
+        height:20,
         backgroundColor:'#FFFFFF',
         borderColor:'black',
         borderRadius:10,
@@ -116,7 +119,8 @@ export default StyleSheet.create({
     containerForButton: {
       flex: 1,
       flexDirection: 'row',
-      justifyContent: 'space-between'
+      justifyContent: 'space-between',
+      maxWidth:"85%",
     },
     buttonForSearchPatient: {
       alignItems: 'center',
@@ -127,6 +131,11 @@ export default StyleSheet.create({
       margin:40,
      
    } , 
+  //  scrollView: {
+  //   backgroundColor: '#65C5F0',
+  //   marginHorizontal: 20,
+  //  },
+
    containerForSearchPatient:{
     width:'80%',
     backgroundColor:'#FFFFFF',
@@ -150,7 +159,7 @@ inputWrap: {
      
     },
     containerForSelectPatient:{
-      backgroundColor:'#FFFFFF',
+      backgroundColor:'#D7E8ED',
       borderColor:'blue',
       borderRadius:10,
       padding:10,
@@ -162,17 +171,15 @@ inputWrap: {
     width: 50 ,
     height: 50,
     borderRadius: 50/2,
-
-  
     backgroundColor:'orange'
     },
+
     tinyLogo: {
       width: '100%',
       height: '100%',
       alignSelf: 'center'
   
-    }
-,
+    },
 Button_text_styling:{
   fontSize:15,
    color:'#FFFFFF',
@@ -181,15 +188,48 @@ Button_text_styling:{
 },
 
 InsideConatiner1:{
-  backgroundColor:'#A4C2D7',
-  width:'50%',
+  backgroundColor:'#8BB68B',
+  width:'40%',
   resizeMode: 'contain'
 },
 InsideConatiner2:{
   backgroundColor:'#FFFFFF',
-  width:'50%',
+  width:'60%',
   resizeMode: 'contain'
-}
+},   
+ containerForScrollView:{
+  width:'80%',
+    backgroundColor:'#FFFFFF',
+    borderColor:'black',
+    borderRadius:10,
+    marginTop:30,
+    alignSelf:'center',
+    // borderWidth:3
+
+},
+ViewForRow:{
+  flexDirection: "row"
+},
+ViewForInsideRow:{
+  flexDirection: 'row',
+  width: '50%' , 
+  alignItems: 'center',
+  justifyContent: 'flex-start'
+
+},
+TextForInsideRow:{
+  marginTop:10, 
+  lineHeight: 20,
+  color: 'black',
+  alignSelf: 'flex-start'
+},
+TextForInsideRowSidebySide:{
+  marginTop:11,
+  color: 'black',
+  lineHeight: 20, 
+  alignSelf: 'flex-start',
+  fontWeight:'bold'
+},
     
 
 

@@ -12,10 +12,12 @@ import styles from './Styles/CompleteStyling';
 
 export default class HomeScreen extends Component {
  
+
+
     render(){
 
      return (
-       <ScrollView>
+       <ScrollView style={styles.ContainerWhole} >
        <SafeAreaView style={{flex: 1}}>
        
              
@@ -32,6 +34,13 @@ export default class HomeScreen extends Component {
               <Text style={styles.Button_text_styling}>
               REGISTRATION </Text>
             </TouchableOpacity>
+            
+            <TouchableOpacity style={styles.button_Side_by_Side}
+              onPress={() =>this.props.navigation.navigate("SignInScreen")}
+              > 
+              <Text style={styles.Button_text_styling}>
+              BOOKING </Text>
+            </TouchableOpacity>
 
             <TouchableOpacity style={styles.button_Side_by_Side}
               onPress={() =>this.props.navigation.navigate("SignInScreen")}
@@ -42,13 +51,23 @@ export default class HomeScreen extends Component {
     </View>
     <AppointmentHeading name="UPCOMING APPOINTMENTS" class= "" />
 
-
+{/* 
+      <SafeAreaView>
+      <ScrollView> */}
+    <View style={[styles.containerForScrollView]}> 
+    <ScrollView>
     <PatientDoc/>
     <PatientDoc/>
     <PatientDoc/>
     <PatientDoc/>
     <PatientDoc/>
-
+    <PatientDoc/>
+    </ScrollView>
+    </View>
+  {/* </ScrollView>
+     </SafeAreaView> */}
+     
+  
                <TouchableOpacity style={styles.buttonGeneral}
               onPress={() =>this.props.navigation.navigate("SignInScreen")}
               > 
@@ -58,9 +77,7 @@ export default class HomeScreen extends Component {
 
  
          </View>
-        
-      
-           
+         
              </SafeAreaView>
              </ScrollView>
       

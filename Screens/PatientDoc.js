@@ -1,38 +1,49 @@
 
 
 import React, {Component, useState} from 'react';
-import { Text, View, TouchableOpacity,TextInput, StyleSheet, FlatList, Image}  from 'react-native';
+import { Text, View, TouchableOpacity,TextInput, StyleSheet, FlatList, Image,Button}  from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 import styles from './Styles/CompleteStyling';
+import drinfo from './DATA/data.json';
+import Patientinfo from './DATA/patient.json';
 
 
 
-export default class SelectDoc extends Component {
+export default class PatientDoc extends Component {
     doctorName = "Dr. Ahmed Khan";
     specality = "MBBS"; 
 
 
-   constructor(props){
-   super(props);
-   }
+  //  constructor(props){
+  //  super(props);
+  //  }
+
+
    
 
   render(){
 
 
-    this.state = {
-
-
-    }
     return (
+     <ScrollView>
         <View style={styles.containerForSelectPatient} >
    
-           
-   <View style= {{flexDirection: "row", flex: 1}}>
-                    <Text style={{margin:15,lineHeight: 20, flex:1,color: 'black'}}>{this.doctorName}{"\n"} {this.specality}</Text>
-                    <Text style={{margin:15 ,lineHeight: 20,flex:1,textAlign:'right', color: 'black',alignItems:'flex-end'}}>Patient: Shafay{"\n"}Tue, 07 Dec - 02:30</Text>
+    <TouchableOpacity>       
+   <View style= {{flexDirection: "row"}}>
                     
-                  </View>
+                    <View style = {{flexDirection: 'row',width: '50%' , alignItems: 'center',justifyContent: 'flex-start'}}>
+                    <Text style={{marginTop:10, lineHeight: 20,color: 'black',alignSelf: 'flex-start'}}>Dr.Name:{'\n'}Specality:</Text>
+                    <Text style={{marginTop:11,color: 'black',lineHeight: 20, alignSelf: 'flex-start',fontWeight:'bold'}}>{drinfo.doctorName}{'\n'}{drinfo.specality}</Text>
+               
+                    </View>
 
+
+<View style = {{flexDirection: 'row', width: '50%', alignItems: 'center',justifyContent: 'flex-end'}}>
+                    <Text style={{marginTop:10 ,lineHeight: 20, color: 'black',alignSelf:'flex-end'}}>Patient: {"\n"}Date: </Text>
+                      <Text style={{marginTop:11,color: 'black',lineHeight: 20, alignSelf: 'flex-start',fontWeight:'bold'}}>{Patientinfo.patientName}{'\n'}{Patientinfo.Date}</Text>
+                    </View>
+                  </View>
+                  </TouchableOpacity>
   
 
         
@@ -44,7 +55,7 @@ export default class SelectDoc extends Component {
          </View>
     
 
-     
+         </ScrollView>
       
     );
   }
