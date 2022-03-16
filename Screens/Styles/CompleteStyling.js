@@ -194,7 +194,8 @@ inputWrap: {
 Button_text_styling:{
   fontSize:15,
    color:'#FFFFFF',
-   fontWeight:'normal'
+   fontWeight:'normal',
+   fontFamily:"Montserrat-Bold"
 
 },
 
