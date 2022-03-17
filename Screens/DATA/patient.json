@@ -1,4 +1,8 @@
 {
     "patientName":"Shafay Azeem",
-    "Date": "Tue, 07 Dec - 02:30"
+    "Date": "Tue, 07 Dec - 02:30",
+    "PhoneNumber" :"0345880",
+
+    "MRNumber" : "090876",
+    "Age": "21 years"
 }

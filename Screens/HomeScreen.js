@@ -46,7 +46,7 @@ export default class HomeScreen extends Component {
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.button_Side_by_Side}
-              onPress={() =>this.props.navigation.navigate("RegistrationScreen")}
+              onPress={() =>this.props.navigation.navigate("SearchPatient")}
               > 
               <Text style={styles.Button_text_styling}>
               SEARCH </Text>

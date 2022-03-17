@@ -95,13 +95,13 @@ export default class RegistrationScreen extends Component {
     console.info(this.props.navigation)
 
     return (
-      <ScrollView style={{backgroundcolor:'pink'}} >
+      <ScrollView  >
       <SafeAreaView >
  
-      
+      <View style={{backgroundColor:'#38AB94'}}> 
       <Header name="PATIENT REGISTRATION" class= "" />
       <UnitClerkHeader/>
-
+</View>
 
       <View style={[styles.containerForRegistration]}>
       <View style={[styles.containerWithinScrollView]}>
@@ -310,7 +310,7 @@ export default class RegistrationScreen extends Component {
 
 <View >
           <TouchableOpacity style={[styles.buttonRegistration]}
-             onPress={() =>this.props.navigation.navigate("SignInScreen")}
+             onPress={() =>this.props.navigation.navigate("SearchPatient")}
              > 
              <Text style={styles.Button_text_styling}>
              SUBMIT </Text>

@@ -4,9 +4,9 @@ export default StyleSheet.create({
   ContainerWhole:{
     width:'100%',
     height:'100%',
-    backgroundColor:'#FFFFFF',
+    backgroundColor:'#33A58F',
     flex: 1,
-
+   
   },  
   ContainerWhite:{
     width:'100%',
@@ -130,16 +130,16 @@ export default StyleSheet.create({
         alignItems:'center',
 
       },
-         containerForSearchPatient:{
-        width:'80%',
-        height:20,
-        backgroundColor:'#FFFFFF',
-        borderColor:'black',
-        borderRadius:10,
-        marginTop:80,
-        alignSelf:'center',
-        // borderWidth:3
-    },
+    //      containerForSearchPatient:{
+    //     width:'50%',
+    //     height:20,
+    //     backgroundColor:'black',
+    //     borderColor:'black',
+    //     borderRadius:10,
+    //     marginTop:80,
+    //     alignSelf:'center',
+    //     // borderWidth:3
+    // },
     containerForButton: {
       flex: 1,
       flexDirection: 'row',
@@ -149,9 +149,11 @@ export default StyleSheet.create({
     buttonForSearchPatient: {
       alignItems: 'center',
       justifyContent: 'center',
-      borderRadius: 15,
+      alignSelf:'center',
+      borderRadius: 25,
       backgroundColor:'#252726',
       height:50,
+      width:250,
       margin:40,
      
    } , 
@@ -161,10 +163,11 @@ export default StyleSheet.create({
   //  },
 
    containerForSearchPatient:{
-    width:'80%',
+    width:'50%',
+    padding:30,
     backgroundColor:'#FFFFFF',
     borderColor:'black',
-    borderRadius:10,
+    // borderRadius:10,
     marginTop:80,
     alignSelf:'center',
     // borderWidth:3
@@ -226,14 +229,14 @@ InsideConatiner2:{
   width:'100%',
     backgroundColor:'#30A28C',           //#FFFFFF
     borderColor:'black',
-    borderRadius:10,
-    marginTop:10,
+    // borderRadius:10,
+    // marginTop:10,
     alignSelf:'center',
     // borderWidth:3
 
 }, 
 containerForScrollView:{
-  width:'80%',
+  width:'60%',
     backgroundColor:'#FFFFFF',           //#FFFFFF
     borderColor:'black',
     // borderRadius:10,
@@ -244,10 +247,12 @@ containerForScrollView:{
 },
  containerWithinScrollView:{
   width:'50%',
+  padding:30,
     backgroundColor:'#FFFFFF',           //#FFFFFF
     borderColor:'black',
     // borderRadius:10,
-    // marginTop:20,
+    marginTop:30,
+    marginBottom:30,
     alignSelf:'center',
     borderWidth:3,
     borderColor:"#30A28C"
