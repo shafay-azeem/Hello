@@ -4,7 +4,7 @@ export default StyleSheet.create({
   ContainerWhole:{
     width:'100%',
     height:'100%',
-    backgroundColor:'#329A85',
+    backgroundColor:'#FFFFFF',
     flex: 1,
 
   },  
@@ -69,7 +69,20 @@ export default StyleSheet.create({
          marginRight:400,
          marginTop:10
         
-      },
+      },    
+       buttonRegistration: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 25,
+        backgroundColor:'#252726',
+        height:50,
+        margin:50,
+       // marginBottom:30,
+       // marginLeft:400,
+       //  marginRight:400,
+       //  marginTop:10
+       
+     },
        button_Side_by_Side: {
      backgroundColor: '#252726',
      borderRadius: 25,
@@ -170,7 +183,7 @@ inputWrap: {
      
     },
     containerForSelectPatient:{
-      backgroundColor:'#D7E8ED',
+      backgroundColor:'#EEEEEE',
       borderColor:'blue',
       borderRadius:10,
       padding:10,
@@ -209,16 +222,38 @@ InsideConatiner2:{
   width:'60%',
   resizeMode: 'contain'
 },   
- containerForScrollView:{
-  width:'80%',
-    backgroundColor:'#FFFFFF',
+ containerForRegistration:{
+  width:'100%',
+    backgroundColor:'#30A28C',           //#FFFFFF
     borderColor:'black',
     borderRadius:10,
-    marginTop:20,
+    marginTop:10,
+    alignSelf:'center',
+    // borderWidth:3
+
+}, 
+containerForScrollView:{
+  width:'80%',
+    backgroundColor:'#FFFFFF',           //#FFFFFF
+    borderColor:'black',
+    // borderRadius:10,
+    // marginTop:20,
     alignSelf:'center',
     // borderWidth:3
 
 },
+ containerWithinScrollView:{
+  width:'50%',
+    backgroundColor:'#FFFFFF',           //#FFFFFF
+    borderColor:'black',
+    // borderRadius:10,
+    // marginTop:20,
+    alignSelf:'center',
+    borderWidth:3,
+    borderColor:"#30A28C"
+
+},
+
 ViewForRow:{
   flexDirection: "row"
 },
@@ -242,6 +277,22 @@ TextForInsideRowSidebySide:{
   alignSelf: 'flex-start',
   fontWeight:'bold'
 },
+
+
+    // GREY
+    ColorGrey:{
+    color_grey_50: "#FAFAFA",
+    color_grey_100: '#F5F5F5',
+    color_grey_200: '#EEEEEE',
+    color_grey_300: '#E0E0E0',
+    color_grey_400: '#BDBDBD',
+    color_grey_500: '#9E9E9E',
+    color_grey_600: '#757575',
+    color_grey_700: '#616161',
+    color_grey_800: '#424242',
+    color_grey_900: '#212121',
+    color_black_1000: '#000000',
+    }
     
 
 

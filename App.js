@@ -8,6 +8,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 import SignInScreen from "./Screens/SignInScreen";
 import HomeScreen from "./Screens/HomeScreen";
 import Balance from "./Screens/Balance";
+import PatientRegistration from "./Screens/PatientRegistration";
+import RegistrationScreen from "./Screens/RegistrationScreen";
 
 const Stack = createStackNavigator();
 
@@ -35,6 +37,17 @@ const App = () => {
 <Stack.Screen
         name="HomeScreen"
         component={HomeScreen}
+
+      />
+
+<Stack.Screen
+        name="PatientRegistration"
+        component={PatientRegistration}
+
+      />
+      <Stack.Screen
+        name="RegistrationScreen"
+        component={RegistrationScreen}
 
       />
 

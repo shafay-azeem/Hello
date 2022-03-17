@@ -32,21 +32,21 @@ export default class HomeScreen extends Component {
             </View>
             <View style={styles.containerForButton}>
             <TouchableOpacity style={styles.button_Side_by_Side}
-              onPress={() =>this.props.navigation.navigate("SignInScreen")}
+              onPress={() =>this.props.navigation.navigate("RegistrationScreen")}
               > 
               <Text style={styles.Button_text_styling}>
               REGISTRATION </Text>
             </TouchableOpacity>
             
             <TouchableOpacity style={styles.button_Side_by_Side}
-              onPress={() =>this.props.navigation.navigate("SignInScreen")}
+              onPress={() =>this.props.navigation.navigate("RegistrationScreen")}
               > 
               <Text style={styles.Button_text_styling}>
               BOOKING </Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.button_Side_by_Side}
-              onPress={() =>this.props.navigation.navigate("SignInScreen")}
+              onPress={() =>this.props.navigation.navigate("RegistrationScreen")}
               > 
               <Text style={styles.Button_text_styling}>
               SEARCH </Text>
@@ -71,7 +71,7 @@ export default class HomeScreen extends Component {
      
   
                <TouchableOpacity style={styles.buttonGeneral}
-              onPress={() =>this.props.navigation.navigate("SignInScreen")}
+              onPress={() =>this.props.navigation.navigate("RegistrationScreen")}
               > 
               <Text  style={styles.Button_text_styling} >
               NEXT </Text>
