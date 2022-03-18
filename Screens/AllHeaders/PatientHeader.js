@@ -29,15 +29,15 @@ export default class PatientHeader extends Component {
 
 
             <View style = {{flexDirection: 'row',width: '45%' , alignItems: 'center',justifyContent: 'flex-start'}}>
-            <Text style={{marginTop:10, lineHeight: 20,color: 'black',alignSelf: 'flex-start'}}>PatientName:{'\n'}Age:</Text>
-            <Text style={{marginTop:11,color: 'black',lineHeight: 20, alignSelf: 'flex-start',fontWeight:'bold'}}>{Patientinfo.patientName}{'\n'}{Patientinfo.Age}</Text>
+            <Text style={{ lineHeight: 20,color: 'black',alignSelf: 'flex-start'}}>PatientName:{'\n'}Age:</Text>
+            <Text style={{color: 'black',lineHeight: 20, alignSelf: 'flex-start',fontWeight:'bold'}}>{Patientinfo.patientName}{'\n'}{Patientinfo.Age}</Text>
        
             </View>
 
 
-<View style = {{flexDirection: 'row', width: '50%', alignItems: 'center',justifyContent: 'flex-end'}}>
-            <Text style={{marginTop:10 ,lineHeight: 20, color: 'black',alignSelf:'flex-end'}}>MRNumber {"\n"}PhoneNumber: </Text>
-              <Text style={{marginTop:11,color: 'black',lineHeight: 20, alignSelf: 'flex-start',fontWeight:'bold'}}>{Patientinfo.MRNumber}{'\n'}{Patientinfo.PhoneNumber}</Text>
+<View style = {{flexDirection: 'row', width: '50%',justifyContent: 'flex-end',alignSelf:'flex-start'}}>
+            <Text style={{lineHeight: 20, color: 'black',alignSelf:'flex-end'}}>MRNumber : {"\n"}PhoneNumber: </Text>
+              <Text style={{color: 'black',lineHeight: 20, alignSelf: 'flex-start',fontWeight:'bold'}}>{Patientinfo.MRNumber}{'\n'}{Patientinfo.PhoneNumber}</Text>
             </View>
           </View>
           </View>

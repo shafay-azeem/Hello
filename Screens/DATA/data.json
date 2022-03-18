@@ -1,4 +1,6 @@
 {
     "doctorName" : "Dr. Ahmed Khan",
-    "specality" : "MBBS"
+    "specality" : "MBBS",
+    "Location": "AKU",
+    "Date": "Tue, 07 Dec - 02:30"
 } 

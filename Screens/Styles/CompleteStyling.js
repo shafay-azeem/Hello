@@ -189,7 +189,7 @@ inputWrap: {
       backgroundColor:'#EEEEEE',
       borderColor:'blue',
       borderRadius:10,
-      padding:10,
+      padding:20,
       margin:20,
       // borderWidth:1
   },

@@ -13,6 +13,12 @@ import SelectPatient from "./Screens/SelectPatient";
 import PatientHeader from "./Screens/AllHeaders/PatientHeader";
 
 import RegistrationScreen from "./Screens/RegistrationScreen";
+import PatientDemographics from "./Screens/PatientDemographics";
+import UpcomingAppointmentSchedule from "./Screens/UpcomingAppointmentSchedule";
+import SearchDoctor from "./Screens/SearchDoctor";
+
+
+
 
 const Stack = createStackNavigator();
 
@@ -21,13 +27,30 @@ const App = () => {
 
   return(
     <NavigationContainer>
-    <Stack.Navigator initialRouteName="PatientHeader"
+    <Stack.Navigator initialRouteName="SignInScreen"
       screenOptions={{headerShown:false}}>
 
 
       <Stack.Screen
         name="SearchPatient"
         component={SearchPatient}
+      />
+
+<Stack.Screen
+        name="UpcomingAppointmentSchedule"
+        component={UpcomingAppointmentSchedule}
+      />
+
+      
+<Stack.Screen
+        name="SearchDoctor"
+        component={SearchDoctor}
+      />
+
+
+<Stack.Screen
+        name="PatientDemographics"
+        component={PatientDemographics}
 
       />
          <Stack.Screen

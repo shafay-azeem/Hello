@@ -5,16 +5,17 @@ import styles from './Styles/CompleteStyling';
 
 import Header from './Header';
 import UnitClerkHeader from './AllHeaders/UnitClerkHeader';
+import PatientHeader from './AllHeaders/PatientHeader';
 
-export default class SearchPatient extends Component {
+export default class SearchDoctor extends Component {
   constructor(props){
     super(props)
 
    }
     state={
-        Mr_Number:"",
-        CNIC:"",
-        QR_code:""
+        Location:"",
+        Speciality:"",
+        Specify_Doctor:""
   }
    render(){
     return (
@@ -23,28 +24,29 @@ export default class SearchPatient extends Component {
  
    
       <View style={{backgroundColor:'#38AB94'}}> 
-           <Header style={{height:"20%"}} name="SEARCH PATIENT " class= ""/>
+           <Header style={{height:"20%"}} name="SEARCH DOCTOR " class= ""/>
            <UnitClerkHeader/>
+           <PatientHeader/>
            </View>
            <View style={styles.containerWithinScrollView} >
-           <Text style={styles.EdittextHeading}>Mr Number </Text>
+           <Text style={styles.EdittextHeading}>Location </Text>
             <TextInput  
               style={styles.Edittext}
-              placeholder="Enter your Mr Number" 
-              onChangeText={text => this.setState({Mr_Number:text})}/>
+              placeholder="Enter your Location " 
+              onChangeText={text => this.setState({Location:text})}/>
          
-           <Text style={styles.EdittextHeading}>CNIC</Text>
+           <Text style={styles.EdittextHeading}>Speciality</Text>
             <TextInput  
               style={styles.Edittext}
-              placeholder="Enter your CNIC" 
-              onChangeText={text => this.setState({CNIC:text})}/>
+              placeholder="Enter your Speciality" 
+              onChangeText={text => this.setState({Speciality:text})}/>
           
            
-           <Text style={styles.EdittextHeading}>QRcode</Text>
+           <Text style={styles.EdittextHeading}>Specify Doctor</Text>
             <TextInput  
               style={styles.Edittext}
-              placeholder="Enter Patient 16 digit QR code" 
-              onChangeText={text => this.setState({QR_code:text})}/>
+              placeholder="Specify Doctor" 
+              onChangeText={text => this.setState({Specify_Doctor:text})}/>
          
              <TouchableOpacity style={styles.buttonForSearchPatient}
              onPress={() =>this.props.navigation.navigate("PatientDemographics")}
