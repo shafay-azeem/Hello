@@ -16,6 +16,7 @@ import RegistrationScreen from "./Screens/RegistrationScreen";
 import PatientDemographics from "./Screens/PatientDemographics";
 import UpcomingAppointmentSchedule from "./Screens/UpcomingAppointmentSchedule";
 import SearchDoctor from "./Screens/SearchDoctor";
+import ImagesRecords from "./Screens/ImagesRecords";
 
 
 
@@ -34,6 +35,13 @@ const App = () => {
       <Stack.Screen
         name="SearchPatient"
         component={SearchPatient}
+      />
+
+
+      
+<Stack.Screen
+        name="ImagesRecords"
+        component={ImagesRecords}
       />
 
 <Stack.Screen
