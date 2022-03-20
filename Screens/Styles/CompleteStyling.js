@@ -211,7 +211,7 @@ Button_text_styling:{
   fontSize:15,
    color:'#FFFFFF',
    fontWeight:'normal',
-   fontFamily:"Montserrat-Bold"
+  //  fontFamily:"Montserrat-Bold"
 
 },
 
@@ -297,8 +297,207 @@ TextForInsideRowSidebySide:{
     color_grey_800: '#424242',
     color_grey_900: '#212121',
     color_black_1000: '#000000',
-    }
+    },
+
+    listItemBox:{
+      // backgroundColor:COLORS.listItem,
+      backgroundColor:'#FFFFFF',
+      margin:10,
+      width:"2%",
+      height: 250,
+      flex:1,
+      alignSelf:"center",
+      borderRadius:15,
+      padding: 15,
+
+
+    },
+
+    dollarIcon:{
+      width: 20 ,
+      height: 20,
+      marginRight: 6
+    },
+    tinyLogo: {
+      width: '100%',
+      height: '100%',
+      alignSelf: 'center'
+  
+    },
+
+    roundIcon:{
+      alignSelf: 'center',
+      width: 70 ,
+      height: 70,
+      borderRadius: 70/2,
+      // backgroundColor: COLORS.barColor,
+      marginBottom: 10
+    },
+
+    circleView: {
+      alignSelf: 'center',
+      width: 25 ,
+      height: 25,
+      borderRadius: 25/2,
+      // backgroundColor: COLORS.barColor,
+      backgroundColor:'#38AB94',
+      marginHorizontal: 2,
+      alignItems: 'center',
+      justifyContent: 'center'
+
+    },
+
+    enabled: {
+      fontSize: 12,
+      // fontFamily: 'Rubik-SemiBold',
+      // color: COLORS.white,
+    color:'white',
+    fontFamily:'bold',
+  
+    },
+
+    circleViewDisable:{
+      alignSelf: 'center',
+      width: 25 ,
+      height: 25,
+      borderRadius: 25/2,
+      // backgroundColor: COLORS.color_grey_400,
+      backgroundColor:'#EEEEEE',
+      marginHorizontal: 2,
+      alignItems: 'center',
+      justifyContent: 'center'
+    },
+
+  disabled: {
+    fontSize: 12,
+    // fontFamily: 'Rubik-SemiBold',
+    // color: COLORS.color_grey_100
+    color:'grey',
+    // backgroundColor:'grey',
+    fontFamily:'bold'
+
+  },
+
+  listItem:{
+    backgroundColor:'#FFFFFF',
+    margin:10,
+    padding:10,
+    width:"50%",
+    flex:1,
+    alignSelf:"center",
+    flexDirection:"row",
+    borderRadius:10,
+    alignItems: 'stretch',
+    height: 80,
+
+    // borderColor: COLORS.barColor
+  },
+
+  bigLogo: {
+    width: 100,
+    height: 100,
+    borderRadius: 100/2,
+    alignSelf: 'center'
+
+  },
+
+  cardText: {
+    color: 'black',
+    // fontFamily: 'Rubik-Medium',
+    fontSize: 25,
+    alignSelf: 'center',
+
+  },
+  doctorDetail: {
+    width: "100%",
+    // backgroundColor: COLORS.white,
+    backgroundColor:'green',
+    height: '6%',
+    marginTop: 0,
+    flexDirection: 'row'
     
+  },
 
+  smallRoundedBlueRoundedNoMargin: {
+    backgroundColor:"#38AB94",
+    shadowColor: 'rgba(0, 0, 0, 0.2)',
+    shadowOpacity: 0.8,
+    elevation: 6,
+    shadowRadius: 20 ,
+    shadowOffset : { width: 3, height: 13},
+    borderRadius: 35,
+    width: '40%',
+    height: 45  ,
+    alignItems: 'flex-end',
+    justifyContent: 'center',
 
+  },
+
+  container: {
+    flex: 1,
+    backgroundColor: '#38AB94',
+  },
+  cardText30: {
+    color: '#000000',
+    fontSize: 30,
+    alignSelf: 'center',
+    // textDecorationLine: 'underline'
+    fontFamily: 'Rubik-Medium'
+  },
+
+  cardView90:{
+    width: "90%",
+    height: "70%",
+    backgroundColor: '#FFF',
+    marginBottom: 0,
+    alignSelf: "center",
+    marginTop: 20,
+    borderRadius: 5,
+    borderWidth: 2,
+    borderColor: "white",
+    alignItems: 'center'
+  },
+
+  subCardView:{
+    backgroundColor:'#EEEEEE',
+    margin: 15,
+    width:"70%",
+    height: "15%",
+    alignSelf:"center",
+    borderRadius:20,
+    shadowColor: 'rgba(0, 0, 0, 0.1)',
+    shadowOpacity: 0.1,
+    elevation: 6,
+    shadowRadius: 5 ,
+    shadowOffset : { width: 1, height: 13},
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  centeredText:{
+    textAlign: 'center',
+    fontSize: 20,
+    justifyContent: 'center'  ,
+    fontFamily: "bold"
+
+  },
+
+  headingText:{
+    fontSize: 30
+  },
+
+  smallRoundedBlueRounded: {
+    backgroundColor: '#252726',
+    // shadowColor: 'rgba(0, 0, 0, 0.2)',
+    // shadowOpacity: 0.8,
+    // elevation: 6,
+    // shadowRadius: 20 ,
+    // shadowOffset : { width: 3, height: 13},
+    borderRadius: 25,
+    width: '30%',
+    height: 50  ,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 20,
+    alignSelf: 'center'
+  },
 })

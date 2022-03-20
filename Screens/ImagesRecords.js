@@ -77,6 +77,13 @@ export default class ImagesRecords extends Component {
                   </View>
            </View>
          </View>
+
+         <TouchableOpacity style={styles.buttonGeneral}
+              onPress={() =>this.props.navigation.navigate("MoreImagesAndRecord")}
+              > 
+              <Text style={styles.Button_text_styling}>
+              NEXT </Text>
+            </TouchableOpacity>
          </View>
            
              </SafeAreaView>

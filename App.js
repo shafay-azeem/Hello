@@ -17,9 +17,15 @@ import PatientDemographics from "./Screens/PatientDemographics";
 import UpcomingAppointmentSchedule from "./Screens/UpcomingAppointmentSchedule";
 import SearchDoctor from "./Screens/SearchDoctor";
 import ImagesRecords from "./Screens/ImagesRecords";
+import MoreImagesAndRecord from "./Screens/MoreImagesAndRecord";
+import UpdatePatientProfile from "./Screens/UpdatePatientProfile";
 
+import SelectDoc from "./Screens/SelectDoc";
+import SelectSlot from "./Screens/SelectSlot";
 
-
+import AppointmentConfirmation from "./Screens/AppointmentConfirmation";
+import SelectSchedule from "./Screens/SelectSchedule";
+import Payment from "./Screens/Payment";
 
 const Stack = createStackNavigator();
 
@@ -28,13 +34,43 @@ const App = () => {
 
   return(
     <NavigationContainer>
-    <Stack.Navigator initialRouteName="SignInScreen"
+    <Stack.Navigator initialRouteName="Payment"
       screenOptions={{headerShown:false}}>
 
 
       <Stack.Screen
         name="SearchPatient"
         component={SearchPatient}
+      />
+
+      
+<Stack.Screen
+        name="Payment"
+        component={Payment}
+      />
+    <Stack.Screen
+        name="AppointmentConfirmation"
+        component={AppointmentConfirmation}
+      />
+      
+<Stack.Screen
+        name="SelectSchedule"
+        component={SelectSchedule}
+      />
+
+<Stack.Screen
+        name="SelectDoc"
+        component={SelectDoc}
+      />
+
+<Stack.Screen
+        name="SelectSlot"
+        component={SelectSlot}
+      />
+
+<Stack.Screen
+        name="UpdatePatientProfile"
+        component={UpdatePatientProfile}
       />
 
 
@@ -93,6 +129,12 @@ const App = () => {
       <Stack.Screen
         name="RegistrationScreen"
         component={RegistrationScreen}
+
+      />
+
+<Stack.Screen
+        name="MoreImagesAndRecord"
+        component={MoreImagesAndRecord}
 
       />
 

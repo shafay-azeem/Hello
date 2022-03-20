@@ -22,7 +22,7 @@ export default class PatientDemographics extends Component {
        <PatientHeader/>
 
                <TouchableOpacity style={styles.buttonGeneral}
-              onPress={() =>this.props.navigation.navigate("EightPage")}
+              onPress={() =>this.props.navigation.navigate("SelectDoc")}
               > 
               <Text style={styles.Button_text_styling}>
               BOOK APPOINTMENT </Text>
@@ -37,14 +37,14 @@ export default class PatientDemographics extends Component {
 
 
             <TouchableOpacity style={styles.buttonGeneral}
-              onPress={() =>this.props.navigation.navigate("EightPage")}
+              onPress={() =>this.props.navigation.navigate("UpdatePatientProfile")}
               > 
               <Text style={styles.Button_text_styling}>
               UPDATE PATIENT PROFILE </Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.buttonGeneral}
-              onPress={() =>this.props.navigation.navigate("EightPage")}
+              onPress={() =>this.props.navigation.navigate("ImagesRecords")}
               > 
               <Text style={styles.Button_text_styling}>
              IMAGES OR RECORD </Text>
