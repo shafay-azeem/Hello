@@ -27,6 +27,14 @@ import AppointmentConfirmation from "./Screens/AppointmentConfirmation";
 import SelectSchedule from "./Screens/SelectSchedule";
 import Payment from "./Screens/Payment";
 
+import modal from "./Screens/modal";
+
+import ConsultationPayment from "./Screens/ConsultationPayment";
+
+import PaymentSuccessfull from "./Screens/PaymentSuccessful";
+
+
+
 const Stack = createStackNavigator();
 
 const App = () => {
@@ -39,9 +47,26 @@ const App = () => {
 
 
       <Stack.Screen
+        name="ConsultationPayment"
+        component={ConsultationPayment}
+      />
+
+<Stack.Screen
+        name="PaymentSuccessfull"
+        component={PaymentSuccessfull}
+      />
+
+<Stack.Screen
         name="SearchPatient"
         component={SearchPatient}
       />
+
+<Stack.Screen
+        name="modal"
+        component={modal}
+      />
+
+      
 
       
 <Stack.Screen

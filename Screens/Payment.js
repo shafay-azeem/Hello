@@ -1,5 +1,5 @@
 import React, {Component, useState} from 'react';
-import { Text, View, TouchableOpacity,TextInput,Image} from 'react-native';
+import { Text, View, TouchableOpacity,TextInput,Image,Pressable,Modal,Alert} from 'react-native';
 import styles from './Styles/CompleteStyling';
 import UnitClerkHeader from './AllHeaders/UnitClerkHeader';
 import PatientHeader from './AllHeaders/PatientHeader';
@@ -9,7 +9,10 @@ import Header from './Header';
 import { Picker } from "@react-native-picker/picker";
 
 
-export default class Payment extends Component {
+
+const Payment = () => { 
+
+
    doctorName = "Dr Ahmed Khan";
    specality = "Medicine";
    doctorEmail = "abc@gmail.com"
@@ -24,8 +27,8 @@ export default class Payment extends Component {
    state={
     PickerSelectedVal : '',
    }
-
-  render(){
+   
+    const [modalVisible, setModalVisible] = useState(false);
     return (
       <View style={styles.container}>
           <Header name="PAYMENT" class= ""/>
@@ -106,14 +109,40 @@ export default class Payment extends Component {
               </View>
 
               <View style = {{width: '50%', height: '80%' }}>
-              <TouchableOpacity
-                onPress={() => this.props.navigation.navigate('SelectPatient')}
-                style={{ backgroundColor:'#252726',height:50, borderRadius: 25, alignItems: 'center',
-                justifyContent: 'center',width:'60%',alignSelf:'center'}}
-         
-               >
-        <Text style={styles.Button_text_styling}>APPLY PROMOCODE</Text>
-                </TouchableOpacity>
+              <View style={styles.centeredView}>
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          Alert.alert("Modal has been closed.");
+          setModalVisible(!modalVisible);
+        }}
+      >
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
+          <Text style={{  fontWeight:'bold',margin:10}}>APPLY PROMOCODE</Text>
+            <TextInput  
+              style={styles.Edittext}
+              placeholder="APPLY PROMOCODE" 
+              />
+            
+            <Pressable
+              style={[styles.button, styles.buttonClose]}
+              onPress={() => setModalVisible(!modalVisible)}
+            >
+              <Text style={styles.textStyle}>Hide Modal</Text>
+            </Pressable>
+          </View>
+        </View>
+      </Modal>
+      <Pressable
+        style={[styles.button, styles.buttonOpen]}
+        onPress={() => setModalVisible(true)}
+      >
+        <Text style={styles.textStyle}>Show Modal</Text>
+      </Pressable>
+    </View>
 
 
                 <View style={{flexDirection:'row'}}> 
@@ -172,5 +201,6 @@ export default class Payment extends Component {
 
     </View>
     );
-  }
-}
+      }
+
+      export default Payment;
