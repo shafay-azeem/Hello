@@ -64,7 +64,7 @@ export default class SelectSlot extends Component {
     return (
         <View style={styles.container}>
         <Header name="SELECT SLOT"/>
-        
+        <UnitClerkHeader/>
          <PatientHeader/>
   
          <View style= {{ height: 630, width: '70%', alignSelf: 'center',marginTop: 0,padding: 0, borderRadius: 30,}}>

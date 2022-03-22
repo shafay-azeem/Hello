@@ -6,8 +6,8 @@ import UnitClerkHeader from './AllHeaders/UnitClerkHeader';
 import PatientHeader from './AllHeaders/PatientHeader';
 import Header from './Header';
 // import DropDownPicker from 'react-native-dropdown-picker';
-
-
+import invoice from './DATA/Invoice.json';
+import drinfo from './DATA/data.json';
 
 
 export default class ConsultationPayment extends Component {
@@ -29,50 +29,72 @@ export default class ConsultationPayment extends Component {
     return (
       <View style={styles.container}>
           <Header name="CONSULTATION PAYMENT OPTION " class= ""/>
+          <UnitClerkHeader/>
             <PatientHeader/>
-      <View style = {styles.cardView90}>
+     
+  
+            <View style = {styles.cardView90}>
+         
+            <View style={{width:'100%',padding:20,height:'30%'}} >
+            <View style= {{flexDirection: "row",justifyContent:'center',padding:10}}>
+            <View style = {{flexDirection: 'column' ,alignItems: 'center',marginRight:10}}>
 
-      <View style ={{
-            width: '90%', flex: 1, flexDirection: 'row', justifyContent: 'center', marginTop: 30,height: '50%'}}>
-          <View style = {{marginLeft: 30}}>
-              <Text style = {[{alignSelf:'flex-start',fontSize:25,color:'black'}]}>Profile Image </Text>
-              {/* <View style = {{borderRadius: 2, borderColor: 'black', height: 10, width: 20}}> */}
-              <View style = {{    width: 35 ,height: 35,}}>
-            <Image
-              style={ { width: '100%',height: '100%',    alignSelf: 'center',justifyContent:'center',alignItems:'center',marginLeft:110}}
-              source={require('../images/doctor.png')}
-            />
+
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline'}}>Profile Image </Text>
+ 
+            <View style={{ width: 40 ,height: 40}}>
+                    { <Image
+                    style={{   width: '100%',height: '100%',alignSelf: 'center'}}
+                    source={require('../images/doctor.png')}
+                    /> }
+                  </View>
             </View>
-              {/* </View> */}
+
+
+
+            <View style = {{flexDirection: 'column' ,alignItems: 'center',marginRight:10}}>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline'}}>DrName </Text>
+            <Text style={{color: 'black', alignSelf: 'flex-start',fontWeight:'bold',fontSize:20,color:'#38AB94',marginRight:20}}>{drinfo.doctorName}</Text>
+       
             </View>
-          <View style = {{marginLeft: 30}}>
-              <Text style = {[{alignSelf:'flex-start',fontSize:25,color:'black'}]}>Display Name </Text>
-              <Text style = {[{alignSelf:'flex-start',marginTop:10,fontWeight:'bold',fontSize:18,color:'#38AB94'}]}>{this.doctorName} </Text>
+
+
+            <View style = {{flexDirection: 'column' ,alignItems: 'center',marginRight:10}}>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline'}}>Speciality </Text>
+            <Text style={{color: 'black', alignSelf: 'flex-start',fontWeight:'bold',fontSize:20,color:'#38AB94',marginRight:20}}>{drinfo.specality}</Text>
+       
             </View>
-            <View style = {{marginLeft: 30}}>
-              <Text style = {[{alignSelf:'flex-start',fontSize:25,color:'black'}]}>Email  </Text>
-              <Text style = {[{alignSelf:'flex-start',marginTop:10,fontWeight:'bold',fontSize:18,color:'#38AB94'}]}>{this.doctorEmail} </Text>
+          
+            <View style = {{flexDirection: 'column',alignItems: 'center',marginRight:10}}>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline'}}>Email</Text>
+            <Text style={{color: 'black', alignSelf: 'flex-start',fontWeight:'bold',fontSize:20,color:'#38AB94',marginRight:20}}>{drinfo.doctorEmail}</Text>
+       
             </View>
-            <View style = {{marginLeft: 30}}>
-              <Text style = {[{alignSelf:'flex-start',fontSize:25,color:'black'}]}>Specality</Text>
-              <Text style = {[{alignSelf:'flex-start',marginTop:10,fontWeight:'bold',fontSize:18,color:'#38AB94'}]}>{this.specality} </Text>
+            <View style = {{flexDirection: 'column',alignItems: 'center',marginRight:10}}>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline'}}>PhoneNo</Text>
+            <Text style={{color: 'black', alignSelf: 'flex-start',fontWeight:'bold',fontSize:20,color:'#38AB94',marginRight:20}}>{drinfo.doctorPhone}</Text>
+       
             </View>
-            <View style = {{marginLeft: 30}}>
-              <Text style = {[{alignSelf:'flex-start',fontSize:25,color:'black'}]}>Fees </Text>
-              <Text style = {[{alignSelf:'flex-start',marginTop:10,fontWeight:'bold',fontSize:18,color:'#38AB94'}]}>{this.Fees} </Text>
+            <View style = {{flexDirection: 'column',alignItems: 'center',marginRight:10}}>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20 , textDecorationLine: 'underline'}}>Fees</Text>
+            <Text style={{color: 'black', alignSelf: 'flex-start',fontWeight:'bold',fontSize:20,color:'#38AB94',marginRight:20}}>{drinfo.Fees}</Text>
+       
             </View>
-            <View style = {{marginLeft: 30}}>
-              <Text style = {[{alignSelf:'flex-start',fontSize:25,color:'black'}]}>Location </Text>
-              <Text style = {[{alignSelf:'flex-start',marginTop:10,fontWeight:'bold',fontSize:18,color:'#38AB94'}]}>{this.Location} </Text>
+         
+
             </View>
-            </View>  
             
-            <View style = {{width: '20%',height: '10%', marginBottom: 30}}>
+            
             
             </View>
-            <View style = {{height: '50%', width: '100%', flexDirection: 'row', justifyContent: 'center', }}>
+
+        
+         
+            
+         
+            <View style = {{width: '100%', flexDirection: 'row', justifyContent: 'center', marginTop:20}}>
               
-            <View style = {{flexDirection: 'row'}}>
+            <View style = {{flexDirection: 'row',alignSelf:'center'}}>
                 <View >
                 <Text style={styles.EdittextHeading}>Transaction ID</Text>
             <TextInput  
@@ -118,14 +140,14 @@ export default class ConsultationPayment extends Component {
 
               
       </View>
+      <TouchableOpacity style={styles.buttonGeneral}
+              onPress={() =>this.props.navigation.navigate("PaymentSuccessfull")}
+              > 
+              <Text style={styles.Button_text_styling}>
+              BOOK APPOINTMENT </Text>
+            </TouchableOpacity>
+            </View>
    
-      <TouchableOpacity
-                  onPress={() => this.props.navigation.navigate('PaymentSuccessfull')}
-                  style={styles.smallRoundedBlueRounded}
-                >
-                  <Text style={styles.Button_text_styling}>PAY</Text>
-                </TouchableOpacity>
-    </View>
 </View>
     );
   }

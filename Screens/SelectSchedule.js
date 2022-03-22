@@ -93,7 +93,7 @@ export default class SelectSchedule extends Component {
     return (
         <View style={styles.container}>
         <Header name="SELECT SCHEDULE"/>
-        {/* <UnitClerkHeader/> */}
+        <UnitClerkHeader/>
          <PatientHeader/>
          <View style= {{ height: 630, width: '70%', alignSelf: 'center',marginTop: 0,padding: 0, borderRadius: 30,}}>
            <View style = {{flexDirection: 'row', alignItems:'center', justifyContent:'center' }}>

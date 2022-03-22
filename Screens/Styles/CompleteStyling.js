@@ -58,19 +58,31 @@ export default StyleSheet.create({
         margin:80,
        
      },
-     buttonGeneral: {
+     buttonGeneralInForm: {
          alignItems: 'center',
          justifyContent: 'center',
+         alignSelf:'center',
          borderRadius: 25,
          backgroundColor:'#252726',
          height:50,
         //  margin:50,
-        marginBottom:30,
-        marginLeft:400,
-         marginRight:400,
-         marginTop:10
+        width:500,
+        // margin:20
         
-      },    
+      },   
+      
+      buttonGeneral: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        alignSelf:'center',
+        borderRadius: 25,
+        backgroundColor:'#252726',
+        height:50,
+       //  margin:50,
+       width:500,
+       margin:40
+       
+     },
        buttonRegistration: {
         alignItems: 'center',
         justifyContent: 'center',
@@ -317,7 +329,7 @@ TextForInsideRowSidebySide:{
     dollarIcon:{
       width: 20 ,
       height: 20,
-      marginRight: 6
+      // marginRight: 6
     },
     tinyLogo: {
       width: '100%',
@@ -448,15 +460,16 @@ TextForInsideRowSidebySide:{
 
   cardView90:{
     width: "90%",
-    height: "70%",
-    backgroundColor: '#FFF',
-    marginBottom: 0,
+    height: "60%",
+ 
+    backgroundColor: '#FFFFFF',
     alignSelf: "center",
     marginTop: 20,
-    borderRadius: 5,
-    borderWidth: 2,
+    // borderRadius: 10,
+    // borderWidth: 2,
     borderColor: "white",
-    alignItems: 'center'
+    alignItems: 'center',
+    // justifyContent:'center'
   },
 
   subCardView:{
@@ -555,4 +568,26 @@ TextForInsideRowSidebySide:{
     marginBottom: 15,
     textAlign: "center"
   },
+  containerModal: {  
+    flex: 1,  
+    alignItems: 'center',  
+    justifyContent: 'center',  
+    backgroundColor: 'purple',  
+  },  
+  modal: {  
+  justifyContent: 'center',  
+  alignItems: 'center',   
+  alignSelf:'center',
+ backgroundColor : "#30A28C",   
+  height: 300 ,  
+  margin:200,
+  width: '50%',  
+  borderRadius:10,  
+  borderWidth: 1,  
+   
+   },  
+   text: {  
+      color: '#3f2949',  
+      marginTop: 10  
+   }  
 })

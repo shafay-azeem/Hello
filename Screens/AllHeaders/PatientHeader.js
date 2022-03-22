@@ -7,16 +7,12 @@ import CheckBox from 'react-native-check-box';
 import Patientinfo from '../DATA/patient.json';
 
 export default class PatientHeader extends Component {
-    // PatientName = "Shafay Azeem";
-    // Age = "21 years";    
-    //  Gender = 'Male';
-    // PhoneNumber = '0345880'
-    // MRNumber = '0908765'
+  
  
 
       render(){
           return (
-            <View style={{backgroundColor:'#FFFFFF',marginTop:10,padding:8}} >
+            <View style={{backgroundColor:'#FFFFFF',marginTop:10,padding:8,borderRadius:10}} >
             <View style= {{flexDirection: "row"}}>
             <View style = {{flexDirection: 'row',width: '5%' , alignItems: 'center',justifyContent: 'flex-start'}}>
             <View style={{ width: 50 ,height: 50,marginRight: 6}}>

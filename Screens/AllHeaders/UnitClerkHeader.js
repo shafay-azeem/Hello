@@ -1,24 +1,42 @@
 
 import React, {Component} from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image ,Button,Pressable,SafeAreaView,alignItems,justifyContent,alignSelf} from 'react-native';
-import CheckBox from 'react-native-check-box';
 
-export default class DoctorPatientDetails extends Component {
-     UnitClerk = "Unit Clerk";
-    // specality = "Nurse";
-    //{"\n"}Specality: {this.specality}
-      render(){
-          return (
-             <View style={{backgroundColor:'#FFFFFF',marginTop:10}} >
-                  <View style= {{flexDirection: "row", flex: 1}}>
-                    <Text style={{ color: 'black'}}>{this.UnitClerk}</Text>
-                    <Text style={{flex:1,textAlign:'right', color: 'black',alignSelf: 'flex-end',justifyContent:'flex-end',alignItems:'flex-end'}}>Location: AKU{"\n"}Tue, 07 Dec - 02:30</Text>
-                    
-                  </View>
-          </View>
-          );
-        }
-      }
+import Clerkinfo from '../DATA/Clerk.json';
+
+
+export default class UnitClerkHeader extends Component {
+  render(){
+    return (
+      <View style={{backgroundColor:'#FFFFFF',marginTop:10,padding:8,borderRadius:10}} >
+      <View style= {{flexDirection: "row"}}>
+      <View style = {{flexDirection: 'row',width: '5%' , alignItems: 'center',justifyContent: 'flex-start'}}>
+      <View style={{ width: 50 ,height: 50,marginRight: 6}}>
+              { <Image
+              style={{   width: '100%',height: '100%',alignSelf: 'center'}}
+              source={require('../clerk.png')}
+              /> }
+            </View>
+      </View>
+
+
+      <View style = {{flexDirection: 'row',width: '45%' , alignItems: 'center',justifyContent: 'flex-start'}}>
+      <Text style={{ lineHeight: 20,color: 'black',alignSelf: 'flex-start'}}>UnitClerk Name:{'\n'}Age:</Text>
+      <Text style={{color: 'black',lineHeight: 20, alignSelf: 'flex-start',fontWeight:'bold'}}>{Clerkinfo.UnitClerk}{'\n'}{Clerkinfo.Age}</Text>
+ 
+      </View>
+
+
+<View style = {{flexDirection: 'row', width: '50%',justifyContent: 'flex-end',alignSelf:'flex-start'}}>
+      <Text style={{lineHeight: 20, color: 'black',alignSelf:'flex-end'}}>Location : {"\n"}Date: </Text>
+        <Text style={{color: 'black',lineHeight: 20, alignSelf: 'flex-start',fontWeight:'bold'}}>{Clerkinfo.Location}{'\n'}{Clerkinfo.Date}</Text>
+      </View>
+    </View>
+    </View>
+    );
+  }
+}
+
 
 
 

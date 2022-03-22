@@ -10,8 +10,6 @@ import Patientinfo from './DATA/patient.json';
 
 
 export default class PatientDoc extends Component {
-    doctorName = "Dr. Ahmed Khan";
-    specality = "MBBS"; 
 
 
   //  constructor(props){

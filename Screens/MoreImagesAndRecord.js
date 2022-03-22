@@ -18,26 +18,29 @@ export default class MoreImagesAndRecord extends Component {
              
           <View>
           <Header name="IMAGES AND RECORDS" class= ""/>
+
        <UnitClerkHeader/>
+
        <PatientHeader/>
 
 
         <View style={{flexDirection:'row',margin:50, alignSelf:'center'}}>
             
-             <View style={{height:200,width:"25%",backgroundColor:'#FFFFFF', marginRight:30 ,borderRadius:10}}> 
-             <View style={{ width: 150 ,height:150,justifyContent:'center',alignItems:'center',alignSelf:'center'}}>
+             <View style={{height:200,width:"20%",backgroundColor:'#FFFFFF',borderRadius:10,margin:20}}> 
+             <View style={{ width: 100 ,height:100,alignSelf:'center',marginTop:50,marginBottom:50}}>
                      <Image
-                    style={{   width: '100%',height: '100%', alignSelf:'center',marginTop:50}}
+                    style={{   width: '100%',height: '100%'}}
                     source={require('../images/man.png')}
+    
                     /> 
                   </View>
             </View>
             
-             <View style={{height:200,width:"25%",backgroundColor:'#FFFFFF' , marginRight:30 ,borderRadius:10 }}> 
+             <View style={{height:200,width:"20%",backgroundColor:'#FFFFFF'  ,borderRadius:10 ,alignSelf:'flex-end',margin:20}}> 
              
-             <View style={{ width: 150 ,height:150,justifyContent:'center',alignItems:'center',alignSelf:'center'}}>
+             <View style={{ width: 100 ,height:100,alignSelf:'center',marginTop:50,marginBottom:50}}>
                      <Image
-                    style={{   width: '100%',height: '100%', alignSelf:'center',marginTop:50}}
+                    style={{   width: '100%',height: '100%'}}
                     source={require('../images/woman.png')}
                     /> 
                   </View>
@@ -48,7 +51,7 @@ export default class MoreImagesAndRecord extends Component {
 
        
        
-         <TouchableOpacity style={styles.buttonGeneral}
+         <TouchableOpacity style={styles.buttonGeneralInForm}
               onPress={() =>this.props.navigation.navigate("MoreImagesAndRecord")}
               > 
               <Text style={styles.Button_text_styling}>

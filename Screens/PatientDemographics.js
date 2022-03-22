@@ -21,6 +21,7 @@ export default class PatientDemographics extends Component {
        <UnitClerkHeader/>
        <PatientHeader/>
 
+
                <TouchableOpacity style={styles.buttonGeneral}
               onPress={() =>this.props.navigation.navigate("SelectDoc")}
               > 
@@ -51,8 +52,8 @@ export default class PatientDemographics extends Component {
             </TouchableOpacity>
             
 
- 
-         </View>
+            </View>
+       
            
              </SafeAreaView>
              </ScrollView>

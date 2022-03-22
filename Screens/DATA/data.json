@@ -2,5 +2,9 @@
     "doctorName" : "Dr. Ahmed Khan",
     "specality" : "MBBS",
     "Location": "AKU",
-    "Date": "Tue, 07 Dec - 02:30"
+    "Date": "Tue, 07 Dec - 02:30",
+    "doctorEmail" : "abc@gmail.com",
+    "doctorPhone" : "+92314799743",
+    "Fees" : "500"
+ 
 } 

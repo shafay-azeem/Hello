@@ -22,30 +22,30 @@ export default class ImagesRecords extends Component {
        <PatientHeader/>
 
 
-        <View style={{flexDirection:'row',margin:50, alignSelf:'center'}}>
+        <View style={{flexDirection:'row',marginTop:30,marginRight:50,marginLeft:50, alignSelf:'center'}}>
             
-             <View style={{height:200,width:"25%",backgroundColor:'#FFFFFF', marginRight:30 ,borderRadius:10}}> 
-             <View style={{ width: 150 ,height:150,justifyContent:'center',alignItems:'center',alignSelf:'center'}}>
+             <View style={{height:200,width:"20%",backgroundColor:'#FFFFFF', marginRight:30 ,borderRadius:10}}> 
+             <View style={{ width: 100 ,height:100,marginTop:50,marginBottom:50,alignSelf:'center'}}>
                      <Image
-                    style={{   width: '100%',height: '100%', alignSelf:'center',marginTop:50}}
+                    style={{   width: '100%',height: '100%'}}
                     source={require('../images/heart.png')}
                     /> 
                   </View>
             </View>
             
-             <View style={{height:200,width:"25%",backgroundColor:'#FFFFFF' , marginRight:30 ,borderRadius:10 }}> 
+             <View style={{height:200,width:"20%",backgroundColor:'#FFFFFF' , marginRight:30 ,borderRadius:10 }}> 
              
-             <View style={{ width: 150 ,height:150,justifyContent:'center',alignItems:'center',alignSelf:'center'}}>
+             <View style={{ width: 100 ,height:100,marginTop:50,marginBottom:50,alignSelf:'center'}}>
                      <Image
-                    style={{   width: '100%',height: '100%', alignSelf:'center',marginTop:50}}
+                    style={{   width: '100%',height: '100%'}}
                     source={require('../images/medical-history.png')}
                     /> 
                   </View>
              </View>
-             <View style={{height:200,width:"25%",backgroundColor:'#FFFFFF',borderRadius:10}}> 
-             <View style={{ width: 150 ,height:150,justifyContent:'center',alignItems:'center',alignSelf:'center'}}>
+             <View style={{height:200,width:"20%",backgroundColor:'#FFFFFF',borderRadius:10}}> 
+             <View style={{ width: 100 ,height:100,marginTop:50,marginBottom:50,alignSelf:'center'}}>
                      <Image
-                    style={{   width: '100%',height: '100%', alignSelf:'center',marginTop:50}}
+                    style={{   width: '100%',height: '100%'}}
                     source={require('../images/medicine.png')}
                     /> 
                   </View></View>
@@ -53,32 +53,32 @@ export default class ImagesRecords extends Component {
 
 
          <View style={{flexDirection:'row',marginTop:30,marginRight:50,marginBottom:50,marginLeft:50, alignSelf:'center'}}>
-             <View style={{height:200,width:"25%",backgroundColor:'#FFFFFF', marginRight:30 ,borderRadius:10}}> 
-             <View style={{ width: 150 ,height:150,justifyContent:'center',alignItems:'center',alignSelf:'center'}}>
+             <View style={{height:200,width:"20%",backgroundColor:'#FFFFFF', marginRight:30 ,borderRadius:10}}> 
+             <View style={{ width: 100 ,height:100,marginTop:50,marginBottom:50,alignSelf:'center'}}>
                      <Image
-                    style={{   width: '100%',height: '100%', alignSelf:'center',marginTop:50}}
+                    style={{   width: '100%',height: '100%'}}
                     source={require('../images/x-ray.png')}
                     /> 
                   </View></View>
-             <View style={{height:200,width:"25%",backgroundColor:'#FFFFFF' , marginRight:30 ,borderRadius:10 }}> 
-             <View style={{ width: 150 ,height:150,justifyContent:'center',alignItems:'center',alignSelf:'center'}}>
+             <View style={{height:200,width:"20%",backgroundColor:'#FFFFFF' , marginRight:30 ,borderRadius:10 }}> 
+             <View style={{ width: 100 ,height:100,marginTop:50,marginBottom:50,alignSelf:'center'}}>
                      <Image
-                    style={{   width: '100%',height: '100%', alignSelf:'center',marginTop:50}}
+                    style={{   width: '100%',height: '100%'}}
                     source={require('../images/dialogue.png')}
                     /> 
                   </View>
              </View>
-             <View style={{height:200,width:"25%",backgroundColor:'#FFFFFF',borderRadius:10}}> 
-             <View style={{ width: 150 ,height:150,justifyContent:'center',alignItems:'center',alignSelf:'center'}}>
+             <View style={{height:200,width:"20%",backgroundColor:'#FFFFFF',borderRadius:10}}> 
+             <View style={{ width: 100 ,height:100,alignSelf:'center',marginTop:50,marginBottom:50}}>
                      <Image
-                    style={{   width: '100%',height: '100%', alignSelf:'center',marginTop:50}}
+                    style={{   width: '100%',height: '100%'}}
                     source={require('../images/volumetric-flask.png')}
                     /> 
                   </View>
            </View>
          </View>
 
-         <TouchableOpacity style={styles.buttonGeneral}
+         <TouchableOpacity style={[styles.buttonGeneralInForm,{marginBottom:10}]}
               onPress={() =>this.props.navigation.navigate("MoreImagesAndRecord")}
               > 
               <Text style={styles.Button_text_styling}>
