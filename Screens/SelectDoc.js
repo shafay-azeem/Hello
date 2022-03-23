@@ -10,6 +10,7 @@ import { useNavigation } from '@react-navigation/native';
 // import { COLORS } from '../styles/colors';
 import doctors from './DATA/selectdoc.json';
 import { ScrollView } from 'react-native-gesture-handler';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 
@@ -17,6 +18,7 @@ function Item({ item }) {
     const navigation = useNavigation();   
   
       return (
+        
 
         <TouchableOpacity style={styles.listItemBox}
         onPress={() => navigation.navigate('SelectSchedule')}
@@ -45,11 +47,11 @@ function Item({ item }) {
 
           </View>
 
-            <Text style={{ textAlign: 'left', fontSize: 25, color: '#575ce5', textAlign: 'center'}}>Dr. {item.name}</Text>
+            <Text numberOfLines={1} style={{ textAlign: 'left', fontSize: 25, color: '#575ce5', textAlign: 'center'}}>Dr. {item.name}</Text>
 
             
             <View style = {{padding: 5, width: '100%', height: '100%'}}>
-            <Text style={{ textAlign: 'center', fontSize: 17,  color: 'grey'}}>{item.profession}</Text>
+            <Text numberOfLines={1} style={{ textAlign: 'center', fontSize: 17,  color: 'grey'}}>{item.profession}</Text>
             
         
         <View style= {{flex: 1,justifyContent: 'flex-end', marginBottom: 80 }}> 
@@ -95,6 +97,7 @@ function Item({ item }) {
           
         </TouchableOpacity>
         </TouchableOpacity>
+       
             );
     }
 
@@ -102,37 +105,37 @@ function Item({ item }) {
 export default class SelectDoc extends Component {
    doctorName = "Dr Ahmed Khan";
    specality = "Medicine";
+   
    constructor(props){
    super(props);
    }
-   numColumns = 4
 
+   numColumns = 4
+   isScrollEnabled=true
   render(){
     
 
     
     const formatData = (data, numColumns) => {
-
-      
-      
-  
-      const numberOfFullRows = Math.floor(data.length / numColumns);
  
+      const numberOfFullRows = Math.floor(data.length / numColumns);
+      
     
       let numberOfElementsLastRow = data.length - (numberOfFullRows * numColumns);
       while (numberOfElementsLastRow !== numColumns && numberOfElementsLastRow !== 0) {
         data.push({ key: `blank-${numberOfElementsLastRow}`, empty: true });
         numberOfElementsLastRow++;
       }
-      // const [isScrollEnabled, setIsScrollEnabled] = useState(false);
+   
  return data;
     
     };
     doctorName = "Dr Ahmed Khan";
     specality = "Medicine";
-
+    
     
     return (
+      <ScrollView>
         <View style={[{backgroundColor:"#38AB94"}]}>
           <Header name="SELECT DOCTOR" class= ""/>
           
@@ -146,13 +149,14 @@ export default class SelectDoc extends Component {
           renderItem={({ item }) => <Item item={item}/>}
           keyExtractor={item => item.email}
           numColumns = {this.numColumns}
-          // scrollEnabled={isScrollEnabled}
+          scrollEnabled={true}
         />
 
 
         </View>
 
         </View>
+        </ScrollView>
     
     );
   }

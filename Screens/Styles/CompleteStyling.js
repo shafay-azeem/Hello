@@ -1,3 +1,7 @@
+
+
+
+
 import { StyleSheet } from 'react-native';
 import {INPUTVIEW} from '../inputView'
 export default StyleSheet.create({
@@ -229,7 +233,7 @@ Button_text_styling:{
 },
 
 InsideConatiner1:{
-  backgroundColor:'#8BB68B',
+  backgroundColor:'#30A28C',
   width:'40%',
   resizeMode: 'contain'
 },

@@ -4,13 +4,17 @@ import styles from './Styles/CompleteStyling';
 import UnitClerkHeader from './AllHeaders/UnitClerkHeader';
 import PatientHeader from './AllHeaders/PatientHeader';
 import Header from './Header';
-
+import { ScrollView } from 'react-native-gesture-handler';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import doctorApp from './DATA/doctorApp.json';
 
 
 function Item({ item }) {
     // const navigation = useNavigation();   
   
       return (
+        <ScrollView>
+          <SafeAreaView>
         <View style={styles.listItem}>
             <View style={{width: '100%', height: '100%'}}>
             <Text style={{fontWeight:"bold", textAlign: 'center'}}>{item.date}</Text>
@@ -20,6 +24,8 @@ function Item({ item }) {
             </View>  
         
         </View>
+        </SafeAreaView>
+        </ScrollView>
       );
     }
 
@@ -39,21 +45,10 @@ export default class AppointmentConfirmation extends Component {
     doctorName = "Dr Ahmed Khan";
     specality = "Medicine";
 
-    this.state = {
-        doctorAppointments:[
-            {
-                "key": "1",
-                "availableSlots":"15",
-                "date":"Mon, 06 Dec",
-                "time":" 3:20 - 2:20 pm"
-            },
-
-            
-        ],
-    }
     return (
         <View style={styles.container}>
         <Header name="APPOINTMENT CONFIRMATION"/>
+        <UnitClerkHeader/>
          <PatientHeader/>
          <View style = {styles.cardView90}>
            
@@ -76,32 +71,27 @@ export default class AppointmentConfirmation extends Component {
              </View>
             
              <View style = {styles.subCardView}>
-               <Text style = {styles.centeredText}>Date: {this.AppointmentDate}</Text>
-               <Text style = {styles.centeredText}>Time: {this.AppointmentTime}</Text>
+               <Text style = {styles.centeredText}>Date: {doctorApp[0].date}</Text>
+               <Text style = {styles.centeredText}>Time: {doctorApp[0].time}</Text>
              </View>
 
-             <Text style= {styles.centeredText}>I hearby confirm that I have read and understood everything return in the consent form</Text>
+             <Text style= {[styles.centeredText,{fontWeight:'bold'}]}>I hearby confirm that I have read and understood everything return in the consent form</Text>
 
-   
-                <TouchableOpacity
-                  onPress={() => this.props.navigation.navigate('Payment')}
-                  style={[styles.smallRoundedBlueRounded, {marginTop: 40},{widht: 40}]}
-                >
-                  <Text style={[styles.centeredText, {color: 'white'}]}>Confirm Appointment</Text>
-                </TouchableOpacity>
-
+             <TouchableOpacity style={styles.buttonGeneral}
+              onPress={() =>this.props.navigation.navigate("Payment")}
+              > 
+              <Text style={styles.Button_text_styling}>
+              BOOK APPOINTMENT </Text>
+            </TouchableOpacity>
                    
-                <TouchableOpacity
-                  onPress={() => this.props.navigation.navigate('Payment')}
-                  style={[styles.smallRoundedBlueRounded, {marginTop: 20},{widht: 40}]}
-                >
-                  <Text style={[styles.centeredText, {color: 'white'}]}>Cancel Appointment</Text>
-                </TouchableOpacity>
+     
+
+          
 
 
               </View>
         </View>
-
+  
         </View>
       
     );

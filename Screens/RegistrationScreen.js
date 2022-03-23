@@ -229,17 +229,22 @@ export default class RegistrationScreen extends Component {
 
 
                  <Text style={styles.EdittextHeading}>Types Of Visits</Text>
-                 <View style={{margin:20, marginTop:10}}>
-                 <RadioForm 
-                  buttonSize={20}
+                  <View style={{margin:20, marginTop:10}}>
+                 <RadioForm row
+                  buttonSize={10}
                   animation={true}
                    buttonColor={'black'}
                    radio_props={radio_props_sv}
                   initial={1}
                   onPress={(value) => {this.setState({value:value})}}  />
-                </View>
+                </View> 
+{/* <RadioGroup aria-label="anonymous" name="anonymous" value={false} row>
+  <FormControlLabel value="true" control={<Radio />} label="Yes" />
+  <FormControlLabel value="false" control={<Radio />} label="No" />
+</RadioGroup>  */}
 
-            </View>
+            </View> 
+            
 
       
 

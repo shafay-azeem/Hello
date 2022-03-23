@@ -67,7 +67,7 @@ function Item({ item }) {
     }
 
 
-export default class SelectDoc extends Component {
+export default class SelectSchedule extends Component {
    doctorName = "Dr Ahmed Khan";
    specality = "MBBS";
    constructor(props){
@@ -101,6 +101,7 @@ export default class SelectDoc extends Component {
 
     
     return (
+      <ScrollView>
         <View style={[{backgroundColor:"#38AB94"}]}>
           <Header name="SELECT SCHEDULE" class= ""/>
           
@@ -133,6 +134,7 @@ export default class SelectDoc extends Component {
         </View>
 
         </View>
+         </ScrollView>
     
     );
   }

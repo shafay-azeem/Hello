@@ -31,7 +31,7 @@ export default class SignInScreen extends Component {
            {/* <View  style={[styles.EMRheading]}  > */}
             <View >
                <Image style={styles.image}
-                source={require('../images/white-wings.png')}>
+                source={require('../images/logo.png')}>
                 </Image>
 
                 
@@ -83,9 +83,9 @@ export default class SignInScreen extends Component {
      
    
 />
-<Text style={{marginTop:10}}>Remember Me</Text>
-<TouchableOpacity style={{alignItems:'flex-end',width:'60%',marginTop:10}}>
-<Text>Forgot Password</Text>
+<Text style={{marginTop:10,fontSize:15}}>Remember Me</Text>
+<TouchableOpacity style={{alignItems:'flex-end',width:'70%',marginTop:10}}>
+<Text style={{color:"red",fontSize:15}}>Forgot Password</Text>
 </TouchableOpacity>
 </View>
 

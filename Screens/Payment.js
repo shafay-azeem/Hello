@@ -88,7 +88,7 @@ export default class Payment extends Component {
 
             <View style = {{flexDirection: 'column' ,alignItems: 'center',marginRight:10}}>
             <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline'}}>DrName </Text>
-            <Text style={{color: 'black', alignSelf: 'flex-start',fontWeight:'bold',fontSize:20,color:'#38AB94',marginRight:20}}>{drinfo.doctorName}</Text>
+            <Text numberOfLines={1} style={{color: 'black', alignSelf: 'flex-start',fontWeight:'bold',fontSize:20,color:'#38AB94',marginRight:20}}>{drinfo.doctorName}</Text>
        
             </View>
             <View style = {{flexDirection: 'column' ,alignItems: 'center',marginRight:10}}>

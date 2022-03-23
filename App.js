@@ -42,7 +42,7 @@ const App = () => {
 
   return(
     <NavigationContainer>
-    <Stack.Navigator initialRouteName="Payment"
+    <Stack.Navigator initialRouteName="SelectDoc"
       screenOptions={{headerShown:false}}>
 
 
