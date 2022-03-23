@@ -52,7 +52,7 @@ export default class MoreImagesAndRecord extends Component {
        
        
          <TouchableOpacity style={styles.buttonGeneralInForm}
-              onPress={() =>this.props.navigation.navigate("MoreImagesAndRecord")}
+              onPress={() =>this.props.navigation.navigate("PatientDemographics")}
               > 
               <Text style={styles.Button_text_styling}>
               NEXT </Text>

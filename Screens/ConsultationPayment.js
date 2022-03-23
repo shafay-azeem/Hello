@@ -146,6 +146,8 @@ export default class ConsultationPayment extends Component {
               <Text style={styles.Button_text_styling}>
               BOOK APPOINTMENT </Text>
             </TouchableOpacity>
+
+            
             </View>
    
 </View>

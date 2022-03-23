@@ -460,8 +460,7 @@ TextForInsideRowSidebySide:{
 
   cardView90:{
     width: "90%",
-    height: "60%",
- 
+height:"60%",
     backgroundColor: '#FFFFFF',
     alignSelf: "center",
     marginTop: 20,
@@ -535,13 +534,15 @@ TextForInsideRowSidebySide:{
   modalView: {
     margin: 20,
     backgroundColor: "white",
-    borderRadius: 20,
+    borderRadius: 10,
     padding: 35,
+    width:"30%",
     alignItems: "center",
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
       height: 2
+  
     },
     shadowOpacity: 0.25,
     shadowRadius: 4,

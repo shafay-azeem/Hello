@@ -14,15 +14,56 @@ export default class Payment extends Component {
 
    state={
     PickerSelectedVal : '',
-    isVisible: false, //state of modal default false  
+    modalVisible: false
    }
    
     
+  setModalVisible = (visible) => {
+    this.setState({ modalVisible: visible });
+  }
 
 
    render(){
+    const { modalVisible } = this.state;
     return (
       <View style={styles.container}>
+        <Modal  
+          animationType="slide"
+          transparent={true}
+          visible={modalVisible}
+          onRequestClose={() => {
+            Alert.alert("Modal has been closed.");
+            this.setModalVisible(!modalVisible);
+          }}
+        >
+          
+          <View style={styles.centeredView}>
+            <View style={styles.modalView}>
+            <Text style={{  fontWeight:'bold', marginTop:10}}>ENTER PROMOCODE</Text>
+            <TextInput  
+              style={styles.Edittext}
+              placeholder="ENTER PROMOCODE" 
+              onChangeText={text => this.setState({ENTER_PROMOCODE:text})}/>
+                <TouchableOpacity
+                style={[styles.smallRoundedBlueRounded,{width:'60%',marginTop:10}]}
+          
+                onPress={() => this.setModalVisible(!modalVisible)}
+              >
+               <Text style={styles.Button_text_styling}>DONE</Text>
+                </TouchableOpacity>
+              <TouchableOpacity
+                style={[styles.smallRoundedBlueRounded,{width:'60%',marginTop:10}]}
+          
+                onPress={() => this.setModalVisible(!modalVisible)}
+              >
+               <Text style={styles.Button_text_styling}>CANCEL</Text>
+                </TouchableOpacity>
+            </View>
+          </View>
+        </Modal>
+  
+
+
           <Header name="PAYMENT" class= ""/>
           <UnitClerkHeader/>
             <PatientHeader/>
@@ -127,39 +168,17 @@ export default class Payment extends Component {
 
               <View style = {{width: '50%' ,flex:1}}>
 
-        <Modal            
-          animationType = {"fade"}  
-          transparent = {false}  
-          visible = {this.state.isVisible}  
-          onRequestClose = {() =>{ console.log("Modal has been closed.") } }>  
-          {/*All views of Modal*/}  
-              <View style = {styles.modal}>  
-              <Text style={{  fontWeight:'bold',marginTop:10}}>APPLY VOUCHER</Text>
-            <TextInput  
-              style={styles.Edittext}
-              placeholder="Enter Voucher here" 
-              onChangeText={text => this.setState({APPLY_VOUCHER:text})}/>
-
-
-              
-              <TouchableOpacity
-                  onPress={() =>  {  
-                    this.setState({ isVisible:!this.state.isVisible})} }
-                  style={[styles.smallRoundedBlueRounded,{marginTop:10}]}
-                >
-                  <Text style={[styles.Button_text_styling]}>DONE</Text>
-                </TouchableOpacity>
-       
-          </View>  
-        </Modal>  
-
-        <TouchableOpacity
-                  onPress={() =>  {  
-                    this.setState({ isVisible: true})} }
+                
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('Payment')}
                   style={[styles.smallRoundedBlueRounded,{width:'60%',marginTop:10}]}
                 >
-                  <Text style={styles.Button_text_styling}>APPLY VOUCHER</Text>
+                   <Text style={styles.Button_text_styling}
+                    onPress={() => this.setModalVisible(true)}
+                            >APPLY VOUCHER</Text>
                 </TouchableOpacity>
+
+ 
 
 
                 <View style={{flexDirection:'row'}}> 
@@ -198,14 +217,6 @@ export default class Payment extends Component {
             
             </View>
 
-            <TouchableOpacity
-                  onPress={() => this.props.navigation.navigate('ConsultationPayment')}
-                  style={styles.smallRoundedBlueRounded}
-                >
-                  <Text style={styles.Button_text_styling}>PAY</Text>
-                </TouchableOpacity>
-
-
               </View>
       </View>
 
@@ -215,6 +226,13 @@ export default class Payment extends Component {
 
       
                 </View>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('ConsultationPayment')}
+                  style={styles.smallRoundedBlueRounded}
+                >
+                  <Text style={styles.Button_text_styling}>PAY</Text>
+                </TouchableOpacity>
+
                    </View>
 
     </View>

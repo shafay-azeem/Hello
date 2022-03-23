@@ -1,102 +1,113 @@
 import React, {Component, useState} from 'react';
-import { Text, View, TouchableOpacity,TextInput, FlatList,Image}  from 'react-native';
-import styles from './Styles/CompleteStyling';
+import { Text, View, TouchableOpacity,TextInput, FlatList, Image}  from 'react-native';
 import UnitClerkHeader from './AllHeaders/UnitClerkHeader';
 import PatientHeader from './AllHeaders/PatientHeader';
 import Header from './Header';
 
+import styles from './Styles/CompleteStyling';
+// import GradientButton from 'react-native-gradient-buttons';
 import { useNavigation } from '@react-navigation/native';
+// import { COLORS } from '../styles/colors';
+import doctorApp from './DATA/doctorApp.json';
+import { ScrollView } from 'react-native-gesture-handler';
 
 
 
 function Item({ item }) {
-  const navigation = useNavigation();   
+    const navigation = useNavigation();   
   
       return (
-        <TouchableOpacity style={styles.listItem}
-          onPress={() => navigation.navigate('SelectSlot')}
+
+        <TouchableOpacity style={styles.listItemBox}
+        onPress={() => navigation.navigate('SelectSlot')}
         >
-            <View style={{width: '50%', height: '100%', justifyContent: 'center'}}>
-            <Text >{item.date}</Text>
-            <Text style={{fontSize: 18}}>{item.time}</Text>
+          <View style={{flex:1}}>
+            
+     
+          <View style = {styles.roundIcon}>
+            <Image
+              style={styles.tinyLogo}
+              source={require('../images/slots.png')}
+            />
+
+         
+
+          </View>
+
+            <Text style={{ textAlign: 'left', fontSize: 25, color: '#575ce5', textAlign: 'center'}}>{item.date}</Text>
+
+            
+            <View style = {{padding: 5, width: '100%', height: '100%'}}>
+            <Text style={{ textAlign: 'center', fontSize: 17,  color: 'grey'}}>{item.time}</Text>
+            
+        
+        <View style= {{justifyContent: 'flex-end' }}> 
+        <View style= {{flexDirection: 'row', justifyContent:'center' }}>
+            
+ 
+                  <Text style={{ color: 'grey',marginTop:20,fontSize:15}}>Available Slots:</Text>
+                  <Text style={{ color: 'blue',marginTop:20,fontWeight:'bold',fontSize:15}}> {item.availableSlots}</Text>
+                  
+             
+           
 
 
-            </View>
+              </View>
+              </View>
 
-            <View style={{width: '50%', height: '100%', alignItems: 'flex-end', justifyContent: 'center'}}>
-            <Text style={{color: '#575ce5',}}>Available: {item.availableSlots}</Text>
-            {/* <Text style={{fontFamily: 'Rubik-Regular'}}>{item.availableSlots}</Text> */}
-            </View>
+
+              </View>
+          </View>
+          <TouchableOpacity style={{height:50,width:50, justifyContent:"center",alignItems:"center"}}
+        >
+          
         </TouchableOpacity>
-      );
+        </TouchableOpacity>
+            );
     }
 
 
-export default class SelectSchedule extends Component {
-   doctorName = "Dr. Ahmed Khan";
-   specality = "Medicine";
+export default class SelectDoc extends Component {
+   doctorName = "Dr Ahmed Khan";
+   specality = "MBBS";
    constructor(props){
    super(props);
    }
+   numColumns = 4
 
   render(){
+    
+
+    
+    const formatData = (data, numColumns) => {
+
+      
+      
+  
+      const numberOfFullRows = Math.floor(data.length / numColumns);
+ 
+    
+      let numberOfElementsLastRow = data.length - (numberOfFullRows * numColumns);
+      while (numberOfElementsLastRow !== numColumns && numberOfElementsLastRow !== 0) {
+        data.push({ key: `blank-${numberOfElementsLastRow}`, empty: true });
+        numberOfElementsLastRow++;
+      }
+      // const [isScrollEnabled, setIsScrollEnabled] = useState(false);
+ return data;
+    
+    };
     doctorName = "Dr Ahmed Khan";
     specality = "Medicine";
-    this.state = {
-        doctorAppointments:[
-            {
-                "key": "1",
-                "availableSlots":"15",
-                "date":"Mon, 06 Dec",
-                "time":" 3:20 - 2:20 pm"
-            },
-            {
-                "key": "2",
-                "availableSlots":"25",
-                "date":"Mon, 06 Dec",
-                "time":" 3:20 - 2:20 pm"
-            },
-            {
-              "key": "3",
-              "availableSlots":"25",
-              "date":"Mon, 06 Dec",
-              "time":" 3:20 - 2:20 pm"
-          },
-          {
-            "key": "4",
-            "availableSlots":"25",
-            "date":"Mon, 06 Dec",
-            "time":" 3:20 - 2:20 pm"
-        },
-        {
-          "key": "5",
-          "availableSlots":"25",
-          "date":"Mon, 06 Dec",
-          "time":" 3:20 - 2:20 pm"
-      },
-      {
-        "key": "6",
-        "availableSlots":"25",
-        "date":"Mon, 06 Dec",
-        "time":" 3:20 - 2:20 pm"
-    },
-    {
-      "key": "7",
-      "availableSlots":"25",
-      "date":"Mon, 06 Dec",
-      "time":" 3:20 - 2:20 pm"
-  },
 
-            
-        ],
-    }
+    
     return (
-        <View style={styles.container}>
-        <Header name="SELECT SCHEDULE"/>
-        <UnitClerkHeader/>
-         <PatientHeader/>
-         <View style= {{ height: 630, width: '70%', alignSelf: 'center',marginTop: 0,padding: 0, borderRadius: 30,}}>
-           <View style = {{flexDirection: 'row', alignItems:'center', justifyContent:'center' }}>
+        <View style={[{backgroundColor:"#38AB94"}]}>
+          <Header name="SELECT SCHEDULE" class= ""/>
+          
+            <PatientHeader/>
+            <UnitClerkHeader/>
+         <View style= {{ height: '100%', width: '100%', alignSelf: 'center'}}>
+         <View style = {{flexDirection: 'row', alignItems:'center', justifyContent:'center' }}>
              <View style={{alignSelf: 'center',height: 120, width: 150,borderRadius: 150/2,justifyContent: 'center', }}>
              <Image
               style={styles.bigLogo}
@@ -109,15 +120,20 @@ export default class SelectSchedule extends Component {
              </View>
              </View>
         <FlatList
-          style={{flex:1, marginTop: 0}}
-          data={this.state.doctorAppointments}
+  
+          style={{flex:1, marginTop: 30, margin: 40}}
+          data={ formatData(doctorApp, this.numColumns)}
           renderItem={({ item }) => <Item item={item}/>}
-          keyExtractor={item => item.key}
+          keyExtractor={item => item.email}
+          numColumns = {this.numColumns}
+          // scrollEnabled={isScrollEnabled}
         />
+
+
         </View>
 
         </View>
-      
+    
     );
   }
 }

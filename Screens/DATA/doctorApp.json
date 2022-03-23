@@ -1,0 +1,29 @@
+[
+    {
+        "key": "1",
+        "availableSlots":"15",
+        "date":"Mon, 06 Dec",
+        "time":" 3:20 - 2:20 pm"
+    },
+    {
+        "key": "2",
+        "availableSlots":"25",
+        "date":"Mon, 07 Dec",
+        "time":" 3:20 - 2:20 pm"
+    },
+    {
+      "key": "3",
+      "availableSlots":"25",
+      "date":"Mon, 06 Dec",
+      "time":" 3:20 - 2:20 pm"
+  },
+  {
+    "key": "4",
+    "availableSlots":"25",
+    "date":"Mon, 06 Dec",
+    "time":" 3:20 - 2:20 pm"
+  }
+
+    
+]
+

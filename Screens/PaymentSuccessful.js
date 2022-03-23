@@ -23,7 +23,7 @@ export default class PaymentSuccessfull extends Component {
    render(){
     return (
       <View style={styles.container}>
-          <Header name="PAYMENT" class= ""/>
+          <Header name="PAYMENT SUCCESSFULL" class= ""/>
           <UnitClerkHeader/>
             <PatientHeader/>
       <View style = {styles.cardView90}>
@@ -146,21 +146,15 @@ export default class PaymentSuccessfull extends Component {
       </View>
            
     
-      <TouchableOpacity
-                  onPress={() => this.props.navigation.navigate('ConsultationPayment')}
-                  style={styles.smallRoundedBlueRounded}
-                >
-                  <Text style={styles.Button_text_styling}>PAY</Text>
-                </TouchableOpacity>
 
-                <TouchableOpacity
-                  onPress={() => this.props.navigation.navigate('ConsultationPayment')}
-                  style={styles.smallRoundedBlueRounded}
-                >
-                  <Text style={styles.Button_text_styling}>PAY</Text>
-                </TouchableOpacity>
-      
                 </View>
+
+                <TouchableOpacity style={[styles.buttonGeneral,{marginTop:30}]}
+              onPress={() =>this.props.navigation.navigate("PatientDemographics")}
+              > 
+              <Text style={styles.Button_text_styling}>
+              PAYMENT INVOICE</Text>
+            </TouchableOpacity>
                    </View>
 
     </View>

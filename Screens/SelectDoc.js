@@ -8,6 +8,8 @@ import styles from './Styles/CompleteStyling';
 // import GradientButton from 'react-native-gradient-buttons';
 import { useNavigation } from '@react-navigation/native';
 // import { COLORS } from '../styles/colors';
+import doctors from './DATA/selectdoc.json';
+import { ScrollView } from 'react-native-gesture-handler';
 
 
 
@@ -15,6 +17,7 @@ function Item({ item }) {
     const navigation = useNavigation();   
   
       return (
+
         <TouchableOpacity style={styles.listItemBox}
         onPress={() => navigation.navigate('SelectSchedule')}
         >
@@ -48,18 +51,6 @@ function Item({ item }) {
             <View style = {{padding: 5, width: '100%', height: '100%'}}>
             <Text style={{ textAlign: 'center', fontSize: 17,  color: 'grey'}}>{item.profession}</Text>
             
-            {/* <View style = {{flexDirection: 'row', width: 70, height: 25,borderColor: 'orange' ,borderWidth:2, borderRadius: 25, alignSelf: 'center', alignItems: 'center'}}>
-            <View style = {styles.dollarIcon}>
-            <Image
-              style={styles.tinyLogo}
-              source={require('../images/dollar.png')}
-            />
-            </View>
-            <Text style= {{textAlign: 'right',color: 'black', fontFamily: 'Rubik-Regular'}}>1000</Text>
-            
-            
-            
-            </View> */}
         
         <View style= {{flex: 1,justifyContent: 'flex-end', marginBottom: 80 }}> 
         <View style= {{flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'center', }}>
@@ -104,7 +95,7 @@ function Item({ item }) {
           
         </TouchableOpacity>
         </TouchableOpacity>
-      );
+            );
     }
 
 
@@ -117,94 +108,30 @@ export default class SelectDoc extends Component {
    numColumns = 4
 
   render(){
+    
+
+    
     const formatData = (data, numColumns) => {
+
+      
+      
+  
       const numberOfFullRows = Math.floor(data.length / numColumns);
+ 
     
       let numberOfElementsLastRow = data.length - (numberOfFullRows * numColumns);
       while (numberOfElementsLastRow !== numColumns && numberOfElementsLastRow !== 0) {
         data.push({ key: `blank-${numberOfElementsLastRow}`, empty: true });
         numberOfElementsLastRow++;
       }
+      // const [isScrollEnabled, setIsScrollEnabled] = useState(false);
+ return data;
     
-      return data;
     };
     doctorName = "Dr Ahmed Khan";
     specality = "Medicine";
-    this.state = {
-        doctor:[
-            {
-                "name": "Hamza Ali K",
-                "email": "saad@gmail.com",
-                "age" : "34 Years",
-                "profession":"Orthopedics",
-                "location":"AKU",
-                "date":"Mon, 06 Dec - 2:20 pm"
-            },
-            {
-                "name": "Saad Ali",
-                "email": "saadd@gmail.com",
-                "age" : "34 Years",
-                "profession":"Orthopedics",
-                "location":"AKU",
-                "date":"Mon, 06 Dec - 2:20 pm"
 
-            },
-            {
-              "name": "Hamza Ali",
-              "email": "saadd@gmail.com",
-              "age" : "34 Years",
-              "profession":"Orthopedics",
-              "location":"AKU",
-              "date":"Mon, 06 Dec - 2:20 pm"
-
-          },
-          {
-            "name": "Laib Ali",
-            "email": "saadd@gmail.com",
-            "age" : "34 Years",
-            "profession":"Orthopedics",
-            "location":"AKU",
-            "date":"Mon, 06 Dec - 2:20 pm"
-
-        },
-        {
-          "name": "Khan Ali",
-          "email": "saadd@gmail.com",
-          "age" : "34 Years",
-          "profession":"Orthopedics",
-          "location":"AKU",
-          "date":"Mon, 06 Dec - 2:20 pm"
-
-      },            {
-        "name": "Usman Ali",
-        "email": "saadd@gmail.com",
-        "age" : "34 Years",
-        "profession":"Orthopedics",
-        "location":"AKU",
-        "date":"Mon, 06 Dec - 2:20 pm"
-
-    },
-    {
-      "name": "Fizan Ali",
-      "email": "saadd@gmail.com",
-      "age" : "34 Years",
-      "profession":"Orthopedics",
-      "location":"AKU",
-      "date":"Mon, 06 Dec - 2:20 pm"
-
-  },
-  {
-    "name": "Shafay Azeem",
-    "email": "saadd@gmail.com",
-    "age" : "34 Years",
-    "profession":"Orthopedics",
-    "location":"AKU",
-    "date":"Mon, 06 Dec - 2:20 pm"
-
-},
-            
-        ],
-    }
+    
     return (
         <View style={[{backgroundColor:"#38AB94"}]}>
           <Header name="SELECT DOCTOR" class= ""/>
@@ -213,18 +140,20 @@ export default class SelectDoc extends Component {
             <UnitClerkHeader/>
          <View style= {{ height: '100%', width: '100%', alignSelf: 'center'}}>
         <FlatList
+  
           style={{flex:1, marginTop: 30, margin: 40}}
-          data={ formatData(this.state.doctor, this.numColumns)}
+          data={ formatData(doctors, this.numColumns)}
           renderItem={({ item }) => <Item item={item}/>}
           keyExtractor={item => item.email}
           numColumns = {this.numColumns}
+          // scrollEnabled={isScrollEnabled}
         />
 
 
         </View>
 
         </View>
-      
+    
     );
   }
 }
