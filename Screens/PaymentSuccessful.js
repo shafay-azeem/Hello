@@ -35,7 +35,7 @@ export default class PaymentSuccessfull extends Component {
           
 
             <View style = {{flexDirection: 'column' ,alignItems: 'center',marginRight:10}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline'}}>Profile Image </Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>Profile Image </Text>
  
             <View style={{ width: 40 ,height: 40}}>
                     { <Image
@@ -46,29 +46,29 @@ export default class PaymentSuccessfull extends Component {
             </View>
 
             <View style = {{flexDirection: 'column' ,alignItems: 'center',marginRight:10}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline'}}>DrName </Text>
-            <Text style={{color: 'black', alignSelf: 'flex-start',fontSize:20,color:'#38AB94',marginRight:20}}>{drinfo.doctorName}</Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>DrName </Text>
+            <Text style={{color: 'black', alignSelf: 'flex-start',fontSize:20,color:'#38AB94',marginRight:20,fontFamily:"Montserrat-SemiBold"}}>{drinfo.doctorName}</Text>
        
             </View>
             <View style = {{flexDirection: 'column' ,alignItems: 'center',marginRight:10}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline'}}>Speciality </Text>
-            <Text style={{color: 'black', alignSelf: 'flex-start',fontSize:20,color:'#38AB94',marginRight:20}}>{drinfo.specality}</Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>Speciality </Text>
+            <Text style={{color: 'black', alignSelf: 'flex-start',fontSize:20,color:'#38AB94',marginRight:20,fontFamily:"Montserrat-SemiBold"}}>{drinfo.specality}</Text>
        
             </View>
           
             <View style = {{flexDirection: 'column',alignItems: 'center',marginRight:10}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline'}}>Email</Text>
-            <Text style={{color: 'black', alignSelf: 'flex-start',fontSize:20,color:'#38AB94',marginRight:20}}>{drinfo.doctorEmail}</Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>Email</Text>
+            <Text style={{color: 'black', alignSelf: 'flex-start',fontSize:20,color:'#38AB94',marginRight:20,fontFamily:"Montserrat-SemiBold"}}>{drinfo.doctorEmail}</Text>
        
             </View>
             <View style = {{flexDirection: 'column',alignItems: 'center',marginRight:10}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline'}}>PhoneNo</Text>
-            <Text style={{color: 'black', alignSelf: 'flex-start',fontSize:20,color:'#38AB94',marginRight:20}}>{drinfo.doctorPhone}</Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>PhoneNo</Text>
+            <Text style={{color: 'black', alignSelf: 'flex-start',fontSize:20,color:'#38AB94',marginRight:20,fontFamily:"Montserrat-SemiBold"}}>{drinfo.doctorPhone}</Text>
        
             </View>
             <View style = {{flexDirection: 'column',alignItems: 'center',marginRight:10}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20 , textDecorationLine: 'underline'}}>Fees</Text>
-            <Text style={{color: 'black', alignSelf: 'flex-start',fontSize:20,color:'#38AB94',marginRight:20}}>{drinfo.Fees}</Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20 , textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>Fees</Text>
+            <Text style={{color: 'black', alignSelf: 'flex-start',fontSize:20,color:'#38AB94',marginRight:20,fontFamily:"Montserrat-SemiBold"}}>{drinfo.Fees}</Text>
        
             </View>
         

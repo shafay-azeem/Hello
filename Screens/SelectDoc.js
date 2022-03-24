@@ -156,7 +156,7 @@ export default class SelectDoc extends Component {
         </View>
 
         </View>
-        </ScrollView>
+         </ScrollView> 
     
     );
   }

@@ -40,7 +40,7 @@ export default class ConsultationPayment extends Component {
             <View style = {{flexDirection: 'column' ,alignItems: 'center',marginRight:10}}>
 
 
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline'}}>Profile Image </Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>Profile Image </Text>
  
             <View style={{ width: 40 ,height: 40}}>
                     { <Image
@@ -71,7 +71,7 @@ export default class ConsultationPayment extends Component {
        
             </View>
             <View style = {{flexDirection: 'column',alignItems: 'center',marginRight:10}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline'}}>PhoneNo</Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>PhoneNo</Text>
             <Text style={{color: 'black', alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold",fontSize:20,color:'#38AB94',marginRight:20}}>{drinfo.doctorPhone}</Text>
        
             </View>

@@ -135,7 +135,7 @@ export default class SelectSlot extends Component {
         </View>
 
         </View>
-     </ScrollView>
+      </ScrollView> 
     );
   }
 }
