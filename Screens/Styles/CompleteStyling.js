@@ -513,7 +513,7 @@ height:"60%",
     textAlign: 'center',
     fontSize: 20,
     justifyContent: 'center'  ,
-    fontFamily: "bold"
+    fontFamily:"Montserrat-SemiBold"
 
   },
 

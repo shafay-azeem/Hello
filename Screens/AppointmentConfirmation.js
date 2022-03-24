@@ -17,8 +17,8 @@ function Item({ item }) {
           <SafeAreaView>
         <View style={styles.listItem}>
             <View style={{width: '100%', height: '100%'}}>
-            <Text style={{fontWeight:"bold", textAlign: 'center'}}>{item.date}</Text>
-            <Text style={{fontWeight:"bold", textAlign: 'center'}}>{item.time}</Text>
+            <Text style={{ textAlign: 'center',fontFamily:"Montserrat-Regular"}}>{item.date}</Text>
+            <Text style={{ textAlign: 'center',fontFamily:"Montserrat-Regular"}}>{item.time}</Text>
 
 
             </View>  
@@ -75,13 +75,13 @@ export default class AppointmentConfirmation extends Component {
                <Text style = {styles.centeredText}>Time: {doctorApp[0].time}</Text>
              </View>
 
-             <Text style= {[styles.centeredText,{fontWeight:'bold'}]}>I hearby confirm that I have read and understood everything return in the consent form</Text>
+             <Text style= {[styles.centeredText,{fontFamily:"Montserrat-Bold"}]}>I hearby confirm that I have read and understood everything return in the consent form</Text>
 
              <TouchableOpacity style={styles.buttonGeneral}
               onPress={() =>this.props.navigation.navigate("Payment")}
               > 
               <Text style={styles.Button_text_styling}>
-              BOOK APPOINTMENT </Text>
+              CONFIRM APPOINTMENT </Text>
             </TouchableOpacity>
                    
      
