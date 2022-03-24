@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     },
     headerText: {
         fontSize: 20,
-        fontWeight:'bold',
+        fontFamily:"Montserrat-Bold",
        color:'#FFFFFF',
     }
 })

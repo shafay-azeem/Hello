@@ -34,11 +34,11 @@ function Item({ item }) {
 
           </View>
 
-            <Text style={{ textAlign: 'left', fontSize: 25, color: '#575ce5', textAlign: 'center'}}>{item.date}</Text>
+            <Text style={{ textAlign: 'left', fontSize: 25, color: '#575ce5', textAlign: 'center',     fontFamily:"Montserrat-Regular",}}>{item.date}</Text>
 
             
             <View style = {{padding: 5, width: '100%', height: '100%'}}>
-            <Text style={{ textAlign: 'center', fontSize: 17,  color: 'grey'}}>{item.time}</Text>
+            <Text style={{ textAlign: 'center', fontSize: 17,  color: 'grey'   ,  fontFamily:"Montserrat-Regular",}}>{item.time}</Text>
             
         
         <View style= {{justifyContent: 'flex-end' }}> 
@@ -102,8 +102,8 @@ export default class SelectSlot extends Component {
 
     
     return (
-      <ScrollView>
-        <View style={[{backgroundColor:"#38AB94"}]}>
+      <ScrollView style={[{backgroundColor:"#38AB94"}]}>
+        <View >
           <Header name="SELECT SLOT" class= ""/>
           
             <PatientHeader/>

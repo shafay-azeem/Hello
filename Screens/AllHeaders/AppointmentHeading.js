@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     },
     headerText: {
         fontSize: 20,
-        fontWeight:'bold',
+        fontFamily:"Montserrat-SemiBold",
        color:'#FFFFFF',
        justifyContent: 'center',
        alignSelf:'center'

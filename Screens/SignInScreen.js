@@ -39,7 +39,7 @@ export default class SignInScreen extends Component {
                 {/* </View> */}
 
                 <View  >
-                <Text style={styles.TextHeading}>
+                <Text style={[styles.TextHeading,styles.MontserratBold]}>
                  ELECTRONIC MEDICAL RECORD
                 </Text>
                 
@@ -50,18 +50,18 @@ export default class SignInScreen extends Component {
           <View style={styles.InsideConatiner2}>
             <View style={{marginTop:150, margin:90}}>
               <View>
-          <Text style={styles.EdittextHeading}>USERNAME </Text>
+          <Text style={[styles.EdittextHeading,styles.MontserratBold]}>USERNAME </Text>
             <TextInput 
-            style={styles.Edittext}
+            style={[styles.Edittext,styles.MontserratSemiBold]}
               placeholder="Enter your username" 
               onChangeText={(text) => this.setState({Username:text})}/>
           </View>
 
 
           <View >
-           <Text style={styles.EdittextHeading}>PASSWORD </Text>
+           <Text style={[styles.EdittextHeading,styles.MontserratBold]}>PASSWORD </Text>
             <TextInput  
-              style={styles.Edittext}
+              style={[styles.Edittext,styles.MontserratSemiBold]}
               placeholder="Enter your password" 
               onChangeText={text => this.setState({password:text})}/>
           </View>
@@ -83,9 +83,9 @@ export default class SignInScreen extends Component {
      
    
 />
-<Text style={{marginTop:10,fontSize:15}}>Remember Me</Text>
-<TouchableOpacity style={{alignItems:'flex-end',width:'70%',marginTop:10}}>
-<Text style={{color:"red",fontSize:15}}>Forgot Password</Text>
+<Text style={ [styles.MontserratRegular,{marginTop:10,fontSize:15}]}>Remember Me</Text>
+<TouchableOpacity style={[styles.forgotPassword,]}>
+<Text style={[styles.MontserratRegular,{color:"red",fontSize:15}]}>Forgot Password</Text>
 </TouchableOpacity>
 </View>
 

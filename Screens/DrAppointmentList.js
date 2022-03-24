@@ -41,15 +41,15 @@ export default class DrAppointmentList extends Component {
 
                     
                     <View style = {{flexDirection: 'row', width: '42%' , alignItems: 'center',justifyContent: 'flex-start'}}>
-                    <Text style={{marginTop:10, lineHeight: 20,color: 'black',alignSelf: 'flex-start'}}>Dr.Name:{'\n'}Specality:</Text>
-                    <Text style={{marginTop:11,color: 'black',lineHeight: 20, alignSelf: 'flex-start',fontWeight:'bold'}}>{drinfo.doctorName}{'\n'}{drinfo.specality}</Text>
+                    <Text style={{marginTop:10, lineHeight: 20,color: 'black',alignSelf: 'flex-start',    fontFamily:"Montserrat-Regular",}}>Dr.Name:{'\n'}Specality:</Text>
+                    <Text style={{marginTop:11,color: 'black',lineHeight: 20, alignSelf: 'flex-start'    ,fontFamily:"Montserrat-Bold",}}>{drinfo.doctorName}{'\n'}{drinfo.specality}</Text>
         
                     </View>
                  
 
 <View style = {{flexDirection: 'row', width: '50%', alignItems: 'center',justifyContent: 'flex-end'}}>
-                    <Text style={{marginTop:10 ,lineHeight: 20, color: 'black',alignSelf:'flex-end'}}>Location: {"\n"}Date: </Text>
-                      <Text style={{marginTop:11,color: 'black',lineHeight: 20, alignSelf: 'flex-start',fontWeight:'bold'}}>{drinfo.Location}{'\n'}{drinfo.Date}</Text>
+                    <Text style={{marginTop:10 ,lineHeight: 20, color: 'black',alignSelf:'flex-end',    fontFamily:"Montserrat-Regular"}}>Location: {"\n"}Date: </Text>
+                      <Text style={{marginTop:11,color: 'black',lineHeight: 20, alignSelf: 'flex-start',    fontFamily:"Montserrat-Bold"}}>{drinfo.Location}{'\n'}{drinfo.Date}</Text>
                     </View>
                   </View>
 
@@ -62,14 +62,14 @@ export default class DrAppointmentList extends Component {
                 //   onPress={() => this.props.navigation.navigate('Payment')}
                   
                 >
-                  <Text style={{ color: 'black',marginTop:20,fontWeight:'bold'}}>CONFIRMED</Text>
+                  <Text style={{ color: 'black',marginTop:20,fontFamily:"Montserrat-Bold"}}>CONFIRMED</Text>
                 </TouchableOpacity>
                 </View>
                 <View style= {{flexDirection: "row",width:'50%'}}>
                 <TouchableOpacity
                 //   onPress={() => this.props.navigation.navigate('Payment')}
                 >
-                  <Text style={{marginLeft:250,alignSelf:'flex-end',flex :1 ,alignItems:'flex-end', textAlign:'right',justifyContent:'flex-end', color: 'black',marginTop:20,fontWeight:'bold'}}>VIEW DETAILS</Text>
+                  <Text style={{marginLeft:230,alignSelf:'flex-end',flex :1 ,alignItems:'flex-end', textAlign:'right',justifyContent:'flex-end', color: 'black',marginTop:20,fontFamily:"Montserrat-Bold"}}>VIEW DETAILS</Text>
                 </TouchableOpacity>
                   </View>
 

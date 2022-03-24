@@ -42,7 +42,7 @@ const App = () => {
 
   return(
     <NavigationContainer>
-    <Stack.Navigator initialRouteName="SelectDoc"
+    <Stack.Navigator initialRouteName="SignInScreen"
       screenOptions={{headerShown:false}}>
 
 

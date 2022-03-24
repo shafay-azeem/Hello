@@ -34,19 +34,19 @@ function Item({ item }) {
 
           </View>
 
-            <Text style={{ textAlign: 'left', fontSize: 25, color: '#575ce5', textAlign: 'center'}}>{item.date}</Text>
+            <Text style={{ textAlign: 'left', fontSize: 25, color: '#575ce5', textAlign: 'center'   , fontFamily:"Montserrat-Regular"}}>{item.date}</Text>
 
             
             <View style = {{padding: 5, width: '100%', height: '100%'}}>
-            <Text style={{ textAlign: 'center', fontSize: 17,  color: 'grey'}}>{item.time}</Text>
+            <Text style={{ textAlign: 'center', fontSize: 17,  color: 'grey',  fontFamily:"Montserrat-Regular"}}>{item.time}</Text>
             
         
         <View style= {{justifyContent: 'flex-end' }}> 
         <View style= {{flexDirection: 'row', justifyContent:'center' }}>
             
  
-                  <Text style={{ color: 'grey',marginTop:20,fontSize:15}}>Available Slots:</Text>
-                  <Text style={{ color: 'blue',marginTop:20,fontWeight:'bold',fontSize:15}}> {item.availableSlots}</Text>
+                  <Text style={{ color: 'grey',marginTop:20,fontSize:15,  fontFamily:"Montserrat-Regular"}}>Available Slots:</Text>
+                  <Text style={{ color: 'blue',marginTop:20,fontWeight:'bold',fontSize:15 , fontFamily:"Montserrat-Regular"}}> {item.availableSlots}</Text>
                   
              
            
@@ -101,8 +101,8 @@ export default class SelectSchedule extends Component {
 
     
     return (
-      <ScrollView>
-        <View style={[{backgroundColor:"#38AB94"}]}>
+      <ScrollView style={[{backgroundColor:"#38AB94"}]}>
+        <View >
           <Header name="SELECT SCHEDULE" class= ""/>
           
             <PatientHeader/>

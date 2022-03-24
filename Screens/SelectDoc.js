@@ -47,11 +47,11 @@ function Item({ item }) {
 
           </View>
 
-            <Text numberOfLines={1} style={{ textAlign: 'left', fontSize: 25, color: '#575ce5', textAlign: 'center'}}>Dr. {item.name}</Text>
+            <Text numberOfLines={1} style={{ textAlign: 'left', fontSize: 25, color: '#575ce5', textAlign: 'center',fontFamily:"Montserrat-Regular"}}>Dr. {item.name}</Text>
 
             
             <View style = {{padding: 5, width: '100%', height: '100%'}}>
-            <Text numberOfLines={1} style={{ textAlign: 'center', fontSize: 17,  color: 'grey'}}>{item.profession}</Text>
+            <Text numberOfLines={1} style={{ textAlign: 'center', fontSize: 17,  color: 'grey',fontFamily:"Montserrat-Regular"}}>{item.profession}</Text>
             
         
         <View style= {{flex: 1,justifyContent: 'flex-end', marginBottom: 80 }}> 

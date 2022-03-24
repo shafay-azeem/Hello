@@ -1,10 +1,28 @@
-
-
-
-
 import { StyleSheet } from 'react-native';
 import {INPUTVIEW} from '../inputView'
 export default StyleSheet.create({
+
+  MontserratLight:{
+    fontFamily:"Montserrat-Light"
+  },
+
+  MontserratBold:{
+    fontFamily:"Montserrat-Bold"
+  },
+
+  MMontserratExtraLight:{
+    fontFamily:"Montserrat-ExtraLight"
+  },
+
+  MontserratRegular:{
+    fontFamily:"Montserrat-Regular"
+  },
+
+  MontserratSemiBold:{
+    fontFamily:"Montserrat-SemiBold"
+  },
+
+  forgotPassword:{alignItems:'flex-end',width:'65%',marginTop:10},
 
   ContainerWhole:{
     width:'100%',
@@ -115,6 +133,7 @@ export default StyleSheet.create({
 
        },
        Edittext: {
+         fontFamily:"Montserrat-SemiBold",
         borderColor: "#B8B8B8",
         backgroundColor:'#F7F7F7',     
            // borderWidth: 2,
@@ -126,7 +145,7 @@ export default StyleSheet.create({
       },
       EdittextHeading: {
         marginLeft:27,
-        fontWeight:'bold',
+        fontFamily:"Montserrat-Bold",
         marginTop:10
     
       },
@@ -140,7 +159,7 @@ export default StyleSheet.create({
       },
       TextHeading:{
         fontSize:40,
-        fontWeight: 'bold',
+   
         textAlign:'center',
         justifyContent:'center',
         alignSelf:'center',
@@ -227,8 +246,8 @@ inputWrap: {
 Button_text_styling:{
   fontSize:15,
    color:'#FFFFFF',
-   fontWeight:'normal',
-  //  fontFamily:"Montserrat-Bold"
+  //  fontWeight:'normal',
+   fontFamily:"Montserrat-Regular"
 
 },
 
@@ -369,7 +388,7 @@ TextForInsideRowSidebySide:{
       // fontFamily: 'Rubik-SemiBold',
       // color: COLORS.white,
     color:'white',
-    fontFamily:'bold',
+    fontFamily:"Montserrat-Bold"
   
     },
 
@@ -391,7 +410,7 @@ TextForInsideRowSidebySide:{
     // color: COLORS.color_grey_100
     color:'grey',
     // backgroundColor:'grey',
-    fontFamily:'bold'
+    fontFamily:"Montserrat-Bold"
 
   },
 
@@ -419,8 +438,8 @@ TextForInsideRowSidebySide:{
   },
 
   cardText: {
-    color: 'black',
-    // fontFamily: 'Rubik-Medium',
+    color: '#FFFFFF',
+     fontFamily:"Montserrat-Regular",
     fontSize: 25,
     alignSelf: 'center',
 
@@ -459,7 +478,7 @@ TextForInsideRowSidebySide:{
     fontSize: 30,
     alignSelf: 'center',
     // textDecorationLine: 'underline'
-    fontFamily: 'Rubik-Medium'
+     fontFamily:"Montserrat-Regular"
   },
 
   cardView90:{
