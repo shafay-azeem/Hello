@@ -134,19 +134,22 @@ export default StyleSheet.create({
        },
        Edittext: {
          fontFamily:"Montserrat-SemiBold",
-        borderColor: "#B8B8B8",
+        borderColor: "#30A28C",
         backgroundColor:'#F7F7F7',     
-           // borderWidth: 2,
+           borderWidth: 1,
         borderRadius: 15,
         padding: 10,
         marginTop:2,
         marginHorizontal:20,
+        
+
     
       },
       EdittextHeading: {
         marginLeft:27,
         fontFamily:"Montserrat-Bold",
-        marginTop:10
+        marginTop:10,
+        color:"#30A28C"
     
       },
 
@@ -513,8 +516,8 @@ height:"60%",
     textAlign: 'center',
     fontSize: 20,
     justifyContent: 'center'  ,
-    fontFamily:"Montserrat-Regular"
-
+    fontFamily:"Montserrat-Regular",
+ 
   },
 
   headingText:{

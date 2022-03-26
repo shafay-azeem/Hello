@@ -33,12 +33,14 @@ export default class SearchDoctor extends Component {
             <TextInput  
               style={styles.Edittext}
               placeholder="Enter your Location " 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({Location:text})}/>
          
            <Text style={styles.EdittextHeading}>Speciality</Text>
             <TextInput  
               style={styles.Edittext}
               placeholder="Enter your Speciality" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({Speciality:text})}/>
           
            
@@ -46,6 +48,7 @@ export default class SearchDoctor extends Component {
             <TextInput  
               style={styles.Edittext}
               placeholder="Specify Doctor" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({Specify_Doctor:text})}/>
          
              <TouchableOpacity style={styles.buttonForSearchPatient}

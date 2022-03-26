@@ -7,7 +7,8 @@ import Header from './Header';
 import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import doctorApp from './DATA/doctorApp.json';
-import CheckBox from 'react-native-check-box';
+import paymentStatus from './DATA/paymentStatus.json';
+
 
 
 function Item({ item }) {
@@ -31,7 +32,7 @@ function Item({ item }) {
     }
 
 
-export default class AppointmentConfirmation extends Component {
+export default class AppointmentDetails extends Component {
    doctorName = "Dr Ahmed Khan";
    specality = "Medicine";    
    AppointmentDate = 'Tuesday, 07 September 2021';
@@ -52,7 +53,7 @@ export default class AppointmentConfirmation extends Component {
 
     return (
         <View style={styles.container}>
-        <Header name="APPOINTMENT CONFIRMATION"/>
+        <Header name="APPOINTMENT DETAILS"/>
         <UnitClerkHeader/>
          <PatientHeader/>
          <View style = {styles.cardView90}>
@@ -80,30 +81,15 @@ export default class AppointmentConfirmation extends Component {
                <Text style = {styles.centeredText}>Time: {doctorApp[0].time}</Text>
              </View>
 
+             
 
-             <View style={{flexDirection:'row'}}>
-             <CheckBox
-
-      
-         
-style={{marginTop:3}}
-onClick={()=>{
- this.setState({
-  isChecked:!this.state.isChecked
-})
-}}
-isChecked={this.state.isChecked}
-RightText={"Remember Me"}
-
-/>
-
-             <Text style= {[styles.centeredText,{fontFamily:"Montserrat-Bold"}]}>I hearby confirm that, I have read and understood everything written in the consent form</Text>
-             </View>
+    
+    
              <TouchableOpacity style={styles.buttonGeneral}
-              onPress={() =>this.props.navigation.navigate("AppointmentDetails")}
+              onPress={() =>this.props.navigation.navigate("Payment")}
               > 
               <Text style={styles.Button_text_styling}>
-              CONFIRM APPOINTMENT </Text>
+              PAY NOW</Text>
             </TouchableOpacity>
                    
      

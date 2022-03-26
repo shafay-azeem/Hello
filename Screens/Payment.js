@@ -43,6 +43,7 @@ export default class Payment extends Component {
             <TextInput  
               style={styles.Edittext}
               placeholder="ENTER PROMOCODE" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({ENTER_PROMOCODE:text})}/>
                 <TouchableOpacity
                 style={[styles.smallRoundedBlueRounded,{width:'60%',marginTop:10}]}

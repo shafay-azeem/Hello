@@ -31,12 +31,14 @@ export default class SearchPatient extends Component {
             <TextInput  
               style={styles.Edittext}
               placeholder="Enter your Mr Number" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({Mr_Number:text})}/>
          
            <Text style={styles.EdittextHeading}>CNIC</Text>
             <TextInput  
               style={styles.Edittext}
               placeholder="Enter your CNIC" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({CNIC:text})}/>
           
            
@@ -44,6 +46,7 @@ export default class SearchPatient extends Component {
             <TextInput  
               style={styles.Edittext}
               placeholder="Enter Patient 16 digit QR code" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({QR_code:text})}/>
          
              <TouchableOpacity style={styles.buttonForSearchPatient}

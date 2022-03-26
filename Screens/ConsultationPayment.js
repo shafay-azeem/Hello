@@ -100,6 +100,7 @@ export default class ConsultationPayment extends Component {
             <TextInput  
               style={styles.Edittext}
               placeholder="Transaction ID" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({Transaction_ID:text})}/>
                 </View>
                 <View style = {{marginLeft: 80}}>
@@ -107,6 +108,7 @@ export default class ConsultationPayment extends Component {
             <TextInput  
               style={styles.Edittext}
               placeholder="Amount" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({Amount:text})}/>
 
                 </View>
@@ -115,6 +117,7 @@ export default class ConsultationPayment extends Component {
             <TextInput  
               style={styles.Edittext}
               placeholder="Payee's Name" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({Payees_Name:text})}/>
 
                 </View>
@@ -123,6 +126,7 @@ export default class ConsultationPayment extends Component {
             <TextInput  
               style={styles.Edittext}
               placeholder="Bank's Name" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({Bank_Name:text})}/>
                      
 
@@ -132,6 +136,7 @@ export default class ConsultationPayment extends Component {
             <TextInput  
               style={styles.Edittext}
               placeholder="Card's Name" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({Card_Name:text})}/>
                      
 

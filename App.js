@@ -32,7 +32,7 @@ import modal from "./Screens/modal";
 import ConsultationPayment from "./Screens/ConsultationPayment";
 
 import PaymentSuccessfull from "./Screens/PaymentSuccessful";
-
+import AppointmentDetails from "./Screens/AppointmentDetails";
 // import ExampleTwo from "./Screens/CreateSlots";
 
 const Stack = createStackNavigator();
@@ -50,6 +50,11 @@ const App = () => {
         name="ConsultationPayment"
         component={ConsultationPayment}
       />
+            <Stack.Screen
+        name="AppointmentDetails"
+        component={AppointmentDetails}
+      />
+
 
       
 {/* <Stack.Screen

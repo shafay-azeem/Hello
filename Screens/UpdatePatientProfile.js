@@ -75,6 +75,7 @@ export default class UpdatePatientProfile extends Component {
           <Text style={styles.EdittextHeading}>MR Number</Text>
           <TextInput style={styles.Edittext}
           placeholder="Enter" 
+          placeholderTextColor="#30A28C"
            onChangeText={text => this.setState({MRNumber:text})}/>
         </View>
 
@@ -82,6 +83,7 @@ export default class UpdatePatientProfile extends Component {
           <Text style={styles.EdittextHeading}>Family Number</Text>
           <TextInput style={styles.Edittext}
            placeholder="Enter" 
+           placeholderTextColor="#30A28C"
             onChangeText={text => this.setState({FamilyNumber:text})} />
         </View>
       </View>
@@ -94,18 +96,21 @@ export default class UpdatePatientProfile extends Component {
           <TextInput  
               style={styles.Edittext}
               placeholder="Enter your SehatSafarNumber" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({SehatSafarNumber:text})}/>
          
            <Text style={styles.EdittextHeading}>CNIC Number </Text>
             <TextInput  
               style={styles.Edittext}
               placeholder="CNICNumber" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({CNICNumber:text})}/>
 
              <Text style={styles.EdittextHeading}>First Name</Text>
             <TextInput  
               style={styles.Edittext}
               placeholder=" FirstName" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({FirstName:text})}/>
 
 
@@ -113,6 +118,7 @@ export default class UpdatePatientProfile extends Component {
             <TextInput  
               style={styles.Edittext}
               placeholder="MiddleName" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({MiddleName:text})}/>
 
 
@@ -120,12 +126,14 @@ export default class UpdatePatientProfile extends Component {
             <TextInput  
               style={styles.Edittext}
               placeholder="Enter your Last Name" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({LastName:text})}/>
 
              <Text style={styles.EdittextHeading}>DOB</Text>
             <TextInput  
               style={styles.Edittext}
               placeholder="Enter your DOB" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({DOB:text})}/>
 
                     {/* <Text style={styles.EdittextHeading}>Phone Number</Text>
