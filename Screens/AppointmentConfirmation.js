@@ -76,8 +76,8 @@ export default class AppointmentConfirmation extends Component {
              </View>
             
              <View style = {styles.subCardView}>
-               <Text style = {styles.centeredText}>Date: {doctorApp[0].date}</Text>
-               <Text style = {styles.centeredText}>Time: {doctorApp[0].time}</Text>
+               <Text style = {[styles.centeredText,{color:"#30A28C"}]}>Date: {doctorApp[0].date}</Text>
+               <Text style = {[styles.centeredText,{color:"#30A28C"}]}>Time: {doctorApp[0].time}</Text>
              </View>
 
 
@@ -97,7 +97,7 @@ RightText={"Remember Me"}
 
 />
 
-             <Text style= {[styles.centeredText,{fontFamily:"Montserrat-Bold"}]}>I hearby confirm that, I have read and understood everything written in the consent form</Text>
+             <Text style= {[styles.centeredText,{fontFamily:"Montserrat-Bold",color:"#30A28C"}]}>I hearby confirm that, I have read and understood everything written in the consent form</Text>
              </View>
              <TouchableOpacity style={styles.buttonGeneral}
               onPress={() =>this.props.navigation.navigate("AppointmentDetails")}

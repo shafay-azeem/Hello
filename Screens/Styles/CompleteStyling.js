@@ -521,7 +521,7 @@ height:"60%",
     // borderRadius: 10,
     // borderWidth: 2,
     borderColor: "white",
-    alignItems: 'center',
+    // alignItems: 'center',
     // justifyContent:'center'
   },
 

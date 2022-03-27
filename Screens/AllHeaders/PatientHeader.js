@@ -26,14 +26,14 @@ export default class PatientHeader extends Component {
 
             <View style = {{flexDirection: 'row',width: '45%' , alignItems: 'center',justifyContent: 'flex-start'}}>
             <Text style={{ lineHeight: 20,color: 'black',alignSelf: 'flex-start',fontFamily:"Montserrat-Regular"}}>PatientName:{'\n'}Age:</Text>
-            <Text style={{color: 'black',lineHeight: 20, alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold"}}>{Patientinfo.patientName}{'\n'}{Patientinfo.Age}</Text>
+            <Text style={{color:"#30A28C",lineHeight: 20, alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold"}}>{Patientinfo.patientName}{'\n'}{Patientinfo.Age}</Text>
        
             </View>
 
 
 <View style = {{flexDirection: 'row', width: '50%',justifyContent: 'flex-end',alignSelf:'flex-start'}}>
             <Text style={{lineHeight: 20, color: 'black',alignSelf:'flex-end',fontFamily:"Montserrat-Regular"}}>MRNumber : {"\n"}PhoneNumber: </Text>
-              <Text style={{color: 'black',lineHeight: 20, alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold"}}>{Patientinfo.MRNumber}{'\n'}{Patientinfo.PhoneNumber}</Text>
+              <Text style={{color:"#30A28C",lineHeight: 20, alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold"}}>{Patientinfo.MRNumber}{'\n'}{Patientinfo.PhoneNumber}</Text>
             </View>
           </View>
           </View>

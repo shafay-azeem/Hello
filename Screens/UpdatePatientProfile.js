@@ -210,6 +210,7 @@ onClick={()=>{
 }}
 isChecked={this.state.isChecked}
 RightText={"Remember Me"}
+checkedColor={"#30A28C"}
 
 />
 

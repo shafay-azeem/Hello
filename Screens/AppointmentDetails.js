@@ -33,10 +33,6 @@ function Item({ item }) {
 
 
 export default class AppointmentDetails extends Component {
-   doctorName = "Dr Ahmed Khan";
-   specality = "Medicine";    
-   AppointmentDate = 'Tuesday, 07 September 2021';
-   AppointmentTime = '05:30pm - 06:00pm'
 
    constructor(props){
    super(props);
@@ -77,8 +73,8 @@ export default class AppointmentDetails extends Component {
              </View>
             
              <View style = {styles.subCardView}>
-               <Text style = {styles.centeredText}>Date: {doctorApp[0].date}</Text>
-               <Text style = {styles.centeredText}>Time: {doctorApp[0].time}</Text>
+               <Text style = {[styles.centeredText,{color:"#30A28C"}]}>Date: {doctorApp[0].date}</Text>
+               <Text style = {[styles.centeredText,{color:"#30A28C"}]}>Time: {doctorApp[0].time}</Text>
              </View>
 
              

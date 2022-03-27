@@ -34,7 +34,7 @@ function Item({ item }) {
 
           </View>
 
-            <Text style={{ textAlign: 'left', fontSize: 25, color: '#575ce5', textAlign: 'center',     fontFamily:"Montserrat-Regular",}}>{item.date}</Text>
+            <Text style={{ textAlign: 'left', fontSize: 25, color:"#30A28C", textAlign: 'center',     fontFamily:"Montserrat-Regular",}}>{item.date}</Text>
 
             
             <View style = {{padding: 5, width: '100%', height: '100%'}}>
