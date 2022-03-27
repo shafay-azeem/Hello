@@ -52,7 +52,7 @@ export default class SearchDoctor extends Component {
               onChangeText={text => this.setState({Specify_Doctor:text})}/>
          
              <TouchableOpacity style={styles.buttonForSearchPatient}
-             onPress={() =>this.props.navigation.navigate("PatientDemographics")}
+             onPress={() =>this.props.navigation.navigate("SelectDoc")}
              > 
              <Text style={styles.Button_text_styling}>
              SEARCH </Text>

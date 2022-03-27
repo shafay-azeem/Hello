@@ -50,7 +50,7 @@ export default class SearchPatient extends Component {
               onChangeText={text => this.setState({QR_code:text})}/>
          
              <TouchableOpacity style={styles.buttonForSearchPatient}
-             onPress={() =>this.props.navigation.navigate("PatientDemographics")}
+             onPress={() =>this.props.navigation.navigate("SelectPatient")}
              > 
              <Text style={styles.Button_text_styling}>
              SEARCH </Text>

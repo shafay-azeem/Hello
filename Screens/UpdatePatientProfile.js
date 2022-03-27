@@ -220,7 +220,7 @@ checkedColor={"#30A28C"}
 
 
 <TouchableOpacity style={[styles.buttonForm]}
-   onPress={() =>this.props.navigation.navigate("SearchPatient")}
+   onPress={() =>this.props.navigation.navigate("PatientDemographics")}
    > 
    <Text style={styles.Button_text_styling}>
    SUBMIT </Text>
