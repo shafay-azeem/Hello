@@ -3,6 +3,7 @@ import React, {Component,Fragment} from 'react';
 import RadioForm  from 'react-native-simple-radio-button';
 import { Picker } from "@react-native-picker/picker";
 import QRCodeScanner from 'react-native-qrcode-scanner';
+import CheckBox from 'react-native-check-box';
 
 
 import styles from './Styles/CompleteStyling';
@@ -95,16 +96,16 @@ export default class RegistrationScreen extends Component {
     console.info(this.props.navigation)
 
     return (
-      <ScrollView  >
+      <ScrollView style={{backgroundColor:'#38AB94'}}  >
       <SafeAreaView >
  
-      <View style={{backgroundColor:'#38AB94'}}> 
+      <View > 
       <Header name="PATIENT REGISTRATION" class= "" />
       <UnitClerkHeader/>
 </View>
 
       <View style={[styles.containerForRegistration]}>
-      <View style={[styles.containerWithinScrollView]}>
+      <View style={[styles.containerWithinScrollViewforForm]}>
 
            
     <View style={styles.Side_by_side_EditText}>
@@ -112,6 +113,8 @@ export default class RegistrationScreen extends Component {
           <Text style={styles.EdittextHeading}>MR Number</Text>
           <TextInput style={styles.Edittext}
           placeholder="Enter" 
+          keyboardType = 'numeric'
+          placeholderTextColor="#30A28C"
            onChangeText={text => this.setState({MRNumber:text})}/>
         </View>
 
@@ -119,6 +122,8 @@ export default class RegistrationScreen extends Component {
           <Text style={styles.EdittextHeading}>Family Number</Text>
           <TextInput style={styles.Edittext}
            placeholder="Enter" 
+           keyboardType = 'numeric'
+           placeholderTextColor="#30A28C"
             onChangeText={text => this.setState({FamilyNumber:text})} />
         </View>
       </View>
@@ -126,76 +131,140 @@ export default class RegistrationScreen extends Component {
 
    
 
-         <View >
+      <View style={styles.Side_by_side_EditText}>
+      <View style={styles.inputWrap}>
           <Text style={styles.EdittextHeading}>Sehat Safar Number</Text>
           <TextInput  
               style={styles.Edittext}
+              keyboardType = 'numeric'
+              placeholderTextColor="#30A28C"
               placeholder="Enter your SehatSafarNumber" 
               onChangeText={text => this.setState({SehatSafarNumber:text})}/>
+               </View>
          
+
+               <View style={styles.inputWrap}>
            <Text style={styles.EdittextHeading}>CNIC Number </Text>
             <TextInput  
               style={styles.Edittext}
+              keyboardType = 'numeric'
+              placeholderTextColor="#30A28C"
               placeholder="CNICNumber" 
               onChangeText={text => this.setState({CNICNumber:text})}/>
+                  </View>
+                  </View>
 
+
+   <View style={styles.Side_by_side_EditText}>
+      <View style={styles.inputWrap}>
              <Text style={styles.EdittextHeading}>First Name</Text>
             <TextInput  
               style={styles.Edittext}
               placeholder=" FirstName" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({FirstName:text})}/>
+                 </View>
 
-
+                 <View style={styles.inputWrap}>
              <Text style={styles.EdittextHeading}>Middle Name</Text>
             <TextInput  
               style={styles.Edittext}
-              placeholder="MiddleName" 
+              placeholder="MiddleName"
+              placeholderTextColor="#30A28C" 
               onChangeText={text => this.setState({MiddleName:text})}/>
+         </View>
 
-
+         <View style={styles.inputWrap}>
             <Text style={styles.EdittextHeading}>Last Name </Text>
             <TextInput  
               style={styles.Edittext}
               placeholder="Enter your Last Name" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({LastName:text})}/>
+                     </View>
+                     </View>
+
+                     
+   <View style={styles.Side_by_side_EditText}>
+      <View style={styles.inputWrap}>
 
              <Text style={styles.EdittextHeading}>DOB</Text>
             <TextInput  
               style={styles.Edittext}
               placeholder="Enter your DOB" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({DOB:text})}/>
+</View>
 
+<View style={styles.inputWrap}>
                     <Text style={styles.EdittextHeading}>Phone Number</Text>
             <TextInput  
               style={styles.Edittext}
+              keyboardType = 'numeric'
               placeholder="Enter your Phone Number" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({phoneNumber:text})}/>
+              </View>
 
+
+<View style={styles.inputWrap}>
                     <Text style={styles.EdittextHeading}>Alternate Phone Number</Text>
             <TextInput  
               style={styles.Edittext}
+              keyboardType = 'numeric'
               placeholder="Enter your Alternate Phone Number" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({Alternate_phone_Number:text})}/>
+                  </View>
+                  </View>
+
+
+                                     
+   <View style={styles.Side_by_side_EditText}>
+      <View style={styles.inputWrap}>
 
                     <Text style={styles.EdittextHeading}>Email</Text>
             <TextInput  
               style={styles.Edittext}
               placeholder="Enter your Email" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({Email:text})}/>
-          
+          </View>
            
+
+          <View style={styles.inputWrap}>
            <Text style={styles.EdittextHeading}>Age</Text>
             <TextInput  
               style={styles.Edittext}
               placeholder="Age" 
+              keyboardType = 'numeric'
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({Age:text})}/>
+            </View>
+            </View>
             
-            
+
+            <View style={styles.Side_by_side_EditText}>
+      <View style={styles.inputWrap}>
                   <Text style={styles.EdittextHeading}>City Town</Text>
             <TextInput  
               style={styles.Edittext}
               placeholder="City Town" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({CityTown:text})}/>
+</View>
+<View style={styles.inputWrap}>
+<Text style={styles.EdittextHeading}>Province</Text>
+            <TextInput  
+              style={styles.Edittext}
+              placeholder="Province"      placeholderTextColor="#30A28C"
+  
+              onChangeText={text => this.setState({Province:text})}/>
+
+
+</View>
+
+            </View>
 
 
 
@@ -203,45 +272,95 @@ export default class RegistrationScreen extends Component {
             <TextInput  
               style={styles.Edittext}
               placeholder="Home Address" 
+              placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({HomeAddress:text})}/>
 
-<Text style={styles.EdittextHeading}>Province</Text>
-            <TextInput  
-              style={styles.Edittext}
-              placeholder="Province" 
-  
-              onChangeText={text => this.setState({Province:text})}/>
 
-<Text style={styles.EdittextHeading}>Marital Status</Text>
-
-          <Picker style={styles.picker}
+              
+            <View style={styles.Side_by_side_EditText}>
+        <View style={styles.inputWrap}>
+      <Text style={styles.EdittextHeading}>Marital Status</Text>
+<View   style={{   borderColor: "#30A28C",
+        backgroundColor:'#F7F7F7',     
+           borderWidth: 1,  borderRadius: 15,  marginHorizontal:20,   marginTop:2, height:50}}> 
+          <Picker  
            selectedValue={this.state.PickerSelectedVal}
+           placeholderTextColor="#30A28C"
            onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
-
-           <Picker.Item label="Married" value="Married" />
-           <Picker.Item label="Unmarried" value="Unmarried" />
-           <Picker.Item label="Divorced" value="Divorced" />
-           <Picker.Item label="Widow" value="Widow" />
-      
+  
+           <Picker.Item color='#30A28C' label="Married" value="Married" />
+           <Picker.Item color='#30A28C' label="Unmarried" value="Unmarried" />
+           <Picker.Item color='#30A28C' label="Divorced" value="Divorced" />
+           <Picker.Item  color='#30A28C' label="Widow" value="Widow" />
+        
 
            </Picker> 
 
+       
+     
+     </View>
+     </View>
 
 
-                 <Text style={styles.EdittextHeading}>Types Of Visits</Text>
-                  <View style={{margin:20, marginTop:10}}>
-                 <RadioForm row
-                  buttonSize={10}
-                  animation={true}
-                   buttonColor={'black'}
-                   radio_props={radio_props_sv}
-                  initial={1}
-                  onPress={(value) => {this.setState({value:value})}}  />
-                </View> 
-{/* <RadioGroup aria-label="anonymous" name="anonymous" value={false} row>
-  <FormControlLabel value="true" control={<Radio />} label="Yes" />
-  <FormControlLabel value="false" control={<Radio />} label="No" />
-</RadioGroup>  */}
+<View style={styles.inputWrap}>
+      <Text style={styles.EdittextHeading}>TYPES OF VISIT</Text>
+<View   style={{   borderColor: "#30A28C",
+        backgroundColor:'#F7F7F7',     
+           borderWidth: 1,  borderRadius: 15,  marginHorizontal:20,   marginTop:2, height:50}}> 
+          <Picker  
+           selectedValue={this.state.PickerSelectedVal}
+           placeholderTextColor="#30A28C"
+           onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
+  
+           <Picker.Item color='#30A28C' label="Clinical Visit" value="Clinical Visit" />
+           <Picker.Item color='#30A28C' label="Educational Visit" value="Educational Visit" />
+           <Picker.Item color='#30A28C' label="Others" value="Others" />
+      
+        
+
+           </Picker> 
+
+       
+     
+     </View>
+     </View>
+     </View>
+
+     <View style={{flexDirection:'row',marginTop:30}}>
+
+<View style={{width:"50%",flexDirection:'row',alignSelf:'center',alignItems:'center',marginLeft:27}}>
+           <CheckBox
+
+    
+       
+style={{marginTop:3}}
+onClick={()=>{
+this.setState({
+isChecked:!this.state.isChecked
+})
+}}
+isChecked={this.state.isChecked}
+RightText={"Remember Me"}
+
+/>
+
+           <Text style= {[{fontFamily:"Montserrat-Bold",justifyContent:'center',color:"#30A28C",fontSize:15}]}>Please Verify above Information is Correct</Text>
+           </View>
+           <View style={{width:"50%",alignSelf:'flex-end',alignItems:'flex-end',justifyContent:'flex-end'}} >
+
+
+<TouchableOpacity style={[styles.buttonForm]}
+ onPress={() =>this.props.navigation.navigate("SearchPatient")}
+ > 
+ <Text style={styles.Button_text_styling}>
+ SUBMIT </Text>
+</TouchableOpacity>
+</View>
+
+
+
+</View>
+                
 
             </View> 
             
@@ -313,21 +432,14 @@ export default class RegistrationScreen extends Component {
                     }
                 </Fragment> */}
 
-<View >
-          <TouchableOpacity style={[styles.buttonRegistration]}
-             onPress={() =>this.props.navigation.navigate("SearchPatient")}
-             > 
-             <Text style={styles.Button_text_styling}>
-             SUBMIT </Text>
-           </TouchableOpacity>
-           </View>
+
      
 
      
 </View>
 
 
-</View>
+
 
 
       </SafeAreaView>

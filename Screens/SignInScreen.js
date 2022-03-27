@@ -22,7 +22,7 @@ export default class SignInScreen extends Component {
 
   render(){
      return (
-      <ScrollView style={styles.ContainerWhite} >
+      <ScrollView >
       <SafeAreaView>
            <Header name="SIGN IN" class= ""/>
            
@@ -54,6 +54,7 @@ export default class SignInScreen extends Component {
             <TextInput 
             style={[styles.Edittext,styles.MontserratSemiBold]}
               placeholder="Enter your username" 
+              placeholderTextColor="#30A28C"
               onChangeText={(text) => this.setState({Username:text})}/>
           </View>
 
@@ -63,6 +64,8 @@ export default class SignInScreen extends Component {
             <TextInput  
               style={[styles.Edittext,styles.MontserratSemiBold]}
               placeholder="Enter your password" 
+              placeholderTextColor="#30A28C"
+              secureTextEntry={true}
               onChangeText={text => this.setState({password:text})}/>
           </View>
 
@@ -85,7 +88,7 @@ export default class SignInScreen extends Component {
 />
 <Text style={ [styles.MontserratRegular,{marginTop:10,fontSize:15}]}>Remember Me</Text>
 <TouchableOpacity style={[styles.forgotPassword,]}>
-<Text style={[styles.MontserratRegular,{color:"red",fontSize:15}]}>Forgot Password</Text>
+<Text style={[styles.MontserratRegular,{color:"red",fontSize:15}]}>Forgot Password ?</Text>
 </TouchableOpacity>
 </View>
 

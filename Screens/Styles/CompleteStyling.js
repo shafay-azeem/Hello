@@ -34,7 +34,7 @@ export default StyleSheet.create({
   ContainerWhite:{
     width:'100%',
     height:'100%',
-    backgroundColor:'#FFFFFF',
+    backgroundColor:'#E5E5E5',
     flex: 1,
 
   },
@@ -118,6 +118,21 @@ export default StyleSheet.create({
        //  marginTop:10
        
      },
+     buttonForm: {
+       width:'60%',
+      alignItems: 'center',
+      justifyContent: 'center',
+      alignSelf:'center',
+      borderRadius: 25,
+      backgroundColor:'#252726',
+      height:50,
+  
+     // marginBottom:30,
+     // marginLeft:400,
+     //  marginRight:400,
+     //  marginTop:10
+     
+   },
        button_Side_by_Side: {
      backgroundColor: '#252726',
      borderRadius: 25,
@@ -260,7 +275,7 @@ InsideConatiner1:{
   resizeMode: 'contain'
 },
 InsideConatiner2:{
-  backgroundColor:'#E5E5E5',
+  backgroundColor:'#FFFFFF',
   width:'60%',
   resizeMode: 'contain'
 },   
@@ -286,6 +301,19 @@ containerForScrollView:{
 },
  containerWithinScrollView:{
   width:'50%',
+  padding:30,
+    backgroundColor:'#FFFFFF',           //#FFFFFF
+    borderColor:'black',
+    // borderRadius:10,
+    marginTop:30,
+    marginBottom:30,
+    alignSelf:'center',
+    borderWidth:3,
+    borderColor:"#30A28C"
+
+},
+containerWithinScrollViewforForm:{
+  width:'80%',
   padding:30,
     backgroundColor:'#FFFFFF',           //#FFFFFF
     borderColor:'black',

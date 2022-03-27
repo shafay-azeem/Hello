@@ -189,23 +189,28 @@ export default class Payment extends Component {
 
 
 <View style={{flex:1,marginTop:20}}>
+<View   style={{   borderColor: "#30A28C",
+        backgroundColor:'#F7F7F7',     
+           borderWidth: 1,  borderRadius: 15,  marginHorizontal:20,   marginTop:2, height:50}}> 
           <Picker
            selectedValue={this.state.PickerSelectedVal}
            onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} 
            style={{fontWeight:'bold',textAlign:'right',color:'#38AB94', fontSize:25}}>
 
-           <Picker.Item label="Cheque" value="Cheque" />
-           <Picker.Item label="Cash" value="Cash" />
+           <Picker.Item color='#30A28C' label="Cheque" value="Cheque" />
+           <Picker.Item color='#30A28C' label="Cash" value="Cash" />
         
       
 
            </Picker> 
            </View>
+                
+     </View>
   </View> 
  {/* </View> */}
  <View style={{flexDirection:'row' }}>
-                <Text style = { [{flexDirection: 'row',alignSelf:'flex-start',marginTop:10,fontFamily:"Montserrat-Regular",fontSize:25,color:'black'}]}>Amount Payable: </Text>
-                <View style = {{flexDirection: 'row', width: 70,borderColor: 'orange' ,borderWidth:2, borderRadius: 15, alignItems: 'center'}}>
+                <Text style = { [{flexDirection: 'row',alignSelf:'flex-start',marginTop:15,fontFamily:"Montserrat-Regular",fontSize:25,color:'black'}]}>Amount Payable: </Text>
+                <View style = {{flexDirection: 'row', width: 70,borderColor: 'orange' ,borderWidth:2, borderRadius: 15, alignItems: 'center',marginTop:15}}>
             <View style = {styles.dollarIcon}>
             <Image
               style={styles.tinyLogo}

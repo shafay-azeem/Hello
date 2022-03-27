@@ -3,6 +3,7 @@ import React, {Component,Fragment} from 'react';
 import RadioForm  from 'react-native-simple-radio-button';
 import { Picker } from "@react-native-picker/picker";
 import QRCodeScanner from 'react-native-qrcode-scanner';
+import CheckBox from 'react-native-check-box';
 
 
 import styles from './Styles/CompleteStyling';
@@ -26,29 +27,19 @@ export default class UpdatePatientProfile extends Component {
     
        }
         state={
-            MRNumber:"",
-            FamilyNumber:"",
-            SehatSafarNumber:"",
-            CNICNumber:"",
-            FirstName:'',
-            MiddleName:"",
-            LastName:'',
+          FirstName:"",
+          MiddleName:"",
+          LastName:"",
+            Gender:"",
+            Age:'',
             DOB:"",
-        //     Age:"",
-        //     MaritalStatus:"",
-        //     phoneNumber:"",
-        //     Alternate_phone_Number:"",
-        //     Email:"",
-        //    HomeAddress:"",
-        //    CityTown:'',
-        //    Province:"",
-        //    selectedLanguage : '',
-        //    setSelectedLanguage:"",
-        //      PickerSelectedVal : '',
-        //     //  barcodes: [],
-        //     scan: false,
-        //     ScanResult: false,
-        //     result: null
+            MaritalStatus:'',
+            phoneNumber:"",
+            address:'',
+            Email:"",
+            password:"",
+            confirmpassword:"",
+
     
       }
      
@@ -58,182 +49,188 @@ export default class UpdatePatientProfile extends Component {
  
 
     return (
-      <ScrollView  >
+      <ScrollView style={{backgroundColor:'#38AB94'}} >
       <SafeAreaView >
  
-      <View style={{backgroundColor:'#38AB94'}}> 
+      <View > 
       <Header name="  UPDATE PATIENT PROFILE " class= "" />
       <UnitClerkHeader/>
 </View>
 
       <View style={[styles.containerForRegistration]}>
-      <View style={[styles.containerWithinScrollView]}>
+      <View style={[styles.containerWithinScrollViewforForm]}>
 
            
     <View style={styles.Side_by_side_EditText}>
         <View style={styles.inputWrap}>
-          <Text style={styles.EdittextHeading}>MR Number</Text>
+          <Text style={styles.EdittextHeading}>First Name</Text>
           <TextInput style={styles.Edittext}
-          placeholder="Enter" 
+          placeholder="Enter First Name" 
           placeholderTextColor="#30A28C"
-           onChangeText={text => this.setState({MRNumber:text})}/>
+           onChangeText={text => this.setState({FirstName:text})}/>
         </View>
 
         <View style={styles.inputWrap}>
-          <Text style={styles.EdittextHeading}>Family Number</Text>
+          <Text style={styles.EdittextHeading}>Middle Name</Text>
           <TextInput style={styles.Edittext}
-           placeholder="Enter" 
+           placeholder="Enter Middle Name" 
            placeholderTextColor="#30A28C"
-            onChangeText={text => this.setState({FamilyNumber:text})} />
+            onChangeText={text => this.setState({MiddleName:text})} />
+        </View>
+
+        <View style={styles.inputWrap}>
+          <Text style={styles.EdittextHeading}>Last Name</Text>
+          <TextInput style={styles.Edittext}
+           placeholder="Enter Last Name" 
+           placeholderTextColor="#30A28C"
+            onChangeText={text => this.setState({LastName:text})} />
         </View>
       </View>
     
 
-   
-
-         <View >
-          <Text style={styles.EdittextHeading}>Sehat Safar Number</Text>
-          <TextInput  
-              style={styles.Edittext}
-              placeholder="Enter your SehatSafarNumber" 
-              placeholderTextColor="#30A28C"
-              onChangeText={text => this.setState({SehatSafarNumber:text})}/>
-         
-           <Text style={styles.EdittextHeading}>CNIC Number </Text>
-            <TextInput  
-              style={styles.Edittext}
-              placeholder="CNICNumber" 
-              placeholderTextColor="#30A28C"
-              onChangeText={text => this.setState({CNICNumber:text})}/>
-
-             <Text style={styles.EdittextHeading}>First Name</Text>
-            <TextInput  
-              style={styles.Edittext}
-              placeholder=" FirstName" 
-              placeholderTextColor="#30A28C"
-              onChangeText={text => this.setState({FirstName:text})}/>
-
-
-             <Text style={styles.EdittextHeading}>Middle Name</Text>
-            <TextInput  
-              style={styles.Edittext}
-              placeholder="MiddleName" 
-              placeholderTextColor="#30A28C"
-              onChangeText={text => this.setState({MiddleName:text})}/>
-
-
-            <Text style={styles.EdittextHeading}>Last Name </Text>
-            <TextInput  
-              style={styles.Edittext}
-              placeholder="Enter your Last Name" 
-              placeholderTextColor="#30A28C"
-              onChangeText={text => this.setState({LastName:text})}/>
-
-             <Text style={styles.EdittextHeading}>DOB</Text>
-            <TextInput  
-              style={styles.Edittext}
-              placeholder="Enter your DOB" 
-              placeholderTextColor="#30A28C"
-              onChangeText={text => this.setState({DOB:text})}/>
-
-                    {/* <Text style={styles.EdittextHeading}>Phone Number</Text>
-            <TextInput  
-              style={styles.Edittext}
-              placeholder="Enter your Phone Number" 
-              onChangeText={text => this.setState({phoneNumber:text})}/>
-
-                    <Text style={styles.EdittextHeading}>Alternate Phone Number</Text>
-            <TextInput  
-              style={styles.Edittext}
-              placeholder="Enter your Alternate Phone Number" 
-              onChangeText={text => this.setState({Alternate_phone_Number:text})}/>
-
-                    <Text style={styles.EdittextHeading}>Email</Text>
-            <TextInput  
-              style={styles.Edittext}
-              placeholder="Enter your Email" 
-              onChangeText={text => this.setState({Email:text})}/>
-          
            
-           <Text style={styles.EdittextHeading}>Age</Text>
-            <TextInput  
-              style={styles.Edittext}
-              placeholder="Age" 
-              onChangeText={text => this.setState({Age:text})}/>
-            
-            
-                  <Text style={styles.EdittextHeading}>City Town</Text>
-            <TextInput  
-              style={styles.Edittext}
-              placeholder="City Town" 
-              onChangeText={text => this.setState({CityTown:text})}/>
+      <View style={styles.Side_by_side_EditText}>
+        <View style={styles.inputWrap}>
+          <Text style={styles.EdittextHeading}>Gender</Text>
+          <TextInput style={styles.Edittext}
+          placeholder="Enter Gender" 
+          placeholderTextColor="#30A28C"
+           onChangeText={text => this.setState({Gender:text})}/>
+        </View>
+
+        <View style={styles.inputWrap}>
+          <Text style={styles.EdittextHeading}>Age</Text>
+          <TextInput style={styles.Edittext}
+           placeholder="Enter Age" 
+           keyboardType = 'numeric'
+           placeholderTextColor="#30A28C"
+            onChangeText={text => this.setState({Age:text})} />
+        </View>
+
+        <View style={styles.inputWrap}>
+          <Text style={styles.EdittextHeading}>DOB</Text>
+          <TextInput style={styles.Edittext}
+           placeholder="Enter DOB" 
+           placeholderTextColor="#30A28C"
+            onChangeText={text => this.setState({DOB:text})} />
+        </View>
+      </View>
+
+
+           
+      <View style={styles.Side_by_side_EditText}>
+      <View style={styles.inputWrap}>
+      <Text style={styles.EdittextHeading}>phoneNumber</Text>
+          <TextInput style={styles.Edittext}
+           placeholder="Enter phoneNumber" 
+           keyboardType = 'numeric'
+           placeholderTextColor="#30A28C"
+            onChangeText={text => this.setState({phoneNumber:text})} />
+        </View>
 
 
 
-            <Text style={styles.EdittextHeading}>Home Address</Text>
-            <TextInput  
-              style={styles.Edittext}
-              placeholder="Home Address" 
-              onChangeText={text => this.setState({HomeAddress:text})}/>
-
-<Text style={styles.EdittextHeading}>Province</Text>
-            <TextInput  
-              style={styles.Edittext}
-              placeholder="Province" 
-  
-              onChangeText={text => this.setState({Province:text})}/>
-
-<Text style={styles.EdittextHeading}>Marital Status</Text>
-
-          <Picker style={styles.picker}
+        <View style={styles.inputWrap}>
+      <Text style={styles.EdittextHeading}>Marital Status</Text>
+<View   style={{   borderColor: "#30A28C",
+        backgroundColor:'#F7F7F7',     
+           borderWidth: 1,  borderRadius: 15,  marginHorizontal:20,   marginTop:2, height:50}}> 
+          <Picker  
            selectedValue={this.state.PickerSelectedVal}
+           placeholderTextColor="#30A28C"
            onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
-
-           <Picker.Item label="Married" value="Married" />
-           <Picker.Item label="Unmarried" value="Unmarried" />
-           <Picker.Item label="Divorced" value="Divorced" />
-           <Picker.Item label="Widow" value="Widow" />
-      
+  
+           <Picker.Item color='#30A28C' label="Married" value="Married" />
+           <Picker.Item color='#30A28C' label="Unmarried" value="Unmarried" />
+           <Picker.Item color='#30A28C' label="Divorced" value="Divorced" />
+           <Picker.Item  color='#30A28C' label="Widow" value="Widow" />
+        
 
            </Picker> 
 
+       
+     
+     </View>
+     </View>
+     </View>
+
+         <View >
+          <Text style={styles.EdittextHeading}>Address</Text>
+          <TextInput  
+              style={styles.Edittext}
+              placeholder="Enter your Address" 
+              placeholderTextColor="#30A28C"
+              onChangeText={text => this.setState({address:text})}/>
+         
+         
 
 
-                 <Text style={styles.EdittextHeading}>Types Of Visits</Text>
-                 <View style={{margin:20, marginTop:10}}>
-                 <RadioForm 
-                  buttonSize={20}
-                  animation={true}
-                   buttonColor={'black'}
-                   radio_props={radio_props_sv}
-                  initial={1}
-                  onPress={(value) => {this.setState({value:value})}}  />
-                </View>
+</View>
+<View style={styles.Side_by_side_EditText}>
+        <View style={styles.inputWrap}>
+          <Text style={styles.EdittextHeading}>Email</Text>
+          <TextInput style={styles.Edittext}
+          placeholder="Enter Email" 
+          placeholderTextColor="#30A28C"
+           onChangeText={text => this.setState({Email:text})}/>
+        </View>
 
-            </View>
+        <View style={styles.inputWrap}>
+          <Text style={styles.EdittextHeading}>Password</Text>
+          <TextInput style={styles.Edittext}
+            secureTextEntry={true}
+           placeholder="Enter Password" 
+           placeholderTextColor="#30A28C"
+            onChangeText={text => this.setState({password:text})} />
+        </View>
+
+        <View style={styles.inputWrap}>
+          <Text style={styles.EdittextHeading}>Confirm Password</Text>
+          <TextInput style={styles.Edittext}
+          secureTextEntry={true}
+           placeholder="Enter Password" 
+           placeholderTextColor="#30A28C"
+            onChangeText={text => this.setState({confirmpassword:text})} />
+        </View>
+      </View>
+
+     
+<View style={{flexDirection:'row',marginTop:30}}>
+
+  <View style={{width:"50%",flexDirection:'row',alignSelf:'center',alignItems:'center',marginLeft:27}}>
+             <CheckBox
 
       
-
-
          
-           */}
+style={{marginTop:3}}
+onClick={()=>{
+ this.setState({
+  isChecked:!this.state.isChecked
+})
+}}
+isChecked={this.state.isChecked}
+RightText={"Remember Me"}
+
+/>
+
+             <Text style= {[{fontFamily:"Montserrat-Bold",justifyContent:'center',color:"#30A28C",fontSize:15}]}>Please Verify above Information is Correct</Text>
+             </View>
+             <View style={{width:"50%",alignSelf:'flex-end',alignItems:'flex-end',justifyContent:'flex-end'}} >
+
+
+<TouchableOpacity style={[styles.buttonForm]}
+   onPress={() =>this.props.navigation.navigate("SearchPatient")}
+   > 
+   <Text style={styles.Button_text_styling}>
+   SUBMIT </Text>
+ </TouchableOpacity>
+ </View>
+
+
 
 </View>
+             </View>
 
-     
-
-<View >
-          <TouchableOpacity style={[styles.buttonRegistration]}
-             onPress={() =>this.props.navigation.navigate("SearchPatient")}
-             > 
-             <Text style={styles.Button_text_styling}>
-             SUBMIT </Text>
-           </TouchableOpacity>
-           </View>
-     
-
-     
-</View>
 
 
 </View>
