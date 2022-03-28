@@ -243,8 +243,9 @@ inputWrap: {
       backgroundColor:'#EEEEEE',
       borderColor:'blue',
       borderRadius:10,
-      padding:20,
-      margin:20,
+      padding:10,
+      margin:8,
+      marginRight:70,
       // borderWidth:1
   },
   roundIcon:{
@@ -290,8 +291,8 @@ InsideConatiner2:{
 
 }, 
 containerForScrollView:{
-  width:'60%',
-    backgroundColor:'#FFFFFF',           //#FFFFFF
+  width:'50%',
+    backgroundColor:'#30A28C',           //#FFFFFF
     borderColor:'black',
     // borderRadius:10,
     // marginTop:20,
@@ -314,7 +315,9 @@ containerForScrollView:{
 },
 containerWithinScrollViewforForm:{
   width:'80%',
-  padding:30,
+  height:580,
+
+  // padding:30,
     backgroundColor:'#FFFFFF',           //#FFFFFF
     borderColor:'black',
     // borderRadius:10,

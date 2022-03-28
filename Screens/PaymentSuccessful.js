@@ -153,7 +153,7 @@ export default class PaymentSuccessfull extends Component {
               onPress={() =>this.props.navigation.navigate("PatientDemographics")}
               > 
               <Text style={styles.Button_text_styling}>
-              PAYMENT INVOICE</Text>
+              PRINTED INVOICE</Text>
             </TouchableOpacity>
                    </View>
 

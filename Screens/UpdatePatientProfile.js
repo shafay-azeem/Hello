@@ -49,7 +49,7 @@ export default class UpdatePatientProfile extends Component {
  
 
     return (
-      <ScrollView style={{backgroundColor:'#38AB94'}} >
+      <View style={styles.container} >
       <SafeAreaView >
  
       <View > 
@@ -57,10 +57,12 @@ export default class UpdatePatientProfile extends Component {
       <UnitClerkHeader/>
 </View>
 
-      <View style={[styles.containerForRegistration]}>
-      <View style={[styles.containerWithinScrollViewforForm]}>
 
-           
+<View style={[styles.containerForRegistration]}>
+  
+  <View style={[styles.containerWithinScrollViewforForm]}>
+
+  <ScrollView>
     <View style={styles.Side_by_side_EditText}>
         <View style={styles.inputWrap}>
           <Text style={styles.EdittextHeading}>First Name</Text>
@@ -230,16 +232,18 @@ checkedColor={"#30A28C"}
 
 
 </View>
+</ScrollView>
              </View>
 
-
+      
 
 </View>
 
 
+
       </SafeAreaView>
      
-      </ScrollView>
+      </View>
       
     );
    }

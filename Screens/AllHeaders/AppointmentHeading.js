@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor:"#FFFFFF",
         borderRadius:10,
-        margin:10,
+      marginTop:50
 
 
     },
@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
         fontFamily:"Montserrat-SemiBold",
        color:'#FFFFFF',
        justifyContent: 'center',
-       alignSelf:'center'
+       alignSelf:'center',
+       marginTop:90
     }
 })

@@ -30,7 +30,7 @@ export default class MoreImagesAndRecord extends Component {
              <View style={{ width: 100 ,height:100,alignSelf:'center',marginTop:50,marginBottom:50}}>
                      <Image
                     style={{   width: '100%',height: '100%'}}
-                    source={require('../images/man.png')}
+                    source={require('../images/question-mark.png')}
     
                     /> 
                   </View>
@@ -41,7 +41,7 @@ export default class MoreImagesAndRecord extends Component {
              <View style={{ width: 100 ,height:100,alignSelf:'center',marginTop:50,marginBottom:50}}>
                      <Image
                     style={{   width: '100%',height: '100%'}}
-                    source={require('../images/woman.png')}
+                    source={require('../images/question-mark.png')}
                     /> 
                   </View>
              </View>

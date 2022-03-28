@@ -8,6 +8,8 @@ import AppointmentHeading from './AllHeaders/AppointmentHeading';
 import PatientDoc from './PatientDoc';
 import styles from './Styles/CompleteStyling';
 import Balance from './Balance';
+import drinfo from './DATA/data.json';
+import Patientinfo from './DATA/patient.json';
 
 
 
@@ -18,7 +20,7 @@ export default class HomeScreen extends Component {
     render(){
 
      return (
-       <ScrollView style={styles.ContainerWhole} >
+       <View style={styles.ContainerWhole} >
        <SafeAreaView style={{flex: 1}}>
        
              
@@ -52,36 +54,224 @@ export default class HomeScreen extends Component {
               SEARCH </Text>
             </TouchableOpacity>
     </View>
-    <AppointmentHeading name="UPCOMING APPOINTMENTS" class= "" />
+    {/* <AppointmentHeading name="UPCOMING APPOINTMENTS" class= "" /> */}
 
-{/* 
-      <SafeAreaView>
-      // <ScrollView> */}
+    <View style={{height: 400,marginTop:90,}} >
     <ScrollView style={[styles.containerForScrollView]}> 
- 
-    <PatientDoc/>
-    <PatientDoc/>
-    <PatientDoc/>
-    <PatientDoc/>
-    
-    </ScrollView>
+    <ScrollView>
+        <View style={styles.containerForSelectPatient} >
+   
+    <TouchableOpacity onPress={() =>this.props.navigation.navigate("PatientDemographics")}>       
+   <View style= {{flexDirection: "row"}}>
+                    
+                    <View style = {{flexDirection: 'row',width: '50%' , alignItems: 'center',justifyContent: 'flex-start'}}>
+                    <Text style={{ lineHeight: 20,color: 'black',alignSelf: 'flex-start',fontFamily:"Montserrat-Regular"}}>Dr.Name:{'\n'}Specality:</Text>
+                    <Text style={{color:"#30A28C",lineHeight: 20, alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold"}}>{drinfo.doctorName}{'\n'}{drinfo.specality}</Text>
+               
+                    </View>
 
-  {/* </ScrollView>
-     </SafeAreaView> */}
+
+<View style = {{flexDirection: 'row', width: '50%', alignItems: 'center',justifyContent: 'flex-end'}}>
+                    <Text style={{lineHeight: 20, color: 'black',alignSelf:'flex-end',fontFamily:"Montserrat-Regular"}}>Patient: {"\n"}Date: </Text>
+                      <Text style={{color:"#30A28C",lineHeight: 20, alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold"}}>{Patientinfo.patientName}{'\n'}{Patientinfo.Date}</Text>
+                    </View>
+                  </View>
+                  </TouchableOpacity>
+  
+
+        
+
+            
+  
+
+
+         </View>
+    
+
+         </ScrollView>
+
+
+         <ScrollView>
+        <View style={styles.containerForSelectPatient} >
+   
+    <TouchableOpacity onPress={() =>this.props.navigation.navigate("PatientDemographics")}>       
+   <View style= {{flexDirection: "row"}}>
+                    
+                    <View style = {{flexDirection: 'row',width: '50%' , alignItems: 'center',justifyContent: 'flex-start'}}>
+                    <Text style={{ lineHeight: 20,color: 'black',alignSelf: 'flex-start',fontFamily:"Montserrat-Regular"}}>Dr.Name:{'\n'}Specality:</Text>
+                    <Text style={{color:"#30A28C",lineHeight: 20, alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold"}}>{drinfo.doctorName}{'\n'}{drinfo.specality}</Text>
+               
+                    </View>
+
+
+<View style = {{flexDirection: 'row', width: '50%', alignItems: 'center',justifyContent: 'flex-end'}}>
+                    <Text style={{lineHeight: 20, color: 'black',alignSelf:'flex-end',fontFamily:"Montserrat-Regular"}}>Patient: {"\n"}Date: </Text>
+                      <Text style={{color:"#30A28C",lineHeight: 20, alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold"}}>{Patientinfo.patientName}{'\n'}{Patientinfo.Date}</Text>
+                    </View>
+                  </View>
+                  </TouchableOpacity>
+  
+
+        
+
+            
+  
+
+
+         </View>
+    
+
+         </ScrollView>
+
+
+
+
+         <ScrollView>
+        <View style={styles.containerForSelectPatient} >
+   
+    <TouchableOpacity onPress={() =>this.props.navigation.navigate("PatientDemographics")}>       
+   <View style= {{flexDirection: "row"}}>
+                    
+                    <View style = {{flexDirection: 'row',width: '50%' , alignItems: 'center',justifyContent: 'flex-start'}}>
+                    <Text style={{ lineHeight: 20,color: 'black',alignSelf: 'flex-start',fontFamily:"Montserrat-Regular"}}>Dr.Name:{'\n'}Specality:</Text>
+                    <Text style={{color:"#30A28C",lineHeight: 20, alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold"}}>{drinfo.doctorName}{'\n'}{drinfo.specality}</Text>
+               
+                    </View>
+
+
+<View style = {{flexDirection: 'row', width: '50%', alignItems: 'center',justifyContent: 'flex-end'}}>
+                    <Text style={{lineHeight: 20, color: 'black',alignSelf:'flex-end',fontFamily:"Montserrat-Regular"}}>Patient: {"\n"}Date: </Text>
+                      <Text style={{color:"#30A28C",lineHeight: 20, alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold"}}>{Patientinfo.patientName}{'\n'}{Patientinfo.Date}</Text>
+                    </View>
+                  </View>
+                  </TouchableOpacity>
+  
+
+        
+
+            
+  
+
+
+         </View>
+    
+
+         </ScrollView>
+
+         <ScrollView>
+        <View style={styles.containerForSelectPatient} >
+   
+    <TouchableOpacity onPress={() =>this.props.navigation.navigate("PatientDemographics")}>       
+   <View style= {{flexDirection: "row"}}>
+                    
+                    <View style = {{flexDirection: 'row',width: '50%' , alignItems: 'center',justifyContent: 'flex-start'}}>
+                    <Text style={{lineHeight: 20,color: 'black',alignSelf: 'flex-start',fontFamily:"Montserrat-Regular"}}>Dr.Name:{'\n'}Specality:</Text>
+                    <Text style={{color:"#30A28C",lineHeight: 20, alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold"}}>{drinfo.doctorName}{'\n'}{drinfo.specality}</Text>
+               
+                    </View>
+
+
+<View style = {{flexDirection: 'row', width: '50%', alignItems: 'center',justifyContent: 'flex-end'}}>
+                    <Text style={{lineHeight: 20, color: 'black',alignSelf:'flex-end',fontFamily:"Montserrat-Regular"}}>Patient: {"\n"}Date: </Text>
+                      <Text style={{color:"#30A28C",lineHeight: 20, alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold"}}>{Patientinfo.patientName}{'\n'}{Patientinfo.Date}</Text>
+                    </View>
+                  </View>
+                  </TouchableOpacity>
+  
+
+        
+
+            
+  
+
+
+         </View>
+    
+
+         </ScrollView>
+
+         <ScrollView>
+        <View style={styles.containerForSelectPatient} >
+   
+    <TouchableOpacity onPress={() =>this.props.navigation.navigate("PatientDemographics")}>       
+   <View style= {{flexDirection: "row"}}>
+                    
+                    <View style = {{flexDirection: 'row',width: '50%' , alignItems: 'center',justifyContent: 'flex-start'}}>
+                    <Text style={{ lineHeight: 20,color: 'black',alignSelf: 'flex-start',fontFamily:"Montserrat-Regular"}}>Dr.Name:{'\n'}Specality:</Text>
+                    <Text style={{color:"#30A28C",lineHeight: 20, alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold"}}>{drinfo.doctorName}{'\n'}{drinfo.specality}</Text>
+               
+                    </View>
+
+
+<View style = {{flexDirection: 'row', width: '50%', alignItems: 'center',justifyContent: 'flex-end'}}>
+                    <Text style={{lineHeight: 20, color: 'black',alignSelf:'flex-end',fontFamily:"Montserrat-Regular"}}>Patient: {"\n"}Date: </Text>
+                      <Text style={{color:"#30A28C",lineHeight: 20, alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold"}}>{Patientinfo.patientName}{'\n'}{Patientinfo.Date}</Text>
+                    </View>
+                  </View>
+                  </TouchableOpacity>
+  
+
+        
+
+            
+  
+
+
+         </View>
+    
+
+         </ScrollView>
+
+
+         <ScrollView>
+        <View style={styles.containerForSelectPatient} >
+   
+    <TouchableOpacity>       
+   <View style= {{flexDirection: "row"}}>
+                    
+                    <View style = {{flexDirection: 'row',width: '50%' , alignItems: 'center',justifyContent: 'flex-start'}}>
+                    <Text style={{ lineHeight: 20,color: 'black',alignSelf: 'flex-start',fontFamily:"Montserrat-Regular"}}>Dr.Name:{'\n'}Specality:</Text>
+                    <Text style={{color:"#30A28C",lineHeight: 20, alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold"}}>{drinfo.doctorName}{'\n'}{drinfo.specality}</Text>
+               
+                    </View>
+
+
+<View style = {{flexDirection: 'row', width: '50%', alignItems: 'center',justifyContent: 'flex-end'}}>
+                    <Text style={{lineHeight: 20, color: 'black',alignSelf:'flex-end',fontFamily:"Montserrat-Regular"}}>Patient: {"\n"}Date: </Text>
+                      <Text style={{color:"#30A28C",lineHeight: 20, alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold"}}>{Patientinfo.patientName}{'\n'}{Patientinfo.Date}</Text>
+                    </View>
+                  </View>
+                  </TouchableOpacity>
+  
+
+        
+
+            
+  
+
+
+         </View>
+    
+
+         </ScrollView>
+
+    </ScrollView>
+    </View>
+
      
   
-               <TouchableOpacity style={styles.buttonGeneral}
+               {/* <TouchableOpacity style={styles.buttonGeneral}
               onPress={() =>this.props.navigation.navigate("RegistrationScreen")}
               > 
               <Text  style={styles.Button_text_styling} >
               NEXT </Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
 
  
          </View>
          
              </SafeAreaView>
-             </ScrollView>
+             </View>
       
      );
     }

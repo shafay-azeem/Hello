@@ -96,7 +96,7 @@ export default class RegistrationScreen extends Component {
     console.info(this.props.navigation)
 
     return (
-      <ScrollView style={{backgroundColor:'#38AB94'}}  >
+      <View style={{backgroundColor:'#38AB94'}}  >
       <SafeAreaView >
  
       <View > 
@@ -105,9 +105,11 @@ export default class RegistrationScreen extends Component {
 </View>
 
       <View style={[styles.containerForRegistration]}>
+  
       <View style={[styles.containerWithinScrollViewforForm]}>
 
-           
+
+          <ScrollView> 
     <View style={styles.Side_by_side_EditText}>
         <View style={styles.inputWrap}>
           <Text style={styles.EdittextHeading}>MR Number</Text>
@@ -349,7 +351,7 @@ RightText={"Remember Me"}
            <View style={{width:"50%",alignSelf:'flex-end',alignItems:'flex-end',justifyContent:'flex-end'}} >
 
 
-<TouchableOpacity style={[styles.buttonForm]}
+<TouchableOpacity style={[styles.buttonForm,{marginBottom:10}]}
  onPress={() =>this.props.navigation.navigate("SearchPatient")}
  > 
  <Text style={styles.Button_text_styling}>
@@ -360,7 +362,7 @@ RightText={"Remember Me"}
 
 
 </View>
-                
+</ScrollView>         
 
             </View> 
             
@@ -444,7 +446,7 @@ RightText={"Remember Me"}
 
       </SafeAreaView>
      
-      </ScrollView>
+      </View>
       
     );
    }
