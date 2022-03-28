@@ -190,7 +190,7 @@ export default class SelectPatient extends Component {
          <ScrollView>
         <View style={styles.containerForSelectPatient} >
    
-    <TouchableOpacity>       
+    <TouchableOpacity onPress={() =>this.props.navigation.navigate("PatientDemographics")}>       
    <View style= {{flexDirection: "row"}}>
                     
                     <View style = {{flexDirection: 'row',width: '50%' , alignItems: 'center',justifyContent: 'flex-start'}}>

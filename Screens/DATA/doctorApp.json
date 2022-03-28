@@ -22,7 +22,37 @@
     "availableSlots":"25",
     "date":"Mon, 06 Dec",
     "time":" 3:20 - 2:20 pm"
+  },
+  {
+    "key": "5",
+    "availableSlots":"25",
+    "date":"Mon, 06 Dec",
+    "time":" 3:20 - 2:20 pm"
   }
+,
+{
+  "key": "6",
+  "availableSlots":"25",
+  "date":"Mon, 06 Dec",
+  "time":" 3:20 - 2:20 pm"
+}
+,
+{
+  "key": "7",
+  "availableSlots":"25",
+  "date":"Mon, 06 Dec",
+  "time":" 3:20 - 2:20 pm"
+}
+,
+{
+  "key": "8",
+  "availableSlots":"25",
+  "date":"Mon, 06 Dec",
+  "time":" 3:20 - 2:20 pm"
+}
+
+
+
 
     
 ]

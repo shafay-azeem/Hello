@@ -1,5 +1,5 @@
 import React, {Component, useState} from 'react';
-import { Text, View, TouchableOpacity,TextInput, FlatList, Image}  from 'react-native';
+import { Text, View, TouchableOpacity,TextInput, FlatList, Image,SafeAreaView}  from 'react-native';
 import UnitClerkHeader from './AllHeaders/UnitClerkHeader';
 import PatientHeader from './AllHeaders/PatientHeader';
 import Header from './Header';
@@ -102,13 +102,13 @@ export default class SelectSlot extends Component {
 
     
     return (
-      <ScrollView style={[{backgroundColor:"#38AB94"}]}>
-        <View >
+  
+        <View style={styles.container} >
           <Header name="SELECT SLOT" class= ""/>
           
             <PatientHeader/>
             <UnitClerkHeader/>
-         <View style= {{ height: '100%', width: '100%', alignSelf: 'center'}}>
+     
          <View style = {{flexDirection: 'row', alignItems:'center', justifyContent:'center' }}>
              <View style={{alignSelf: 'center',height: 120, width: 150,borderRadius: 150/2,justifyContent: 'center', }}>
              <Image
@@ -121,6 +121,8 @@ export default class SelectSlot extends Component {
              <Text style= {[styles.cardText, {alignSelf: 'flex-start'}]}>{this.specality}</Text>
              </View>
              </View>
+             <View style= {{flex:1 , height:"100%",width: '100%', alignSelf: 'center'}}>
+             <SafeAreaView style={{flex:1}} >
         <FlatList
   
           style={{flex:1, marginTop: 30, margin: 40}}
@@ -130,12 +132,12 @@ export default class SelectSlot extends Component {
           numColumns = {this.numColumns}
           // scrollEnabled={isScrollEnabled}
         />
-
-
-        </View>
+</SafeAreaView>
 
         </View>
-      </ScrollView> 
+
+        </View>
+     
     );
   }
 }

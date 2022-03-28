@@ -20,11 +20,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor:"#252726",
+        
 
     },
     headerText: {
         fontSize: 20,
         fontFamily:"Montserrat-Bold",
        color:'#FFFFFF',
+        
     }
 })

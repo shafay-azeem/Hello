@@ -1,4 +1,4 @@
-import React, {Component, useState} from 'react';
+import React, {Component, useState,useEffect } from 'react';
 import { Text, View, TouchableOpacity,TextInput, FlatList, Image}  from 'react-native';
 import UnitClerkHeader from './AllHeaders/UnitClerkHeader';
 import PatientHeader from './AllHeaders/PatientHeader';
@@ -117,7 +117,7 @@ export default class SelectDoc extends Component {
 
     
     const formatData = (data, numColumns) => {
- 
+      // const [isScrollEnabled, setIsScrollEnabled] = useState(false);
       const numberOfFullRows = Math.floor(data.length / numColumns);
       
     
@@ -126,6 +126,12 @@ export default class SelectDoc extends Component {
         data.push({ key: `blank-${numberOfElementsLastRow}`, empty: true });
         numberOfElementsLastRow++;
       }
+
+      // useEffect(() => {
+      //   setTimeout(() => {
+      //     setIsScrollEnabled(true);
+      //   }, 3000);
+      // }, []);
    
  return data;
     
@@ -135,28 +141,31 @@ export default class SelectDoc extends Component {
     
     
     return (
-      <ScrollView>
-        <View style={[{backgroundColor:"#38AB94"}]}>
+    
+        <View style={styles.container}>
           <Header name="SELECT DOCTOR" class= ""/>
           
             <PatientHeader/>
             <UnitClerkHeader/>
-         <View style= {{ height: '100%', width: '100%', alignSelf: 'center'}}>
+         <View style= {{flex:1 ,width: '100%', alignSelf: 'center'}}>
+         <SafeAreaView style={{flex:1}} >
         <FlatList
   
-          style={{flex:1, marginTop: 30, margin: 40}}
+          style={{flex:1, marginTop: 30, marginRight:30,marginLeft:30}}
           data={ formatData(doctors, this.numColumns)}
           renderItem={({ item }) => <Item item={item}/>}
           keyExtractor={item => item.email}
           numColumns = {this.numColumns}
-          scrollEnabled={true}
+         
         />
-
+        </SafeAreaView>
+  
 
         </View>
 
         </View>
-         </ScrollView> 
+       
+      
     
     );
   }

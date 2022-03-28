@@ -126,14 +126,14 @@ export default class PaymentSuccessfull extends Component {
 
  <View style={{flexDirection:'row'}}>
                 <Text style = { [{flexDirection: 'row',alignSelf:'flex-end',fontFamily:"Montserrat-Regular",fontSize:25,color:'black'}]}>Amount Payable: </Text>
-                <View style = {{flexDirection: 'row',borderColor: 'orange' ,borderWidth:2, borderRadius: 15, alignItems: 'center'}}>
+                <View style = {{flexDirection: 'row',borderColor: 'orange' ,borderWidth:2, borderRadius: 15, alignItems: 'center',}}>
             <View style = {styles.dollarIcon}>
             <Image
               style={styles.tinyLogo}
               source={require('../images/dollar.png')}
             />
             </View>
-            <Text style= {{textAlign: 'right',color: 'black',fontFamily:"Montserrat-SemiBold"}}>{invoice.TeleconsultationPayment }</Text>
+            <Text style= {{textAlign: 'right',color: 'black',fontFamily:"Montserrat-SemiBold",padding:5,fontSize:15}}>{invoice.TeleconsultationPayment }</Text>
             
             </View>
             

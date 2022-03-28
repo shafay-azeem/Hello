@@ -379,6 +379,7 @@ TextForInsideRowSidebySide:{
       alignSelf:"center",
       borderRadius:15,
       padding: 15,
+      // marginRight:30
 
 
     },

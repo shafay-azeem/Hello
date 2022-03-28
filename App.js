@@ -33,7 +33,15 @@ import ConsultationPayment from "./Screens/ConsultationPayment";
 
 import PaymentSuccessfull from "./Screens/PaymentSuccessful";
 import AppointmentDetails from "./Screens/AppointmentDetails";
+
+
+import UpdatePatient from "./Screens/UpdatePatient";
 // import ExampleTwo from "./Screens/CreateSlots";
+
+
+
+import ConsultationPaymentcheque from "./Screens/ConsultationPaymentcheque";
+
 
 const Stack = createStackNavigator();
 
@@ -47,12 +55,21 @@ const App = () => {
 
 
       <Stack.Screen
+        name="ConsultationPaymentcheque"
+        component={ConsultationPaymentcheque}
+      />
+
+<Stack.Screen
         name="ConsultationPayment"
         component={ConsultationPayment}
       />
             <Stack.Screen
         name="AppointmentDetails"
         component={AppointmentDetails}
+      />
+                <Stack.Screen
+        name="UpdatePatient"
+        component={UpdatePatient}
       />
 
 

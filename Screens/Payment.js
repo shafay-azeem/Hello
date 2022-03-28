@@ -194,11 +194,25 @@ export default class Payment extends Component {
            borderWidth: 1,  borderRadius: 15,  marginHorizontal:20,   marginTop:2, height:50}}> 
           <Picker
            selectedValue={this.state.PickerSelectedVal}
-           onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} 
+           onValueChange={(itemValue, itemIndex) => { 
+             this.setState({PickerSelectedVal: itemValue}); 
+           
+             if(itemValue=="Card"){
+              this.props.navigation.navigate('ConsultationPayment')
+
+              
+             }
+             else if((itemValue=="Cheque")){
+              this.props.navigation.navigate('ConsultationPaymentcheque')
+             }
+          
+          } }
            style={{fontWeight:'bold',textAlign:'right',color:'#38AB94', fontSize:25}}>
 
+
+            <Picker.Item color='#30A28C' label="Select" value="0" />
            <Picker.Item color='#30A28C' label="Cheque" value="Cheque" />
-           <Picker.Item color='#30A28C' label="Cash" value="Cash" />
+           <Picker.Item color='#30A28C' label="Card" value="Card" />
         
       
 

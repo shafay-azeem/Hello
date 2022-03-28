@@ -260,13 +260,7 @@ export default class HomeScreen extends Component {
 
      
   
-               {/* <TouchableOpacity style={styles.buttonGeneral}
-              onPress={() =>this.props.navigation.navigate("RegistrationScreen")}
-              > 
-              <Text  style={styles.Button_text_styling} >
-              NEXT </Text>
-            </TouchableOpacity> */}
-
+   
  
          </View>
          

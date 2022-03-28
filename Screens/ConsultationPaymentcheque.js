@@ -10,7 +10,7 @@ import invoice from './DATA/Invoice.json';
 import drinfo from './DATA/data.json';
 
 
-export default class ConsultationPayment extends Component {
+export default class ConsultationPaymentcheque extends Component {
    doctorName = "Dr Ahmed Khan";
    specality = "Medicine";
    doctorEmail = "abc@gmail.com"
@@ -97,7 +97,7 @@ export default class ConsultationPayment extends Component {
 
             <TextInput  
              style={[styles.Edittext,{width:200}]}
-              placeholder="Transaction ID" 
+              placeholder="Cheque Number" 
               placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({Transaction_ID:text})}/>
            
@@ -129,7 +129,7 @@ export default class ConsultationPayment extends Component {
        
             <TextInput  
               style={[styles.Edittext,{width:200}]}
-              placeholder="Card's Name" 
+              placeholder="Account Number" 
               placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({Card_Name:text})}/>
                      
