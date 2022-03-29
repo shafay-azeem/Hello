@@ -35,7 +35,7 @@ export default class HomeScreen extends Component {
           
                 <View style = {styles.OpeningBalView}>
                 <TouchableOpacity
-            onPress={() =>this.props.navigation.navigate("SearchPatient")}>
+            onPress={() =>this.props.navigation.navigate("OpeningBal")}>
                     <View style={{flexDirection: 'column',justifyContent:'center',marginTop:7}}>
                     <View style={{alignSelf:'center',marginLeft:100}}>
            

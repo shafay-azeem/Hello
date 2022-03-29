@@ -37,6 +37,7 @@ import AppointmentDetails from "./Screens/AppointmentDetails";
 
 import UpdatePatient from "./Screens/UpdatePatient";
 import CreateSlot from "./Screens/CreateSlots";
+import OpeningBal from "./Screens/Openingbal";
 
 
 
@@ -53,6 +54,10 @@ const App = () => {
     <Stack.Navigator initialRouteName="SignInScreen"
       screenOptions={{headerShown:false}}>
 
+<Stack.Screen
+        name="OpeningBal"
+        component={OpeningBal}
+      />
 
 <Stack.Screen
         name="CreateSlot"
