@@ -383,6 +383,20 @@ TextForInsideRowSidebySide:{
 
 
     },
+    smallText: {
+      fontFamily: 'Montserrat-Medium',
+      color: 'black',
+      fontSize: 15
+
+
+    }, 
+    mediumText: {
+      fontFamily: 'Montserrat-Medium',
+      color: 'black',
+      fontSize: 25
+
+
+    },  
 
     dollarIcon:{
       width: 20 ,
@@ -528,6 +542,19 @@ height:"60%",
     // alignItems: 'center',
     // justifyContent:'center'
   },
+  cardView91:{
+    width: "90%",
+height:"80%",
+    backgroundColor: '#FFFFFF',
+    alignSelf: "center",
+    marginTop: 20,
+    // borderRadius: 10,
+    // borderWidth: 2,
+    borderColor: "white",
+    // alignItems: 'center',
+    // justifyContent:'center'
+  },
+
 
   subCardView:{
     backgroundColor:'#EEEEEE',
@@ -648,5 +675,30 @@ height:"60%",
    text: {  
       color: '#3f2949',  
       marginTop: 10  
-   }  
+   }  ,
+   headerbalance: {
+    height: 90,
+    flexDirection: 'row',
+    // alignItems: 'center',
+    // justifyContent: 'center',
+    backgroundColor:"#FFFFFF",
+    borderRadius:10,
+    margin:10,
+  
+
+},
+headerText: {
+    fontSize: 20,
+    fontWeight:'bold',
+   color:'#FFFFFF',
+},
+OpeningBalView:{
+    flexDirection: 'row' ,borderTopLeftRadius:100,borderBottomLeftRadius:100
+},
+TextForBalance:{
+    fontSize:20,
+    fontFamily:'Montserrat-SemiBold',
+    justifyContent:'center',
+    alignItems:'center'
+  }
 })

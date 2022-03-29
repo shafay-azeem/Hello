@@ -1,4 +1,4 @@
-import {SafeAreaView, StyleSheet,ScrollView, Text,Button, View, TouchableOpacity,TextInput} from 'react-native';
+import {SafeAreaView, StyleSheet,ScrollView, Text,Button, View, TouchableOpacity,TextInput,Image} from 'react-native';
 import React, {Component, useState} from 'react';
 
 
@@ -10,6 +10,7 @@ import styles from './Styles/CompleteStyling';
 import Balance from './Balance';
 import drinfo from './DATA/data.json';
 import Patientinfo from './DATA/patient.json';
+import balanceinfo from './DATA/balance.json';
 
 
 
@@ -30,28 +31,96 @@ export default class HomeScreen extends Component {
           <Header name="HOME SCREEN" class= ""/>
             <UnitClerkHeader/>
  
-            <Balance/>
+            <View style= {styles.headerbalance}>
+          
+                <View style = {styles.OpeningBalView}>
+                <TouchableOpacity
+            onPress={() =>this.props.navigation.navigate("SearchPatient")}>
+                    <View style={{flexDirection: 'column',justifyContent:'center',marginTop:7}}>
+                    <View style={{alignSelf:'center',marginLeft:100}}>
+           
+                    <Text style={styles.TextForBalance}>Opening Balance </Text>
+                    </View>
+                    
+                    <View style={{marginLeft:100,alignItems:'center'}}>
+                    <View style={{flexDirection: 'row'}}>
+  
+          
+                     <TextInput  
+           style={[styles.Edittext,{width:200}]}
+              placeholder="Amount" 
+              placeholderTextColor="#30A28C"
+              onChangeText={text => this.setState({Amount:text})}/>
+             
+                    </View>
+                    </View>
+                   
+                    </View>
+                    </TouchableOpacity>
+                </View>
+                <View style = {{flexDirection: 'row', width: '33%' , alignItems: 'center',justifyContent: 'center',marginLeft:50}}>
+                <View style={{flexDirection: 'column',justifyContent:'center'}}>
+                    <View style={{alignSelf:'center'}}>
+                <Text style={styles.TextForBalance}>Balance</Text>
+                </View>
+                <View style={{alignItems:'center'}}>
+                    <View style={{flexDirection: 'row'}}>
+                    
+                   <TextInput  
+           style={[styles.Edittext,{width:200}]}
+              placeholder="Amount" 
+              placeholderTextColor="#30A28C"
+              onChangeText={text => this.setState({Amount:text})}/>
+                    </View>
+                    </View>
+                    </View>
+                </View>
+                <View style = {{flexDirection: 'row', width: '33%' , alignItems: 'center',justifyContent: 'center',borderTopRightRadius:100,borderBottomRightRadius:100}}>
+                <View style={{flexDirection: 'column',justifyContent:'center'}}>
+                    <View style={{alignSelf:'center'}}>
+                <Text style={styles.TextForBalance}>Closing Balance</Text>
+                </View>
+                <View style={{alignItems:'center'}}>
+                    <View style={{flexDirection: 'row'}}>
+                     {/* <View style={{ width: 40 ,height: 40,marginRight: 6}}>
+                     <Image
+                     style={{   width: '100%',height: '100%',alignSelf: 'center'}}
+                     source={require('../images/dollar.png')}
+                    
+                     />
+                   </View> */}
+                   <TextInput  
+           style={[styles.Edittext,{width:200}]}
+              placeholder="Amount" 
+              placeholderTextColor="#30A28C"
+              onChangeText={text => this.setState({Amount:text})}/>
+                    </View>
+                    </View>
+                    </View>
+                </View>
+ 
+         </View>
             </View>
             <View style={styles.containerForButton}>
             <TouchableOpacity style={styles.button_Side_by_Side}
               onPress={() =>this.props.navigation.navigate("RegistrationScreen")}
               > 
               <Text style={styles.Button_text_styling}>
-              REGISTRATION </Text>
+              REGISTRATION NEW PATIENT</Text>
             </TouchableOpacity>
             
             <TouchableOpacity style={styles.button_Side_by_Side}
-              onPress={() =>this.props.navigation.navigate("SelectDoc")}
+              onPress={() =>this.props.navigation.navigate("CreateSlot")}
               > 
               <Text style={styles.Button_text_styling}>
-              BOOKING </Text>
+              BOOKING MANAGEMENT</Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.button_Side_by_Side}
               onPress={() =>this.props.navigation.navigate("SearchPatient")}
               > 
               <Text style={styles.Button_text_styling}>
-              SEARCH </Text>
+              SEARCH PATIENT</Text>
             </TouchableOpacity>
     </View>
     {/* <AppointmentHeading name="UPCOMING APPOINTMENTS" class= "" /> */}

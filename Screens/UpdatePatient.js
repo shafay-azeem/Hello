@@ -30,22 +30,7 @@ const App = () => {
         </Text>
         <TouchableOpacity
           activeOpacity={0.7}
-          onPress={t.launchImageLibrary({}, (response) => {
-            if (response.didCancel) {
-              // user cancel image selection
-            } else if (response.error) {
-              // error
-            } else {
-              // her you access the image with response object
-              console.log(response);
-              this.setState({
-                image: {
-                  uri: response.uri,
-                },
-              });
-            }
-          })
-        }
+          onPress={clickHandler}
           style={styles.touchableOpacityStyle}>
           <Image
             // FAB using TouchableOpacity with an image

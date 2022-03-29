@@ -36,7 +36,7 @@ import AppointmentDetails from "./Screens/AppointmentDetails";
 
 
 import UpdatePatient from "./Screens/UpdatePatient";
-// import ExampleTwo from "./Screens/CreateSlots";
+import CreateSlot from "./Screens/CreateSlots";
 
 
 
@@ -54,6 +54,10 @@ const App = () => {
       screenOptions={{headerShown:false}}>
 
 
+<Stack.Screen
+        name="CreateSlot"
+        component={CreateSlot}
+      />
       <Stack.Screen
         name="ConsultationPaymentcheque"
         component={ConsultationPaymentcheque}

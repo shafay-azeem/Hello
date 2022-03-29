@@ -28,7 +28,7 @@ export default class ConsultationPayment extends Component {
       }];
     return (
       <View style={styles.container}>
-          <Header name="CONSULTATION PAYMENT OPTION " class= ""/>
+          <Header name="CARD MODE " class= ""/>
           <UnitClerkHeader/>
             <PatientHeader/>
      

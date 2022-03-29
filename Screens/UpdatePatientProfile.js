@@ -225,7 +225,7 @@ checkedColor={"#30A28C"}
    onPress={() =>this.props.navigation.navigate("PatientDemographics")}
    > 
    <Text style={styles.Button_text_styling}>
-   SUBMIT </Text>
+   UPDATE </Text>
  </TouchableOpacity>
  </View>
 

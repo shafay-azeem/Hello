@@ -9,7 +9,13 @@ import PatientHeader from './AllHeaders/PatientHeader';
 
 export default class MoreImagesAndRecord extends Component {
 
+
+
     render(){
+      const clickHandler = () => {
+        //function to handle click on floating Action Button
+        alert('Floating Button Clicked');
+      };
      return (
        <ScrollView style={{backgroundColor:"#38AB94"}}>
        <SafeAreaView style={{flex: 1}}>
@@ -47,7 +53,7 @@ export default class MoreImagesAndRecord extends Component {
              </View>
             
          </View>
-
+     
 
        
        

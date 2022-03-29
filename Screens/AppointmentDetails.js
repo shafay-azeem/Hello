@@ -9,7 +9,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import doctorApp from './DATA/doctorApp.json';
 import paymentStatus from './DATA/paymentStatus.json';
 
-
+import Patientinfo from './DATA/patient.json';
 
 function Item({ item }) {
     // const navigation = useNavigation();   
@@ -76,7 +76,23 @@ export default class AppointmentDetails extends Component {
                <Text style = {[styles.centeredText,{color:"#30A28C"}]}>Date: {doctorApp[0].date}</Text>
                <Text style = {[styles.centeredText,{color:"#30A28C"}]}>Time: {doctorApp[0].time}</Text>
              </View>
+             
 
+             <View style={{backgroundColor:'#FFFFFF',marginTop:10,padding:8,borderRadius:10,alignItems: 'center'}} >
+            <View style= {{flexDirection: "row"}}>
+       
+
+
+            <View style = {{flexDirection: 'row', alignItems: 'center',justifyContent: 'center'}}>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontFamily:"Montserrat-Regular",fontSize:25}}>PAYMENT STATUS: </Text>
+            <Text style={{color:"red",alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold",fontSize:25}}>{paymentStatus.paymentstatus}</Text>
+       
+            </View>
+
+
+
+          </View>
+          </View>
              
 
     
