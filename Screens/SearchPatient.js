@@ -25,8 +25,11 @@ export default class SearchPatient extends Component {
       <View style={{backgroundColor:'#38AB94'}}> 
            <Header style={{height:"20%"}} name="SEARCH PATIENT " class= ""/>
            <UnitClerkHeader/>
+
+
            </View>
            <View style={styles.containerWithinScrollView} >
+           <Text style = {[styles.mediumText,{alignSelf:'center'}]}>SEARCH PATIENT BY</Text>
            <Text style={styles.EdittextHeading}>Mr Number </Text>
             <TextInput  
               style={styles.Edittext}

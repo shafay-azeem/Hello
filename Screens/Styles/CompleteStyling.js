@@ -621,7 +621,7 @@ height:"80%",
     backgroundColor: "white",
     borderRadius: 10,
     padding: 35,
-    width:"30%",
+    width:"35%",
     alignItems: "center",
     shadowColor: "#000",
     shadowOffset: {
@@ -629,6 +629,9 @@ height:"80%",
       height: 2
   
     },
+
+
+
     shadowOpacity: 0.25,
     shadowRadius: 4,
     elevation: 5

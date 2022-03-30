@@ -1,4 +1,4 @@
-import {SafeAreaView, StyleSheet,ScrollView, Text,Button, View, TouchableOpacity,TextInput,Image} from 'react-native';
+import {SafeAreaView, StyleSheet,ScrollView, Text,Button, View, TouchableOpacity,TextInput,Image,Modal} from 'react-native';
 import React, {Component, useState} from 'react';
 
 
@@ -11,18 +11,71 @@ import Balance from './Balance';
 import drinfo from './DATA/data.json';
 import Patientinfo from './DATA/patient.json';
 import balanceinfo from './DATA/balance.json';
-
+import doctorApp from './DATA/doctorApp.json';
 
 
 export default class HomeScreen extends Component {
  
+  state={
+    PickerSelectedVal : '',
+    modalVisible: false
+   }
+   
+    
+  setModalVisible = (visible) => {
+    this.setState({ modalVisible: visible });
+  }
+
 
 
     render(){
-
+      const { modalVisible } = this.state;
      return (
        <View style={styles.ContainerWhole} >
        <SafeAreaView style={{flex: 1}}>
+       <Modal  
+          animationType="slide"
+          transparent={true}
+          visible={modalVisible}
+          onRequestClose={() => {
+            Alert.alert("Modal has been closed.");
+            this.setModalVisible(!modalVisible);
+          }}
+        >
+          
+          <View style={styles.centeredView}>
+            <View style={styles.modalView}>
+            <View style = {{flexDirection: 'row', alignItems: 'center',justifyContent: 'center'}}>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontFamily:"Montserrat-Regular",fontSize:25}}>TODAY'S DATE: </Text>
+            <Text style={{color:"#38AB94",alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold",fontSize:25}}>{doctorApp[0].date}</Text>
+       
+            </View>
+            <Text style={[{ fontFamily:"Montserrat-Bold",
+        marginTop:30,
+        color:"#30A28C",fontSize:15}]}>ENTER OPENING BALANCE</Text>
+            <TextInput  
+              style={[styles.Edittext,{width:250}]}
+              placeholder="Enter Opening Bal" 
+              placeholderTextColor="#30A28C"
+              onChangeText={text => this.setState({OpeningBal:text})}/>
+                <TouchableOpacity
+                style={[styles.smallRoundedBlueRounded,{width:'60%',marginTop:10}]}
+          
+                onPress={() => this.setModalVisible(!modalVisible)}
+              >
+               <Text style={styles.Button_text_styling}>SUBMIT</Text>
+                </TouchableOpacity>
+              {/* <TouchableOpacity
+                style={[styles.smallRoundedBlueRounded,{width:'60%',marginTop:10}]}
+          
+                onPress={() => this.setModalVisible(!modalVisible)}
+              >
+               <Text style={styles.Button_text_styling}>CANCEL</Text>
+                </TouchableOpacity> */}
+            </View>
+          </View>
+        </Modal>
+  
        
              
              
@@ -35,11 +88,12 @@ export default class HomeScreen extends Component {
           
                 <View style = {styles.OpeningBalView}>
                 <TouchableOpacity
-            onPress={() =>this.props.navigation.navigate("OpeningBal")}>
+            onPress={() =>this.props.navigation.navigate("HomeScreen")}>
                     <View style={{flexDirection: 'column',justifyContent:'center',marginTop:7}}>
                     <View style={{alignSelf:'center',marginLeft:100}}>
            
-                    <Text style={styles.TextForBalance}>Opening Balance </Text>
+                    <Text style={styles.TextForBalance}
+                    onPress={() => this.setModalVisible(true)}>Opening Balance </Text>
                     </View>
                     
                     <View style={{marginLeft:100,alignItems:'center'}}>

@@ -39,9 +39,9 @@ export default class Payment extends Component {
           
           <View style={styles.centeredView}>
             <View style={styles.modalView}>
-            <Text style={{  fontWeight:'bold', marginTop:10}}>ENTER PROMOCODE</Text>
+            <Text style={{marginTop:10,fontFamily:"Montserrat-Bold",color:"#30A28C",fontSize:15}}>ENTER PROMOCODE</Text>
             <TextInput  
-              style={styles.Edittext}
+              style={[styles.Edittext,{width:250}]}
               placeholder="ENTER PROMOCODE" 
               placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({ENTER_PROMOCODE:text})}/>
