@@ -34,11 +34,11 @@ function Item({ item }) {
 
           </View>
 
-            <Text style={{ textAlign: 'left', fontSize: 25, color:"#30A28C", textAlign: 'center',     fontFamily:"Montserrat-Regular",}}>{item.date}</Text>
+            <Text style={{ textAlign: 'left', fontSize: 22, color:"#075430", textAlign: 'center',     fontFamily:"Montserrat-Regular",}}>{item.slot}</Text>
 
             
             <View style = {{padding: 5, width: '100%', height: '100%'}}>
-            <Text style={{ textAlign: 'center', fontSize: 17,  color: 'grey'   ,  fontFamily:"Montserrat-Regular",}}>{item.time}</Text>
+            <Text style={{ textAlign: 'center', fontSize: 17,  color: 'grey'   ,  fontFamily:"Montserrat-Regular",}}>{item.date}</Text>
             
         
         <View style= {{justifyContent: 'flex-end' }}> 

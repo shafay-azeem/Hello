@@ -11,7 +11,7 @@ export default class PatientDemographics extends Component {
 
     render(){
      return (
-       <ScrollView style={{backgroundColor:"#38AB94"}}>
+       <ScrollView style={styles.container}>
        <SafeAreaView style={{flex: 1}}>
        
              
@@ -22,8 +22,8 @@ export default class PatientDemographics extends Component {
        <PatientHeader/>
 
 
-               <TouchableOpacity style={styles.buttonGeneral}
-              onPress={() =>this.props.navigation.navigate("SelectDoc")}
+               <TouchableOpacity style={[styles.buttonGeneral,{marginTop:110}]}
+              onPress={() =>this.props.navigation.navigate("SearchDoctor")}
               > 
               <Text style={styles.Button_text_styling}>
               BOOK APPOINTMENT </Text>

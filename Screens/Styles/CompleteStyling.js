@@ -102,7 +102,7 @@ export default StyleSheet.create({
         height:50,
        //  margin:50,
        width:500,
-       margin:40
+       margin:20
        
      },
        buttonRegistration: {
@@ -149,7 +149,7 @@ export default StyleSheet.create({
        },
        Edittext: {
          fontFamily:"Montserrat-SemiBold",
-        borderColor: "#30A28C",
+        borderColor: "#3FB39B",
         backgroundColor:'#F7F7F7',     
            borderWidth: 1,
         borderRadius: 15,
@@ -164,7 +164,7 @@ export default StyleSheet.create({
         marginLeft:27,
         fontFamily:"Montserrat-Bold",
         marginTop:10,
-        color:"#30A28C"
+        color:"#3FB39B"
     
       },
 
@@ -195,10 +195,9 @@ export default StyleSheet.create({
     //     // borderWidth:3
     // },
     containerForButton: {
-      flex: 1,
       flexDirection: 'row',
-      justifyContent: 'space-between',
-      maxWidth:"85%",
+      justifyContent:'center'
+   
     },
     buttonForSearchPatient: {
       alignItems: 'center',
@@ -240,13 +239,31 @@ inputWrap: {
      
     },
     containerForSelectPatient:{
-      backgroundColor:'#EEEEEE',
-      borderColor:'blue',
-      borderRadius:10,
-      padding:10,
-      margin:8,
-      marginRight:70,
-      // borderWidth:1
+      // backgroundColor:'#FFFFFF',
+      // borderColor:'blue',
+      // borderRadius:10,
+      // padding:10,
+      // margin:8,
+      // height:250,
+      // width:250,
+      // // marginRight:70,
+      // // borderWidth:1
+
+      backgroundColor:'#FFFFFF',
+      margin:10,
+      width:"2%",
+      height: 250,
+      flex:1,
+      alignSelf:"center",
+      borderRadius:15,
+      padding: 15,
+  },
+  inputViewHeight40:{
+    borderWidth: 1.5, 
+    borderColor: "#075430" ,
+    borderRadius: 25, 
+    width: '90%',
+    height: 40 
   },
   roundIcon:{
     alignSelf: 'center',
@@ -282,7 +299,7 @@ InsideConatiner2:{
 },   
  containerForRegistration:{
   width:'100%',
-    backgroundColor:'#30A28C',           //#FFFFFF
+    backgroundColor:'#3FB39B',           //#FFFFFF
     borderColor:'black',
     // borderRadius:10,
     // marginTop:10,
@@ -425,7 +442,7 @@ TextForInsideRowSidebySide:{
       height: 25,
       borderRadius: 25/2,
       // backgroundColor: COLORS.barColor,
-      backgroundColor:'#38AB94',
+      backgroundColor:'#3FB39B',
       marginHorizontal: 2,
       alignItems: 'center',
       justifyContent: 'center'
@@ -504,7 +521,7 @@ TextForInsideRowSidebySide:{
   },
 
   smallRoundedBlueRoundedNoMargin: {
-    backgroundColor:"#38AB94",
+    backgroundColor:"#3FB39B",
     shadowColor: 'rgba(0, 0, 0, 0.2)',
     shadowOpacity: 0.8,
     elevation: 6,
@@ -520,7 +537,12 @@ TextForInsideRowSidebySide:{
 
   container: {
     flex: 1,
-    backgroundColor: '#38AB94',
+    backgroundColor: '#3FB39B',
+  },
+  largeText:{
+    fontFamily: 'Montserrat-SemiBold',
+    color: 'black',
+    fontSize: 45
   },
   cardText30: {
     color: '#000000',
@@ -682,12 +704,12 @@ height:"80%",
    headerbalance: {
     height: 90,
     flexDirection: 'row',
-    // alignItems: 'center',
-    // justifyContent: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
     backgroundColor:"#FFFFFF",
     borderRadius:10,
     margin:10,
-  
+
 
 },
 headerText: {
@@ -703,5 +725,33 @@ TextForBalance:{
     fontFamily:'Montserrat-SemiBold',
     justifyContent:'center',
     alignItems:'center'
-  }
+  },
+  mediumButton: {
+    color: "#075430",
+    borderRadius: 25,
+    width: 170,
+    height: 40
+
+  },
+  containerlogo: {
+    flex: 1,
+    backgroundColor: "#3FB39B",
+    alignItems: 'center',
+    justifyContent: 'center',
+   
+  },
+  inputViewLarge:{
+    width:450,
+    height:50,
+    borderRadius:12,
+    backgroundColor: "purple",
+    borderColor: "#ADD8E6",
+    alignItems: 'center'
+  },
+  logoImage: {
+    resizeMode: 'stretch',
+    height: '100%',
+    width: '100%'
+
+},  
 })

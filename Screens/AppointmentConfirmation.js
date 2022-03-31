@@ -71,17 +71,17 @@ export default class AppointmentConfirmation extends Component {
             </View>
             <View>
              <Text style= {styles.cardText30}>{this.doctorName}</Text>
-             <Text style= {[styles.cardText, {alignSelf: 'flex-start'}]}>{this.specality}</Text>
+             <Text style= {[styles.cardText, {alignSelf: 'flex-start',color:'black'}]}>{this.specality}</Text>
              </View>
              </View>
             
              <View style = {styles.subCardView}>
-               <Text style = {[styles.centeredText,{color:"#30A28C"}]}>Date: {doctorApp[0].date}</Text>
-               <Text style = {[styles.centeredText,{color:"#30A28C"}]}>Time: {doctorApp[0].time}</Text>
+               <Text style = {[styles.centeredText,{color:"#3FB39B"}]}>{doctorApp[0].date1}</Text>
+               <Text style = {[styles.centeredText,{color:"#3FB39B"}]}>{doctorApp[0].slot}</Text>
              </View>
 
 
-             <View style={{flexDirection:'row'}}>
+             {/* <View style={{flexDirection:'row'}}>
              <CheckBox
 
       
@@ -98,15 +98,33 @@ RightText={"Remember Me"}
 />
 
              <Text style= {[styles.centeredText,{fontFamily:"Montserrat-Bold",color:"#30A28C"}]}>I hearby confirm that, I have read and understood everything written in the consent form</Text>
-             </View>
-             <TouchableOpacity style={styles.buttonGeneral}
+             </View> */}
+             <TouchableOpacity style={[styles.buttonGeneral,{marginTop:40}]}
               onPress={() =>this.props.navigation.navigate("AppointmentDetails")}
               > 
               <Text style={styles.Button_text_styling}>
               CONFIRM APPOINTMENT </Text>
             </TouchableOpacity>
                    
-     
+            <TouchableOpacity style={{     alignItems: 'center',
+        justifyContent: 'center',
+        alignSelf:'center',
+        borderRadius: 25,
+        backgroundColor:'#FFFFFF',
+        borderColor:"#252726",
+        borderWidth:1,
+        height:50,
+       //  margin:50,
+       width:500,
+       marginRight:20,marginLeft:20,marginBottom:20}}
+              onPress={() =>this.props.navigation.navigate("PatientDemographics")}
+              > 
+              <Text style={{  fontSize:15,
+   color:'black',
+  //  fontWeight:'normal',
+   fontFamily:"Montserrat-Regular"}}>
+              CANCEL APPOINTMENT</Text>
+            </TouchableOpacity>
 
           
 

@@ -21,15 +21,17 @@ export default class UnitClerkHeader extends Component {
 
 
       <View style = {{flexDirection: 'row',width: '45%' , alignItems: 'center',justifyContent: 'flex-start'}}>
-      <Text style={{ lineHeight: 20,color: 'black',alignSelf: 'flex-start',fontFamily:"Montserrat-Regular"}}>UnitClerk Name:{'\n'}Age:</Text>
-      <Text style={{color:"#30A28C",lineHeight: 20, alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold"}}>{Clerkinfo.UnitClerk}{'\n'}{Clerkinfo.Age}</Text>
+      <Text style={{ lineHeight: 20,color: 'black',alignSelf: 'flex-start',fontFamily:"Montserrat-Regular"}}>Name: {'\n'}Title: </Text>
+      <Text style={{color:"#3FB39B",lineHeight: 20, alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold"}}>{Clerkinfo.UnitClerk}{'\n'}{Clerkinfo.Title}</Text>
  
       </View>
+
+  
 
 
 <View style = {{flexDirection: 'row', width: '50%',justifyContent: 'flex-end',alignSelf:'flex-start'}}>
       <Text style={{lineHeight: 20, color: 'black',alignSelf:'flex-end',fontFamily:"Montserrat-Regular"}}>Location : {"\n"}Date: </Text>
-        <Text style={{color:"#30A28C",lineHeight: 20, alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold"}}>{Clerkinfo.Location}{'\n'}{Clerkinfo.Date}</Text>
+        <Text style={{color:"#3FB39B",lineHeight: 20, alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold"}}>{Clerkinfo.Location}{'\n'}{Clerkinfo.Date}</Text>
       </View>
     </View>
     </View>

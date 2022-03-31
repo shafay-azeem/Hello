@@ -29,18 +29,18 @@ export default class SearchPatient extends Component {
 
            </View>
            <View style={styles.containerWithinScrollView} >
-           <Text style = {[styles.mediumText,{alignSelf:'center'}]}>SEARCH PATIENT BY</Text>
+           <Text style = {[styles.mediumText,{alignSelf:'center'}]}>SEARCH PATIENT BY:</Text>
            <Text style={styles.EdittextHeading}>Mr Number </Text>
             <TextInput  
               style={styles.Edittext}
-              placeholder="Enter your Mr Number" 
+              placeholder="Enter Patient's MR Number" 
               placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({Mr_Number:text})}/>
          
            <Text style={styles.EdittextHeading}>CNIC</Text>
             <TextInput  
               style={styles.Edittext}
-              placeholder="Enter your CNIC" 
+              placeholder="Enter Patient's CNIC Number" 
               placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({CNIC:text})}/>
           

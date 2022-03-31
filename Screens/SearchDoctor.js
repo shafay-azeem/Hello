@@ -29,17 +29,18 @@ export default class SearchDoctor extends Component {
            <PatientHeader/>
            </View>
            <View style={styles.containerWithinScrollView} >
+           <Text style = {[styles.mediumText,{alignSelf:'center'}]}>SEARCH DOCTOR BY:</Text>
            <Text style={styles.EdittextHeading}>Location </Text>
             <TextInput  
               style={styles.Edittext}
-              placeholder="Enter your Location " 
+              placeholder="Select which Location you prefer " 
               placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({Location:text})}/>
          
            <Text style={styles.EdittextHeading}>Speciality</Text>
             <TextInput  
               style={styles.Edittext}
-              placeholder="Enter your Speciality" 
+              placeholder="Select Your desired speciality" 
               placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({Speciality:text})}/>
           
@@ -47,7 +48,7 @@ export default class SearchDoctor extends Component {
            <Text style={styles.EdittextHeading}>Specify Doctor</Text>
             <TextInput  
               style={styles.Edittext}
-              placeholder="Specify Doctor" 
+              placeholder="Specify Name of Desired Doctor" 
               placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({Specify_Doctor:text})}/>
          

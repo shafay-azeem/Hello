@@ -39,11 +39,11 @@ export default class Payment extends Component {
           
           <View style={styles.centeredView}>
             <View style={styles.modalView}>
-            <Text style={{marginTop:10,fontFamily:"Montserrat-Bold",color:"#30A28C",fontSize:15}}>ENTER PROMOCODE</Text>
+            <Text style={{marginTop:10,fontFamily:"Montserrat-Bold",color:"#3FB39B",fontSize:15}}>ENTER PROMOCODE</Text>
             <TextInput  
               style={[styles.Edittext,{width:250}]}
               placeholder="ENTER PROMOCODE" 
-              placeholderTextColor="#30A28C"
+              placeholderTextColor="#3FB39B"
               onChangeText={text => this.setState({ENTER_PROMOCODE:text})}/>
                 <TouchableOpacity
                 style={[styles.smallRoundedBlueRounded,{width:'60%',marginTop:10}]}
@@ -77,40 +77,40 @@ export default class Payment extends Component {
           
 
             <View style = {{flexDirection: 'column' ,alignItems: 'center',marginRight:10}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>Profile Image </Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,fontFamily:"Montserrat-Regular"}}>Profile Image </Text>
  
             <View style={{ width: 40 ,height: 40}}>
                     { <Image
-                    style={{   width: '100%',height: '100%',alignSelf: 'center'}}
+                    style={{   width: '100%',height: '100%',alignSelf: 'flex-start',marginTop:5}}
                     source={require('../images/doctor.png')}
                     /> }
                   </View>
             </View>
 
             <View style = {{flexDirection: 'column' ,alignItems: 'center',marginRight:10}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>DrName </Text>
-            <Text numberOfLines={1} style={{color: 'black', alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold",fontSize:20,color:'#38AB94',marginRight:20}}>{drinfo.doctorName}</Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20, fontFamily:"Montserrat-Regular"}}>Doctor Name </Text>
+            <Text numberOfLines={1} style={{color: 'black', alignSelf: 'flex-start',fontFamily:"Montserrat-Regular",fontSize:18,color:'#3FB39B',marginRight:20,marginTop:5}}>{drinfo.doctorName}</Text>
        
             </View>
             <View style = {{flexDirection: 'column' ,alignItems: 'center',marginRight:10}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>Speciality </Text>
-            <Text style={{color: 'black', alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold",fontSize:20,color:'#38AB94',marginRight:20}}>{drinfo.specality}</Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  fontFamily:"Montserrat-Regular"}}>Speciality </Text>
+            <Text style={{color: 'black', alignSelf: 'flex-start',fontFamily:"Montserrat-Regular",fontSize:18,color:'#3FB39B',marginRight:20,marginTop:5}}>{drinfo.specality}</Text>
        
             </View>
           
             <View style = {{flexDirection: 'column',alignItems: 'center',marginRight:10}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>Email</Text>
-            <Text style={{color: 'black', alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold",fontSize:20,color:'#38AB94',marginRight:20}}>{drinfo.doctorEmail}</Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20, fontFamily:"Montserrat-Regular"}}>Fee</Text>
+            <Text style={{color: 'black', alignSelf: 'flex-start',fontFamily:"Montserrat-Regular",fontSize:18,color:'#3FB39B',marginRight:20,marginTop:5}}>{drinfo.Fees}</Text>
        
             </View>
             <View style = {{flexDirection: 'column',alignItems: 'center',marginRight:10}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>PhoneNo</Text>
-            <Text style={{color: 'black', alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold",fontSize:20,color:'#38AB94',marginRight:20}}>{drinfo.doctorPhone}</Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20, fontFamily:"Montserrat-Regular"}}>PhoneNo</Text>
+            <Text style={{color: 'black', alignSelf: 'flex-start',fontFamily:"Montserrat-Regular",fontSize:18,color:'#3FB39B',marginRight:20,marginTop:5}}>{drinfo.doctorPhone}</Text>
        
             </View>
             <View style = {{flexDirection: 'column',alignItems: 'center',marginRight:10}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20 , textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>Fees</Text>
-            <Text style={{color: 'black', alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold",fontSize:20,color:'#38AB94',marginRight:20}}>{drinfo.Fees}</Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20 ,fontFamily:"Montserrat-Regular"}}>Location</Text>
+            <Text style={{color: 'black', alignSelf: 'flex-start',fontFamily:"Montserrat-Regular",fontSize:18,color:'#3FB39B',marginRight:20,marginTop:5}}>{drinfo.Location}</Text>
        
             </View>
          
@@ -137,30 +137,30 @@ export default class Payment extends Component {
 
                 <View style = {{flexDirection: 'row' ,marginTop: 20}}>
                 <Text style = {[{alignSelf:'flex-start',marginTop:10,fontSize:20,color:'black',fontFamily:"Montserrat-Regular"}]}>Invoice ID: </Text> 
-                <Text style = {[{alignSelf:'flex-start',marginTop:12,fontFamily:"Montserrat-SemiBold",fontSize:18,color:'#38AB94'}]}>{invoice['InvoiceID '] }</Text>
+                <Text style = {[{alignSelf:'flex-start',marginTop:14,fontFamily:"Montserrat-SemiBold",fontSize:15,color:'#3FB39B'}]}>{invoice['InvoiceID '] }</Text>
                 </View>
 
 
                 <View style = {{flexDirection: 'row'}}>
                 <Text style = {[{alignSelf:'flex-start',marginTop:10,fontSize:20,color:'black',fontFamily:"Montserrat-Regular"}]}>Invoice Date: </Text>
-                <Text style = {[{alignSelf:'flex-start',marginTop:12,fontFamily:"Montserrat-SemiBold",fontSize:18,color:'#38AB94'}]}>{invoice['InvoiceDate'] }</Text>
+                <Text style = {[{alignSelf:'flex-start',marginTop:14,fontFamily:"Montserrat-SemiBold",fontSize:15,color:'#3FB39B'}]}>{invoice['InvoiceDate'] }</Text>
                 </View>
 
                 <View style = {{flexDirection: 'row'}}>
                 <Text style = {[{alignSelf:'flex-start',marginTop:10,fontSize:20,color:'black',fontFamily:"Montserrat-Regular"}]}>Issued by: </Text>
-                <Text style = {[{alignSelf:'flex-start',marginTop:12,fontFamily:"Montserrat-SemiBold",fontSize:18,color:'#38AB94'}]}>{invoice['IssuedBy '] }</Text>
+                <Text style = {[{alignSelf:'flex-start',marginTop:14,fontFamily:"Montserrat-SemiBold",fontSize:15,color:'#3FB39B'}]}>{invoice['IssuedBy '] }</Text>
 
                 </View>
 
                 <View style = {{flexDirection: 'row'}}>
                 <Text style = {[{alignSelf:'flex-start',marginTop:10,fontSize:20,color:'black',fontFamily:"Montserrat-Regular"}]}>Patient Name: </Text>
-                <Text style = {[{alignSelf:'flex-start',marginTop:12,fontFamily:"Montserrat-SemiBold",fontSize:18,color:'#38AB94'}]}>{invoice.patientName }</Text>
+                <Text style = {[{alignSelf:'flex-start',marginTop:14,fontFamily:"Montserrat-SemiBold",fontSize:15,color:'#3FB39B'}]}>{invoice.patientName }</Text>
 
                 </View>
 
                 <View style = {{flexDirection: 'row'}}>
                 <Text style = {[{alignSelf:'flex-start',marginTop:10,fontSize:20,color:'black',fontFamily:"Montserrat-Regular"}]}>Teleconsultation Payment: </Text>
-                <Text style = {[{alignSelf:'flex-start',marginTop:12,fontFamily:"Montserrat-SemiBold",fontSize:18,color:'#38AB94'}]}>{invoice.TeleconsultationPayment }</Text>
+                <Text style = {[{alignSelf:'flex-start',marginTop:14,fontFamily:"Montserrat-SemiBold",fontSize:15,color:'#3FB39B'}]}>{invoice.TeleconsultationPayment }</Text>
 
                 </View>
 
@@ -172,24 +172,24 @@ export default class Payment extends Component {
                 
                 <TouchableOpacity
                   onPress={() => this.props.navigation.navigate('Payment')}
-                  style={[styles.smallRoundedBlueRounded,{width:'60%',marginTop:10}]}
+                  style={[styles.smallRoundedBlueRounded,{width:'60%',marginTop:40,height:"20%"}]}
                 >
                    <Text style={styles.Button_text_styling}
                     onPress={() => this.setModalVisible(true)}
-                            >APPLY VOUCHER</Text>
+                            >Apply Promo Code</Text>
                 </TouchableOpacity>
 
  
 
 
                 <View style={{flexDirection:'row'}}> 
-                <Text style={{color:'black',fontSize:25,marginTop:30,fontFamily:"Montserrat-Regular"}}>Payment Mode</Text>
+                <Text style={{color:'black',fontSize:20,marginTop:30,fontFamily:"Montserrat-Regular"}}>Payment Mode</Text>
 
 
 
 
 <View style={{flex:1,marginTop:20}}>
-<View   style={{   borderColor: "#30A28C",
+<View   style={{   borderColor: "#3FB39B",
         backgroundColor:'#F7F7F7',     
            borderWidth: 1,  borderRadius: 15,  marginHorizontal:20,   marginTop:2, height:50}}> 
           <Picker
@@ -207,12 +207,12 @@ export default class Payment extends Component {
              }
           
           } }
-           style={{fontWeight:'bold',textAlign:'right',color:'#38AB94', fontSize:25}}>
+           style={{fontWeight:'bold',textAlign:'right',color:'#3FB39B', fontSize:25}}>
 
 
-            <Picker.Item color='#30A28C' label="Select" value="0" />
-           <Picker.Item color='#30A28C' label="Cheque" value="Cheque" />
-           <Picker.Item color='#30A28C' label="Card" value="Card" />
+            <Picker.Item color='#3FB39B' label="Cash" value="0" />
+           <Picker.Item color='#3FB39B' label="Bank Cheque" value="Cheque" />
+           <Picker.Item color='#3FB39B' label="Credit Card/Debit Card" value="Card" />
         
       
 
@@ -223,15 +223,15 @@ export default class Payment extends Component {
   </View> 
  {/* </View> */}
  <View style={{flexDirection:'row' }}>
-                <Text style = { [{flexDirection: 'row',alignSelf:'flex-start',marginTop:15,fontFamily:"Montserrat-Regular",fontSize:25,color:'black'}]}>Amount Payable: </Text>
-                <View style = {{flexDirection: 'row', width: 70,borderColor: 'orange' ,borderWidth:2, borderRadius: 15, alignItems: 'center',marginTop:15}}>
-            <View style = {styles.dollarIcon}>
+                <Text style = { [{flexDirection: 'row',alignSelf:'flex-start',marginTop:15,fontFamily:"Montserrat-Regular",fontSize:20,color:'black'}]}>Amount Payable: </Text>
+                <View style = {{flexDirection: 'row', width: 70,borderColor: 'orange' ,borderWidth:2, borderRadius: 15, alignItems: 'center',justifyContent:"center",marginTop:15}}>
+            {/* <View style = {styles.dollarIcon}>
             <Image
               style={styles.tinyLogo}
               source={require('../images/dollar.png')}
             />
-            </View>
-            <Text style= {{textAlign: 'right',color: 'black'}}>1000</Text>
+            </View> */}
+            <Text style= {{color: 'black',justifyContent:'center'}}>500 PKR</Text>
             
             </View>
             
@@ -247,7 +247,7 @@ export default class Payment extends Component {
       
                 </View>
                 <TouchableOpacity
-                  onPress={() => this.props.navigation.navigate('ConsultationPayment')}
+                  onPress={() => this.props.navigation.navigate('PaymentSuccessfull')}
                   style={styles.smallRoundedBlueRounded}
                 >
                   <Text style={styles.Button_text_styling}>PAY</Text>

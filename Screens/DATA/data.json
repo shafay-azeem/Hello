@@ -1,10 +1,10 @@
 {
     "doctorName" : "Dr. Ahmed Khan",
     "specality" : "MBBS",
-    "Location": "AKU",
+    "Location": "AKU-Yusuf Plaza Clinic",
     "Date": "Tue, 07 Dec - 02:30",
-    "doctorEmail" : "abc@gmail.com",
+    "doctorEmail" : "Ahmed@gmail.com",
     "doctorPhone" : "+92314799743",
-    "Fees" : "500"
+    "Fees" : "500 PKR"
  
 } 

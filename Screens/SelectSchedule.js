@@ -34,7 +34,7 @@ function Item({ item }) {
 
           </View>
 
-            <Text style={{ textAlign: 'left', fontSize: 25, color:"#30A28C", textAlign: 'center'   , fontFamily:"Montserrat-Regular"}}>{item.date}</Text>
+            <Text style={{ textAlign: 'left', fontSize: 25, color:"#3FB39B", textAlign: 'center'   , fontFamily:"Montserrat-Regular"}}>{item.date}</Text>
 
             
             <View style = {{padding: 5, width: '100%', height: '100%'}}>
@@ -45,8 +45,8 @@ function Item({ item }) {
         <View style= {{flexDirection: 'row', justifyContent:'center' }}>
             
  
-                  <Text style={{ color: 'grey',marginTop:20,fontSize:15,  fontFamily:"Montserrat-Regular"}}>Available Slots:</Text>
-                  <Text style={{ color:"#30A28C",marginTop:20,fontWeight:'bold',fontSize:15 , fontFamily:"Montserrat-Regular"}}> {item.availableSlots}</Text>
+                  <Text style={{ color: 'grey',marginTop:20,fontSize:15,  fontFamily:"Montserrat-Regular"}}>Available Slots:{'\n'}</Text>
+                  <Text style={{ color:"#3FB39B",marginTop:20,fontWeight:'bold',fontSize:16 , fontFamily:"Montserrat-Regular"}}>{item.availableSlots}</Text>
                   
              
            

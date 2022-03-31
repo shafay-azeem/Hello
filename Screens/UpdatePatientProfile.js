@@ -68,7 +68,7 @@ export default class UpdatePatientProfile extends Component {
           <Text style={styles.EdittextHeading}>First Name</Text>
           <TextInput style={styles.Edittext}
           placeholder="Enter First Name" 
-          placeholderTextColor="#30A28C"
+          placeholderTextColor="#3FB39B"
            onChangeText={text => this.setState({FirstName:text})}/>
         </View>
 
@@ -76,7 +76,7 @@ export default class UpdatePatientProfile extends Component {
           <Text style={styles.EdittextHeading}>Middle Name</Text>
           <TextInput style={styles.Edittext}
            placeholder="Enter Middle Name" 
-           placeholderTextColor="#30A28C"
+           placeholderTextColor="#3FB39B"
             onChangeText={text => this.setState({MiddleName:text})} />
         </View>
 
@@ -84,7 +84,7 @@ export default class UpdatePatientProfile extends Component {
           <Text style={styles.EdittextHeading}>Last Name</Text>
           <TextInput style={styles.Edittext}
            placeholder="Enter Last Name" 
-           placeholderTextColor="#30A28C"
+           placeholderTextColor="#3FB39B"
             onChangeText={text => this.setState({LastName:text})} />
         </View>
       </View>
@@ -94,10 +94,25 @@ export default class UpdatePatientProfile extends Component {
       <View style={styles.Side_by_side_EditText}>
         <View style={styles.inputWrap}>
           <Text style={styles.EdittextHeading}>Gender</Text>
-          <TextInput style={styles.Edittext}
-          placeholder="Enter Gender" 
-          placeholderTextColor="#30A28C"
-           onChangeText={text => this.setState({Gender:text})}/>
+          <View   style={{   borderColor: "#3FB39B",
+        backgroundColor:'#F7F7F7',     
+           borderWidth: 1,  borderRadius: 15,  marginHorizontal:20,   marginTop:2, height:50}}> 
+          <Picker  
+           selectedValue={this.state.PickerSelectedVal}
+           placeholderTextColor="#3FB39B"
+           onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
+  
+           <Picker.Item color='#3FB39B' label="Male" value="Male" />
+           <Picker.Item color='#3FB39B' label="Female" value="Female" />
+           <Picker.Item color='#3FB39B' label="Others" value="Others" />
+          
+        
+
+           </Picker> 
+
+       
+     
+     </View>
         </View>
 
         <View style={styles.inputWrap}>
@@ -105,7 +120,7 @@ export default class UpdatePatientProfile extends Component {
           <TextInput style={styles.Edittext}
            placeholder="Enter Age" 
            keyboardType = 'numeric'
-           placeholderTextColor="#30A28C"
+           placeholderTextColor="#3FB39B"
             onChangeText={text => this.setState({Age:text})} />
         </View>
 
@@ -113,7 +128,7 @@ export default class UpdatePatientProfile extends Component {
           <Text style={styles.EdittextHeading}>DOB</Text>
           <TextInput style={styles.Edittext}
            placeholder="Enter DOB" 
-           placeholderTextColor="#30A28C"
+           placeholderTextColor="#3FB39B"
             onChangeText={text => this.setState({DOB:text})} />
         </View>
       </View>
@@ -126,7 +141,7 @@ export default class UpdatePatientProfile extends Component {
           <TextInput style={styles.Edittext}
            placeholder="Enter phoneNumber" 
            keyboardType = 'numeric'
-           placeholderTextColor="#30A28C"
+           placeholderTextColor="#3FB39B"
             onChangeText={text => this.setState({phoneNumber:text})} />
         </View>
 
@@ -134,18 +149,18 @@ export default class UpdatePatientProfile extends Component {
 
         <View style={styles.inputWrap}>
       <Text style={styles.EdittextHeading}>Marital Status</Text>
-<View   style={{   borderColor: "#30A28C",
+<View   style={{   borderColor: "#3FB39B",
         backgroundColor:'#F7F7F7',     
            borderWidth: 1,  borderRadius: 15,  marginHorizontal:20,   marginTop:2, height:50}}> 
           <Picker  
            selectedValue={this.state.PickerSelectedVal}
-           placeholderTextColor="#30A28C"
+           placeholderTextColor="#3FB39B"
            onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
   
-           <Picker.Item color='#30A28C' label="Married" value="Married" />
-           <Picker.Item color='#30A28C' label="Unmarried" value="Unmarried" />
-           <Picker.Item color='#30A28C' label="Divorced" value="Divorced" />
-           <Picker.Item  color='#30A28C' label="Widow" value="Widow" />
+           <Picker.Item color='#3FB39B' label="Married" value="Married" />
+           <Picker.Item color='#3FB39B' label="Unmarried" value="Unmarried" />
+           <Picker.Item color='#3FB39B' label="Divorced" value="Divorced" />
+           <Picker.Item  color='#3FB39B' label="Widow" value="Widow" />
         
 
            </Picker> 
@@ -161,7 +176,7 @@ export default class UpdatePatientProfile extends Component {
           <TextInput  
               style={styles.Edittext}
               placeholder="Enter your Address" 
-              placeholderTextColor="#30A28C"
+              placeholderTextColor="#3FB39B"
               onChangeText={text => this.setState({address:text})}/>
          
          
@@ -173,7 +188,7 @@ export default class UpdatePatientProfile extends Component {
           <Text style={styles.EdittextHeading}>Email</Text>
           <TextInput style={styles.Edittext}
           placeholder="Enter Email" 
-          placeholderTextColor="#30A28C"
+          placeholderTextColor="#3FB39B"
            onChangeText={text => this.setState({Email:text})}/>
         </View>
 
@@ -182,7 +197,7 @@ export default class UpdatePatientProfile extends Component {
           <TextInput style={styles.Edittext}
             secureTextEntry={true}
            placeholder="Enter Password" 
-           placeholderTextColor="#30A28C"
+           placeholderTextColor="#3FB39B"
             onChangeText={text => this.setState({password:text})} />
         </View>
 
@@ -191,7 +206,8 @@ export default class UpdatePatientProfile extends Component {
           <TextInput style={styles.Edittext}
           secureTextEntry={true}
            placeholder="Enter Password" 
-           placeholderTextColor="#30A28C"
+           placeholderTextColor="#3FB39B"
+        
             onChangeText={text => this.setState({confirmpassword:text})} />
         </View>
       </View>
@@ -212,11 +228,11 @@ onClick={()=>{
 }}
 isChecked={this.state.isChecked}
 RightText={"Remember Me"}
-checkedColor={"#30A28C"}
+checkedColor={"#3FB39B"}
 
 />
 
-             <Text style= {[{fontFamily:"Montserrat-Bold",justifyContent:'center',color:"#30A28C",fontSize:15}]}>Please Verify above Information is Correct</Text>
+             <Text style= {[{fontFamily:"Montserrat-Bold",justifyContent:'center',color:"#3FB39B",fontSize:15}]}>Please Verify above Information is Correct</Text>
              </View>
              <View style={{width:"50%",alignSelf:'flex-end',alignItems:'flex-end',justifyContent:'flex-end'}} >
 

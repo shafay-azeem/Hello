@@ -47,7 +47,7 @@ function Item({ item }) {
 
           </View>
 
-            <Text numberOfLines={1} style={{ textAlign: 'left', fontSize: 25, color:"#30A28C", textAlign: 'center',fontFamily:"Montserrat-Regular"}}>Dr. {item.name}</Text>
+            <Text numberOfLines={1} style={{ textAlign: 'left', fontSize: 25, color:"#075430", textAlign: 'center',fontFamily:"Montserrat-Regular"}}>Dr. {item.name}</Text>
 
             
             <View style = {{padding: 5, width: '100%', height: '100%'}}>

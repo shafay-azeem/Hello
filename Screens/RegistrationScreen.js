@@ -4,8 +4,9 @@ import RadioForm  from 'react-native-simple-radio-button';
 import { Picker } from "@react-native-picker/picker";
 import QRCodeScanner from 'react-native-qrcode-scanner';
 import CheckBox from 'react-native-check-box';
+import DateTimePickerModal from "react-native-modal-datetime-picker";
 
-
+import Example from './Example';
 import styles from './Styles/CompleteStyling';
 
 
@@ -96,7 +97,7 @@ export default class RegistrationScreen extends Component {
     console.info(this.props.navigation)
 
     return (
-      <View style={{backgroundColor:'#38AB94'}}  >
+      <View style={{backgroundColor:'#3FB39B'}}  >
       <SafeAreaView >
  
       <View > 
@@ -191,11 +192,12 @@ export default class RegistrationScreen extends Component {
       <View style={styles.inputWrap}>
 
              <Text style={styles.EdittextHeading}>DOB</Text>
-            <TextInput  
+             <Example/>
+            {/* <TextInput  
               style={styles.Edittext}
               placeholder="Enter your DOB" 
               placeholderTextColor="#30A28C"
-              onChangeText={text => this.setState({DOB:text})}/>
+              onChangeText={text => this.setState({DOB:text})}/> */}
 </View>
 
 <View style={styles.inputWrap}>
@@ -352,7 +354,7 @@ RightText={"Remember Me"}
 
 
 <TouchableOpacity style={[styles.buttonForm,{marginBottom:10}]}
- onPress={() =>this.props.navigation.navigate("SearchPatient")}
+ onPress={() =>this.props.navigation.navigate("SelectPatient")}
  > 
  <Text style={styles.Button_text_styling}>
  SUBMIT </Text>

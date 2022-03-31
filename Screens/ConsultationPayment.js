@@ -40,7 +40,7 @@ export default class ConsultationPayment extends Component {
             <View style = {{flexDirection: 'column' ,alignItems: 'center',marginRight:10}}>
 
 
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>Profile Image </Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  fontFamily:"Montserrat-Regular"}}>Profile Image </Text>
  
             <View style={{ width: 40 ,height: 40}}>
                     { <Image
@@ -53,31 +53,31 @@ export default class ConsultationPayment extends Component {
 
 
             <View style = {{flexDirection: 'column' ,alignItems: 'center',marginRight:10}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>DrName </Text>
-            <Text style={{color: 'black', alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold",fontSize:20,color:'#38AB94',marginRight:20}}>{drinfo.doctorName}</Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  fontFamily:"Montserrat-Regular"}}>DrName </Text>
+            <Text style={{color: 'black', alignSelf: 'flex-start',fontFamily:"Montserrat-Regular",fontSize:18,color:'#3FB39B',marginRight:20}}>{drinfo.doctorName}</Text>
        
             </View>
 
 
             <View style = {{flexDirection: 'column' ,alignItems: 'center',marginRight:10}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>Speciality </Text>
-            <Text style={{color: 'black', alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold",fontSize:20,color:'#38AB94',marginRight:20}}>{drinfo.specality}</Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  fontFamily:"Montserrat-Regular"}}>Speciality </Text>
+            <Text style={{color: 'black', alignSelf: 'flex-start',fontFamily:"Montserrat-Regular",fontSize:18,color:'#3FB39B',marginRight:20}}>{drinfo.specality}</Text>
        
             </View>
           
             <View style = {{flexDirection: 'column',alignItems: 'center',marginRight:10}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>Email</Text>
-            <Text style={{color: 'black', alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold",fontSize:20,color:'#38AB94',marginRight:20}}>{drinfo.doctorEmail}</Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20, fontFamily:"Montserrat-Regular"}}>Email</Text>
+            <Text style={{color: 'black', alignSelf: 'flex-start',fontFamily:"Montserrat-Regular",fontSize:18,color:'#3FB39B',marginRight:20}}>{drinfo.doctorEmail}</Text>
        
             </View>
             <View style = {{flexDirection: 'column',alignItems: 'center',marginRight:10}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>PhoneNo</Text>
-            <Text style={{color: 'black', alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold",fontSize:20,color:'#38AB94',marginRight:20}}>{drinfo.doctorPhone}</Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,fontFamily:"Montserrat-Regular"}}>PhoneNo</Text>
+            <Text style={{color: 'black', alignSelf: 'flex-start',fontFamily:"Montserrat-Regular",fontSize:18,color:'#3FB39B',marginRight:20}}>{drinfo.doctorPhone}</Text>
        
             </View>
             <View style = {{flexDirection: 'column',alignItems: 'center',marginRight:10}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20 , textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>Fees</Text>
-            <Text style={{color: 'black', alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold",fontSize:20,color:'#38AB94',marginRight:20}}>{drinfo.Fees}</Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20 ,fontFamily:"Montserrat-Regular"}}>Fee</Text>
+            <Text style={{color: 'black', alignSelf: 'flex-start',fontFamily:"Montserrat-Regular",fontSize:18,color:'#3FB39B',marginRight:20}}>{drinfo.Fees}</Text>
        
             </View>
          
@@ -98,21 +98,25 @@ export default class ConsultationPayment extends Component {
             <TextInput  
              style={[styles.Edittext,{width:200}]}
               placeholder="Transaction ID" 
-              placeholderTextColor="#30A28C"
+           keyboardType = 'numeric'
+
+              placeholderTextColor="#3FB39B"
               onChangeText={text => this.setState({Transaction_ID:text})}/>
            
 
             <TextInput  
            style={[styles.Edittext,{width:200}]}
               placeholder="Amount" 
-              placeholderTextColor="#30A28C"
+           keyboardType = 'numeric'
+
+              placeholderTextColor="#3FB39B"
               onChangeText={text => this.setState({Amount:text})}/>
 
 
             <TextInput  
          style={[styles.Edittext,{width:200}]}
               placeholder="Payee's Name" 
-              placeholderTextColor="#30A28C"
+              placeholderTextColor="#3FB39B"
               onChangeText={text => this.setState({Payees_Name:text})}/>
  </View>
 
@@ -122,7 +126,7 @@ export default class ConsultationPayment extends Component {
             <TextInput  
             style={[styles.Edittext,{width:200}]}
               placeholder="Bank's Name" 
-              placeholderTextColor="#30A28C"
+              placeholderTextColor="#3FB39B"
               onChangeText={text => this.setState({Bank_Name:text})}/>
                
 
@@ -130,13 +134,13 @@ export default class ConsultationPayment extends Component {
             <TextInput  
               style={[styles.Edittext,{width:200}]}
               placeholder="Card's Name" 
-              placeholderTextColor="#30A28C"
+              placeholderTextColor="#3FB39B"
               onChangeText={text => this.setState({Card_Name:text})}/>
                      
                      </View>
 
                      <View style={{marginTop:20}}>
-            <TouchableOpacity style={[styles.buttonGeneral]}
+            <TouchableOpacity style={[styles.buttonGeneral,{width:"30%"}]}
               onPress={() =>this.props.navigation.navigate("PaymentSuccessfull")}
               > 
               <Text style={styles.Button_text_styling}>

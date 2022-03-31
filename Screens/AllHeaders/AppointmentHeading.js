@@ -29,6 +29,6 @@ const styles = StyleSheet.create({
        color:'#FFFFFF',
        justifyContent: 'center',
        alignSelf:'center',
-       marginTop:90
+        marginTop:30
     }
 })

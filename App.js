@@ -22,7 +22,7 @@ import UpdatePatientProfile from "./Screens/UpdatePatientProfile";
 
 import SelectDoc from "./Screens/SelectDoc";
 import SelectSlot from "./Screens/SelectSlot";
-
+import Cash from "./Screens/Cash";
 import AppointmentConfirmation from "./Screens/AppointmentConfirmation";
 import SelectSchedule from "./Screens/SelectSchedule";
 import Payment from "./Screens/Payment";
@@ -57,6 +57,10 @@ const App = () => {
 <Stack.Screen
         name="OpeningBal"
         component={OpeningBal}
+      />
+      <Stack.Screen
+        name="Cash"
+        component={Cash}
       />
 
 <Stack.Screen

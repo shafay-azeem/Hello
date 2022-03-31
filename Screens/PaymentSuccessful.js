@@ -35,7 +35,7 @@ export default class PaymentSuccessfull extends Component {
           
 
             <View style = {{flexDirection: 'column' ,alignItems: 'center',marginRight:10}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>Profile Image </Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20, fontFamily:"Montserrat-Regular"}}>Profile Image </Text>
  
             <View style={{ width: 40 ,height: 40}}>
                     { <Image
@@ -46,29 +46,29 @@ export default class PaymentSuccessfull extends Component {
             </View>
 
             <View style = {{flexDirection: 'column' ,alignItems: 'center',marginRight:10}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>DrName </Text>
-            <Text style={{color: 'black', alignSelf: 'flex-start',fontSize:20,color:'#38AB94',marginRight:20,fontFamily:"Montserrat-SemiBold"}}>{drinfo.doctorName}</Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20, fontFamily:"Montserrat-Regular"}}>Doctor Name </Text>
+            <Text style={{color: 'black', alignSelf: 'flex-start',fontSize:18,color:'#3FB39B',marginRight:20,fontFamily:"Montserrat-Regular"}}>{drinfo.doctorName}</Text>
        
             </View>
             <View style = {{flexDirection: 'column' ,alignItems: 'center',marginRight:10}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>Speciality </Text>
-            <Text style={{color: 'black', alignSelf: 'flex-start',fontSize:20,color:'#38AB94',marginRight:20,fontFamily:"Montserrat-SemiBold"}}>{drinfo.specality}</Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20, fontFamily:"Montserrat-Regular"}}>Speciality </Text>
+            <Text style={{color: 'black', alignSelf: 'flex-start',fontSize:18,color:'#3FB39B',marginRight:20,fontFamily:"Montserrat-Regular"}}>{drinfo.specality}</Text>
        
             </View>
           
             <View style = {{flexDirection: 'column',alignItems: 'center',marginRight:10}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>Email</Text>
-            <Text style={{color: 'black', alignSelf: 'flex-start',fontSize:20,color:'#38AB94',marginRight:20,fontFamily:"Montserrat-SemiBold"}}>{drinfo.doctorEmail}</Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20, fontFamily:"Montserrat-Regular"}}>Fee</Text>
+            <Text style={{color: 'black', alignSelf: 'flex-start',fontSize:18,color:'#3FB39B',marginRight:20,fontFamily:"Montserrat-Regular"}}>{drinfo.Fees}</Text>
        
             </View>
             <View style = {{flexDirection: 'column',alignItems: 'center',marginRight:10}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20,  textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>PhoneNo</Text>
-            <Text style={{color: 'black', alignSelf: 'flex-start',fontSize:20,color:'#38AB94',marginRight:20,fontFamily:"Montserrat-SemiBold"}}>{drinfo.doctorPhone}</Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20, fontFamily:"Montserrat-Regular"}}>PhoneNo</Text>
+            <Text style={{color: 'black', alignSelf: 'flex-start',fontSize:18,color:'#3FB39B',marginRight:20,fontFamily:"Montserrat-Regular"}}>{drinfo.doctorPhone}</Text>
        
             </View>
             <View style = {{flexDirection: 'column',alignItems: 'center',marginRight:10}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20 , textDecorationLine: 'underline',fontFamily:"Montserrat-Regular"}}>Fees</Text>
-            <Text style={{color: 'black', alignSelf: 'flex-start',fontSize:20,color:'#38AB94',marginRight:20,fontFamily:"Montserrat-SemiBold"}}>{drinfo.Fees}</Text>
+            <Text style={{ color: 'black',alignSelf: 'flex-start',fontSize:20 , fontFamily:"Montserrat-Regular"}}>Location</Text>
+            <Text style={{color: 'black', alignSelf: 'flex-start',fontSize:18,color:'#3FB39B',marginRight:20,fontFamily:"Montserrat-Regular"}}>{drinfo.Location}</Text>
        
             </View>
         
@@ -90,30 +90,30 @@ export default class PaymentSuccessfull extends Component {
 
                 <View style = {{flexDirection: 'row' ,marginTop: 20}}>
                 <Text style = {[{alignSelf:'flex-start',marginTop:10,fontSize:20,color:'black',fontFamily:"Montserrat-Regular"}]}>Invoice ID: </Text> 
-                <Text style = {[{alignSelf:'flex-start',marginTop:12,fontSize:18,color:'#38AB94',fontFamily:"Montserrat-SemiBold"}]}>{invoice['InvoiceID '] }</Text>
+                <Text style = {[{alignSelf:'flex-start',marginTop:14,fontSize:15,color:'#3FB39B',fontFamily:"Montserrat-SemiBold"}]}>{invoice['InvoiceID '] }</Text>
                 </View>
 
 
                 <View style = {{flexDirection: 'row'}}>
                 <Text style = {[{marginTop:10,fontSize:20,color:'black',fontFamily:"Montserrat-Regular"}]}>Invoice Date: </Text>
-                <Text style = {[{marginTop:12,fontSize:18,color:'#38AB94',fontFamily:"Montserrat-SemiBold"}]}>{invoice['InvoiceDate'] }</Text>
+                <Text style = {[{marginTop:14,fontSize:15,color:'#3FB39B',fontFamily:"Montserrat-SemiBold"}]}>{invoice['InvoiceDate'] }</Text>
                 </View>
 
                 <View style = {{flexDirection: 'row'}}>
                 <Text style = {[{marginTop:10,fontSize:20,color:'black',fontFamily:"Montserrat-Regular"}]}>Issued by: </Text>
-                <Text style = {[{marginTop:12,fontSize:18,color:'#38AB94',fontFamily:"Montserrat-SemiBold"}]}>{invoice['IssuedBy '] }</Text>
+                <Text style = {[{marginTop:14,fontSize:15,color:'#3FB39B',fontFamily:"Montserrat-SemiBold"}]}>{invoice['IssuedBy '] }</Text>
 
                 </View>
 
                 <View style = {{flexDirection: 'row'}}>
                 <Text style = {[{marginTop:10,fontSize:20,color:'black',fontFamily:"Montserrat-Regular"}]}>Patient Name: </Text>
-                <Text style = {[{marginTop:12,fontSize:18,color:'#38AB94',fontFamily:"Montserrat-SemiBold"}]}>{invoice.patientName }</Text>
+                <Text style = {[{marginTop:14,fontSize:15,color:'#3FB39B',fontFamily:"Montserrat-SemiBold"}]}>{invoice.patientName }</Text>
 
                 </View>
 
                 <View style = {{flexDirection: 'row'}}>
                 <Text style = {[{marginTop:10,fontSize:20,color:'black',fontFamily:"Montserrat-Regular"}]}>Teleconsultation Payment: </Text>
-                <Text style = {[{marginTop:12,fontSize:18,color:'#38AB94',fontFamily:"Montserrat-SemiBold"}]}>{invoice.TeleconsultationPayment }</Text>
+                <Text style = {[{marginTop:14,fontSize:15,color:'#3FB39B',fontFamily:"Montserrat-SemiBold"}]}>{invoice.TeleconsultationPayment }</Text>
 
                 </View>
 
@@ -125,14 +125,9 @@ export default class PaymentSuccessfull extends Component {
 
 
  <View style={{flexDirection:'row'}}>
-                <Text style = { [{flexDirection: 'row',alignSelf:'flex-end',fontFamily:"Montserrat-Regular",fontSize:25,color:'black'}]}>Amount Payable: </Text>
+                <Text style = { [{flexDirection: 'row',alignSelf:'flex-end',fontFamily:"Montserrat-Regular",fontSize:20,color:'black'}]}>Amount Payable: </Text>
                 <View style = {{flexDirection: 'row',borderColor: 'orange' ,borderWidth:2, borderRadius: 15, alignItems: 'center',}}>
-            <View style = {styles.dollarIcon}>
-            <Image
-              style={styles.tinyLogo}
-              source={require('../images/dollar.png')}
-            />
-            </View>
+            
             <Text style= {{textAlign: 'right',color: 'black',fontFamily:"Montserrat-SemiBold",padding:5,fontSize:15}}>{invoice.TeleconsultationPayment }</Text>
             
             </View>
@@ -149,7 +144,7 @@ export default class PaymentSuccessfull extends Component {
 
                 </View>
 
-                <TouchableOpacity style={[styles.buttonGeneral,{marginTop:30}]}
+                <TouchableOpacity style={[styles.buttonGeneral,{marginTop:30,width:"28%"}]}
               onPress={() =>this.props.navigation.navigate("PatientDemographics")}
               > 
               <Text style={styles.Button_text_styling}>

@@ -19,8 +19,8 @@ function Item({ item }) {
           <SafeAreaView>
         <View style={styles.listItem}>
             <View style={{width: '100%', height: '100%'}}>
-            <Text style={{ textAlign: 'center',fontFamily:"Montserrat-Regular"}}>{item.date}</Text>
-            <Text style={{ textAlign: 'center',fontFamily:"Montserrat-Regular"}}>{item.time}</Text>
+            <Text style={{ textAlign: 'center',fontFamily:"Montserrat-Regular"}}>{item.date1}</Text>
+            <Text style={{ textAlign: 'center',fontFamily:"Montserrat-Regular"}}>{item.slot}</Text>
 
 
             </View>  
@@ -33,6 +33,8 @@ function Item({ item }) {
 
 
 export default class AppointmentDetails extends Component {
+  doctorName = "Dr Ahmed Khan";
+  specality = "Medicine";  
 
    constructor(props){
    super(props);
@@ -68,28 +70,50 @@ export default class AppointmentDetails extends Component {
             </View>
             <View>
              <Text style= {styles.cardText30}>{this.doctorName}</Text>
-             <Text style= {[styles.cardText, {alignSelf: 'flex-start'}]}>{this.specality}</Text>
+             <Text style= {[styles.cardText, {alignSelf: 'flex-start',color:"black"}]}>{this.specality}</Text>
              </View>
              </View>
             
-             <View style = {styles.subCardView}>
-               <Text style = {[styles.centeredText,{color:"#30A28C"}]}>Date: {doctorApp[0].date}</Text>
-               <Text style = {[styles.centeredText,{color:"#30A28C"}]}>Time: {doctorApp[0].time}</Text>
+             <View style = {[styles.subCardView,{height:"60%",width:"65%"}]}>
+               <Text style = {[styles.centeredText,{color:"#3FB39B",fontSize:25}]}>{doctorApp[0].date1}</Text>
+               <Text style = {[styles.centeredText,{color:"#3FB39B",marginBottom:40,justifyContent:'flex-start',textAlign:'left',marginRight:160}]}>{doctorApp[0].slot}</Text>
+
+
+               
+            <View style = {{flexDirection: 'row', alignItems: 'center',justifyContent: 'center'}}>
+            <Text style={{ color: 'black',alignSelf: 'flex-end',fontFamily:"Montserrat-Regular",fontSize:20,marginLeft:150}}>PAYMENT </Text>
+            <Text style={{color:"black",alignSelf: 'flex-end',fontFamily:"Montserrat-Regular",fontSize:20}}>{paymentStatus.paymentstatus}</Text>
+       
+            </View>
+       
+            <TouchableOpacity style={{     alignItems: 'center',
+        justifyContent: 'center',
+        alignSelf:'flex-end',
+        borderRadius: 25,
+        backgroundColor:'#FFFFFF',
+        borderColor:"#252726",
+        borderWidth:1,
+        height:40,
+       //  margin:50,
+       width:250,
+       marginTop:10,
+       marginRight:60,marginLeft:20,marginBottom:20}}
+              onPress={() =>this.props.navigation.navigate("Payment")}
+              > 
+              <Text style={{  fontSize:15,
+   color:'black',
+  //  fontWeight:'normal',
+   fontFamily:"Montserrat-Regular"}}>
+              PAY NOW</Text>
+            </TouchableOpacity>
              </View>
              
 
-             <View style={{backgroundColor:'#FFFFFF',marginTop:10,padding:8,borderRadius:10,alignItems: 'center'}} >
+             <View style={{backgroundColor:'#green',marginTop:10,padding:8,borderRadius:10,alignItems: 'center'}} >
             <View style= {{flexDirection: "row"}}>
        
 
 
-            <View style = {{flexDirection: 'row', alignItems: 'center',justifyContent: 'center'}}>
-            <Text style={{ color: 'black',alignSelf: 'flex-start',fontFamily:"Montserrat-Regular",fontSize:25}}>PAYMENT STATUS: </Text>
-            <Text style={{color:"red",alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold",fontSize:25}}>{paymentStatus.paymentstatus}</Text>
-       
-            </View>
-
-
 
           </View>
           </View>
@@ -97,12 +121,6 @@ export default class AppointmentDetails extends Component {
 
     
     
-             <TouchableOpacity style={styles.buttonGeneral}
-              onPress={() =>this.props.navigation.navigate("Payment")}
-              > 
-              <Text style={styles.Button_text_styling}>
-              PAY NOW</Text>
-            </TouchableOpacity>
                    
      
 

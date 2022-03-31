@@ -17,7 +17,7 @@ export default class MoreImagesAndRecord extends Component {
         alert('Floating Button Clicked');
       };
      return (
-       <ScrollView style={{backgroundColor:"#38AB94"}}>
+       <ScrollView style={styles.container}>
        <SafeAreaView style={{flex: 1}}>
        
              
