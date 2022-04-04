@@ -5,7 +5,7 @@
        
     
         "profession":"Orthopedics",
-        "location":"AKU-Yusuf Plaza Clinic",
+        "location":"AFMC",
         "date":"Mon, 06 Dec"
     },
     {
@@ -13,7 +13,7 @@
         "name": "Saad Ali",
        
         "profession":"Orthopedics",
-        "location":"AKU-Yusuf Plaza Clinic",
+        "location":"AFMC",
         "date":"Mon, 06 Dec"
 
     },
@@ -22,7 +22,7 @@
       "name": "Hamza Ali",
  
       "profession":"Orthopedics",
-      "location":"AKU-Yusuf Plaza Clinic",
+      "location":"AFMC",
       "date":"Mon, 06 Dec"
 
   },
@@ -31,7 +31,7 @@
     "name": "Laib Ali",
   
     "profession":"Orthopedics",
-    "location":"AKU-Yusuf Plaza Clinic",
+    "location":"AFMC",
     "date":"Mon, 06 Dec"
 
 },
@@ -40,7 +40,7 @@
   "name": "Khan Ali",
 
   "profession":"Orthopedics",
-  "location":"AKU-Yusuf Plaza Clinic",
+  "location":"AFMC",
   "date":"Mon, 06 Dec"
 
 },            {
@@ -48,7 +48,7 @@
 "name": "Usman Ali",
 
 "profession":"Orthopedics",
-"location":"AKU-Yusuf Plaza Clinic",
+"location":"AFMC",
 "date":"Mon, 06 Dec"
 
 },
@@ -57,7 +57,7 @@
 "name": "Fizan Ali",
 
 "profession":"Orthopedics",
-"location":"AKU-Yusuf Plaza Clinic",
+"location":"AFMC",
 "date":"Mon, 06 Dec"
 
 },
@@ -66,7 +66,7 @@
 "name": "Ahmed Ali",
 
 "profession":"Orthopedics",
-"location":"AKU-Yusuf Plaza Clinic",
+"location":"AFMC",
 "date":"Mon, 06 Dec"
 
 },
@@ -75,7 +75,7 @@
   "name": "Yawar Khan",
 
   "profession":"Orthopedics",
-  "location":"AKU-Yusuf Plaza Clinic",
+  "location":"AFMC",
   "date":"Mon, 06 Dec"
   
   },
@@ -84,7 +84,7 @@
   "name": "Kaleem Ahmed",
 
   "profession":"Orthopedics",
-  "location":"AKU-Yusuf Plaza Clinic",
+  "location":"AFMC",
   "date":"Mon, 06 Dec"
   
   },
@@ -93,7 +93,7 @@
     "name": "Ali Saleem",
 
     "profession":"Orthopedics",
-    "location":"AKU-Yusuf Plaza Clinic",
+    "location":"AFMC",
     "date":"Mon, 06 Dec"
     
     },
@@ -101,7 +101,7 @@
       "name": "Hashir Hussain",
 
       "profession":"Orthopedics",
-      "location":"AKU-Yusuf Plaza Clinic",
+      "location":"AFMC",
       "date":"Mon, 06 Dec - 2:20 pm"
       
       }

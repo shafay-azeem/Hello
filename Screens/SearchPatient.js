@@ -14,12 +14,13 @@ export default class SearchPatient extends Component {
     state={
         Mr_Number:"",
         CNIC:"",
-        QR_code:""
+        QR_code:"",
+        Phone_Number:""
   }
    render(){
     return (
-      <ScrollView style={{backgroundColor:'#38AB94'}}> 
-      <SafeAreaView style={{flex: 1}}>
+  
+      <SafeAreaView style={[styles.container,{flex: 1}]}>
  
    
       <View style={{backgroundColor:'#38AB94'}}> 
@@ -51,6 +52,15 @@ export default class SearchPatient extends Component {
               placeholder="Enter Patient 16 digit QR code" 
               placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({QR_code:text})}/>
+
+
+<Text style={styles.EdittextHeading}>Phone Number</Text>
+            <TextInput  
+              style={styles.Edittext}
+              placeholder="Search by Phone Number" 
+              placeholderTextColor="#30A28C"
+              keyboardType = 'numeric'
+              onChangeText={text => this.setState({Phone_Number:text})}/>
          
              <TouchableOpacity style={styles.buttonForSearchPatient}
              onPress={() =>this.props.navigation.navigate("SelectPatient")}
@@ -67,7 +77,7 @@ export default class SearchPatient extends Component {
            </View>
          
            </SafeAreaView>
-           </ScrollView>
+     
      );
      }
 }

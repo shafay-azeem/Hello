@@ -145,8 +145,8 @@ export default class RegistrationScreen extends Component {
               style={styles.Edittext}
               keyboardType = 'numeric'
               placeholderTextColor="#30A28C"
-              editable={false} 
-              selectTextOnFocus={false}
+            //   editable={false} 
+              // selectTextOnFocus={false}
               placeholder="Auto Generate" 
               onChangeText={text => this.setState({SehatSafarNumber:text})}/>
                </View>

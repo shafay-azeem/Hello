@@ -32,7 +32,7 @@ function Item({ item }) {
               source={require('../images/dollar.png')}
             />
             </View>
-            <Text style= {{textAlign: 'right',color: 'black'}}>500 PKR</Text>
+            {/* <Text style= {{textAlign: 'right',color: 'black'}}>500 PKR</Text> */}
             
             
             

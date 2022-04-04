@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Text, View, TextInput, TouchableOpacity,ScrollView,SafeAreaView} from 'react-native';
 import styles from './Styles/CompleteStyling';
-
+import { Picker } from "@react-native-picker/picker";
 
 import Header from './Header';
 import UnitClerkHeader from './AllHeaders/UnitClerkHeader';
@@ -15,12 +15,13 @@ export default class SearchDoctor extends Component {
     state={
         Location:"",
         Speciality:"",
-        Specify_Doctor:""
+        Specify_Doctor:"",
+        Phone_Number:""
   }
    render(){
     return (
-      <ScrollView style={{backgroundColor:'#38AB94'}}> 
-      <SafeAreaView style={{flex: 1}}>
+    
+      <SafeAreaView style={[styles.container,{flex: 1}]}>
  
    
       <View style={{backgroundColor:'#38AB94'}}> 
@@ -33,18 +34,41 @@ export default class SearchDoctor extends Component {
            
            </Text>
            <Text style={styles.EdittextHeading}>Location </Text>
-            <TextInput  
-              style={styles.Edittext}
-              placeholder="Select which Location you prefer " 
-              placeholderTextColor="#30A28C"
-              onChangeText={text => this.setState({Location:text})}/>
-         
+           <View   style={{   borderColor: "#30A28C",
+        backgroundColor:'#F7F7F7',     
+           borderWidth: 1,  borderRadius: 15,  marginHorizontal:20,   marginTop:2, height:50}}> 
+          <Picker  
+           selectedValue={this.state.PickerSelectedVal}
+           placeholderTextColor="#30A28C"
+           onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
+  <Picker.Item color='#30A28C' label="Select" value="Select" />
+           <Picker.Item color='#30A28C' label="AFMC" value="AFMC" />
+ 
+           
+
+           </Picker> 
+
+       
+     
+     </View>
            <Text style={styles.EdittextHeading}>Speciality</Text>
-            <TextInput  
-              style={styles.Edittext}
-              placeholder="Select Your desired speciality" 
-              placeholderTextColor="#30A28C"
-              onChangeText={text => this.setState({Speciality:text})}/>
+           <View   style={{   borderColor: "#30A28C",
+        backgroundColor:'#F7F7F7',     
+           borderWidth: 1,  borderRadius: 15,  marginHorizontal:20,   marginTop:2, height:50}}> 
+          <Picker  
+           selectedValue={this.state.PickerSelectedVal}
+           placeholderTextColor="#30A28C"
+           onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
+  <Picker.Item color='#30A28C' label="Select" value="Select" />
+           <Picker.Item color='#30A28C' label="Family Medicine" value="Family Medicine" />
+ 
+           
+
+           </Picker> 
+
+       
+     
+     </View>
           
            
            <Text style={styles.EdittextHeading}>Specify Doctor</Text>
@@ -53,6 +77,16 @@ export default class SearchDoctor extends Component {
               placeholder="Specify Name of Desired Doctor" 
               placeholderTextColor="#30A28C"
               onChangeText={text => this.setState({Specify_Doctor:text})}/>
+
+
+                         
+           <Text style={styles.EdittextHeading}>Phone Number</Text>
+            <TextInput  
+              style={styles.Edittext}
+              placeholder="Search by Phone Number" 
+              placeholderTextColor="#30A28C"
+              keyboardType = 'numeric'
+              onChangeText={text => this.setState({Phone_Number:text})}/>
          
              <TouchableOpacity style={styles.buttonForSearchPatient}
              onPress={() =>this.props.navigation.navigate("SelectDoc")}
@@ -69,7 +103,7 @@ export default class SearchDoctor extends Component {
            </View>
          
            </SafeAreaView>
-           </ScrollView>
+       
      );
      }
 }
