@@ -24,12 +24,14 @@ export default class SearchDoctor extends Component {
  
    
       <View style={{backgroundColor:'#38AB94'}}> 
-           <Header style={{height:"20%"}} name="SEARCH DOCTOR " class= ""/>
+           <Header style={{height:"20%"}} name="Search Doctor " class= ""/>
            <UnitClerkHeader/>
            <PatientHeader/>
            </View>
            <View style={styles.containerWithinScrollView} >
-           <Text style = {[styles.mediumText,{alignSelf:'center'}]}>SEARCH DOCTOR BY:</Text>
+           <Text style = {[styles.mediumText,{alignSelf:'center'}]}>SEARCH DOCTOR BY:
+           
+           </Text>
            <Text style={styles.EdittextHeading}>Location </Text>
             <TextInput  
               style={styles.Edittext}

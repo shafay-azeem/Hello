@@ -23,7 +23,7 @@ export default class PaymentSuccessfull extends Component {
    render(){
     return (
       <View style={styles.container}>
-          <Header name="PAYMENT SUCCESSFULL" class= ""/>
+          <Header name="Payment Successfully Done" class= ""/>
           <UnitClerkHeader/>
             <PatientHeader/>
       <View style = {styles.cardView90}>

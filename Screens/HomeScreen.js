@@ -5,6 +5,7 @@ import PatientHeader from './AllHeaders/PatientHeader';
 import Header from './Header';
 import Balance from './Balance';
 
+import AppointmentHeading from './AllHeaders/AppointmentHeading';
 import styles from './Styles/CompleteStyling';
 // import GradientButton from 'react-native-gradient-buttons';
 import { useNavigation } from '@react-navigation/native';
@@ -27,7 +28,7 @@ function Item({ item }) {
           <View style={{flex:1}}>
             
           <View style={{flexDirection:"row"}}>
-          <View style = {styles.roundIcon}>
+          <View style = {[styles.roundIcon,{marginRight:5}]}>
             <Image
               style={[styles.tinyLogo,]}
               source={require('../images/doctor.png')}
@@ -50,10 +51,10 @@ function Item({ item }) {
 
                     <View style={{flexDirection:"row"}}>
 
-                    <View style = {[styles.roundIcon,{ }]}>
+                    <View style = {[styles.roundIcon,{marginTop:10 ,marginRight:5}]}>
             <Image
               style={styles.tinyLogo}
-              source={require('../images/user-silhouette.png')}
+              source={require('../images/user.png')}
             />
          
 
@@ -72,7 +73,7 @@ function Item({ item }) {
             
  
        
-            <TouchableOpacity style={[styles.smallRoundedBlueRoundedNoMargin,{marginTop:10,marginBottom:40}]}
+            <TouchableOpacity style={[styles.smallRoundedBlueRoundedNoMargin,{marginBottom:40}]}
                    onPress={() => navigation.navigate('PatientDemographics')} >
               <Text style={[styles.cardText,{fontSize: 18},{color: 'white'}]}>SELECT </Text>
             </TouchableOpacity>
@@ -184,7 +185,7 @@ export default class HomeScreen extends Component {
         </Modal>
   
        
-          <Header name="EMR" class= ""/>
+          <Header name="EMR logo" class= ""/>
           
         
             <UnitClerkHeader/>
@@ -243,7 +244,7 @@ export default class HomeScreen extends Component {
               onPress={() =>this.props.navigation.navigate("RegistrationScreen")}
               > 
               <Text style={styles.Button_text_styling}>
-              REGISTRATION NEW PATIENT</Text>
+              REGISTER NEW PATIENT</Text>
             </TouchableOpacity>
             
             <TouchableOpacity style={[styles.button_Side_by_Side,{width:300}]}
@@ -260,6 +261,7 @@ export default class HomeScreen extends Component {
               SEARCH PATIENT</Text>
             </TouchableOpacity>
     </View>
+    <AppointmentHeading name="Upcomming Appointments"/>
   
              <View style= {{flex:1 , height:"100%",width: '100%'}}>
              <SafeAreaView style={{flex:1}} >

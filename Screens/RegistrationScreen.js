@@ -101,7 +101,7 @@ export default class RegistrationScreen extends Component {
       <SafeAreaView >
  
       <View > 
-      <Header name="PATIENT REGISTRATION" class= "" />
+      <Header name="Patient Registration" class= "" />
       <UnitClerkHeader/>
 </View>
 
@@ -115,8 +115,10 @@ export default class RegistrationScreen extends Component {
         <View style={styles.inputWrap}>
           <Text style={styles.EdittextHeading}>MR Number</Text>
           <TextInput style={styles.Edittext}
-          placeholder="Enter" 
+          placeholder="Auto Generate" 
           keyboardType = 'numeric'
+          editable={false} 
+          selectTextOnFocus={false}
           placeholderTextColor="#30A28C"
            onChangeText={text => this.setState({MRNumber:text})}/>
         </View>
@@ -124,8 +126,10 @@ export default class RegistrationScreen extends Component {
         <View style={styles.inputWrap}>
           <Text style={styles.EdittextHeading}>Family Number</Text>
           <TextInput style={styles.Edittext}
-           placeholder="Enter" 
+           placeholder="Auto Generate" 
            keyboardType = 'numeric'
+           editable={false} 
+           selectTextOnFocus={false}
            placeholderTextColor="#30A28C"
             onChangeText={text => this.setState({FamilyNumber:text})} />
         </View>
@@ -141,7 +145,9 @@ export default class RegistrationScreen extends Component {
               style={styles.Edittext}
               keyboardType = 'numeric'
               placeholderTextColor="#30A28C"
-              placeholder="Enter your SehatSafarNumber" 
+              editable={false} 
+              selectTextOnFocus={false}
+              placeholder="Auto Generate" 
               onChangeText={text => this.setState({SehatSafarNumber:text})}/>
                </View>
          
@@ -152,7 +158,7 @@ export default class RegistrationScreen extends Component {
               style={styles.Edittext}
               keyboardType = 'numeric'
               placeholderTextColor="#30A28C"
-              placeholder="CNICNumber" 
+              placeholder="Enter CNIC Number" 
               onChangeText={text => this.setState({CNICNumber:text})}/>
                   </View>
                   </View>

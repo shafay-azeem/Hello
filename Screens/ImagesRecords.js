@@ -17,7 +17,7 @@ export default class ImagesRecords extends Component {
              
              
           <View>
-          <Header name="IMAGES AND RECORDS" class= ""/>
+          <Header name="Images Or Records" class= ""/>
        <UnitClerkHeader/>
        <PatientHeader/>
 

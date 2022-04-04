@@ -239,28 +239,28 @@ inputWrap: {
      
     },
     containerForSelectPatient:{
-      // backgroundColor:'#FFFFFF',
-      // borderColor:'blue',
-      // borderRadius:10,
-      // padding:10,
-      // margin:8,
-      // height:250,
-      // width:250,
-      // // marginRight:70,
-      // // borderWidth:1
-
       backgroundColor:'#FFFFFF',
-      margin:10,
-      width:"2%",
-      height: 250,
-      flex:1,
-      alignSelf:"center",
-      borderRadius:15,
-      padding: 15,
+      borderColor:'blue',
+      borderRadius:10,
+      padding:10,
+      margin:8,
+      height:250,
+      width:250,
+      // marginRight:70,
+      // borderWidth:1
+
+      // backgroundColor:'#FFFFFF',
+      // margin:10,
+      // width:"2%",
+      // height: 250,
+      // flex:1,
+      // alignSelf:"center",
+      // borderRadius:15,
+      // padding: 15,
   },
   inputViewHeight40:{
     borderWidth: 1.5, 
-    borderColor: "#075430" ,
+    borderColor: "#3FB39B" ,
     borderRadius: 25, 
     width: '90%',
     height: 40 

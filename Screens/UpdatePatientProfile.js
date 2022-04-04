@@ -5,6 +5,7 @@ import { Picker } from "@react-native-picker/picker";
 import QRCodeScanner from 'react-native-qrcode-scanner';
 import CheckBox from 'react-native-check-box';
 
+import Example from './Example';
 
 import styles from './Styles/CompleteStyling';
 
@@ -53,7 +54,7 @@ export default class UpdatePatientProfile extends Component {
       <SafeAreaView >
  
       <View > 
-      <Header name="  UPDATE PATIENT PROFILE " class= "" />
+      <Header name="  Update Patient Profile " class= "" />
       <UnitClerkHeader/>
 </View>
 
@@ -126,10 +127,12 @@ export default class UpdatePatientProfile extends Component {
 
         <View style={styles.inputWrap}>
           <Text style={styles.EdittextHeading}>DOB</Text>
-          <TextInput style={styles.Edittext}
+
+          <Example/>
+          {/* <TextInput style={styles.Edittext}
            placeholder="Enter DOB" 
            placeholderTextColor="#3FB39B"
-            onChangeText={text => this.setState({DOB:text})} />
+            onChangeText={text => this.setState({DOB:text})} /> */}
         </View>
       </View>
 

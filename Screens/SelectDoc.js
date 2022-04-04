@@ -25,14 +25,14 @@ function Item({ item }) {
         >
           <View style={{flex:1}}>
             
-      <View style = {{flexDirection: 'row', width: 70, height: 25,borderColor: 'orange' ,borderWidth:2, borderRadius: 25, alignSelf: 'flex-end', alignItems: 'center'}}>
+      <View style = {{flexDirection: 'row', width: 80, height: 25,borderColor: 'orange' ,borderWidth:2, borderRadius: 25, alignSelf: 'flex-end', alignItems: 'center'}}>
             <View style = {styles.dollarIcon}>
             <Image
               style={styles.tinyLogo}
               source={require('../images/dollar.png')}
             />
             </View>
-            <Text style= {{textAlign: 'right',color: 'black'}}>1000</Text>
+            <Text style= {{textAlign: 'right',color: 'black'}}>500 PKR</Text>
             
             
             
@@ -143,10 +143,11 @@ export default class SelectDoc extends Component {
     return (
     
         <View style={styles.container}>
-          <Header name="SELECT DOCTOR" class= ""/>
+          <Header name="Select Doctor" class= ""/>
           
-            <PatientHeader/>
+          
             <UnitClerkHeader/>
+            <PatientHeader/>
          <View style= {{flex:1 ,width: '100%', alignSelf: 'center'}}>
          <SafeAreaView style={{flex:1}} >
         <FlatList

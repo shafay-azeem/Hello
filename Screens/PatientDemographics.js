@@ -17,7 +17,7 @@ export default class PatientDemographics extends Component {
              
              
           <View>
-          <Header name="PATIENT DEMOGRAPHICS" class= ""/>
+          <Header name="Patient Demographics" class= ""/>
        <UnitClerkHeader/>
        <PatientHeader/>
 

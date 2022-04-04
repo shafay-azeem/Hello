@@ -28,7 +28,7 @@ export default class ConsultationPaymentcheque extends Component {
       }];
     return (
       <View style={styles.container}>
-          <Header name="CHEQUE MODE " class= ""/>
+          <Header name="Cheque Mode " class= ""/>
           <UnitClerkHeader/>
             <PatientHeader/>
      

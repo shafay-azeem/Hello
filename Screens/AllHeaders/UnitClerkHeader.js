@@ -14,7 +14,7 @@ export default class UnitClerkHeader extends Component {
       <View style={{ width: 50 ,height: 50,marginRight: 6}}>
               { <Image
               style={{   width: '100%',height: '100%',alignSelf: 'center'}}
-              source={require('../clerk.png')}
+              source={require('../user.png')}
               /> }
             </View>
       </View>

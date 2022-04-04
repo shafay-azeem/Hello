@@ -23,7 +23,7 @@ export default class MoreImagesAndRecord extends Component {
              
              
           <View>
-          <Header name="IMAGES AND RECORDS" class= ""/>
+          <Header name="Images Or Records" class= ""/>
 
        <UnitClerkHeader/>
 

@@ -52,7 +52,7 @@ export default class AppointmentConfirmation extends Component {
 
     return (
         <View style={styles.container}>
-        <Header name="APPOINTMENT CONFIRMATION"/>
+        <Header name="Appointment Confirmation"/>
         <UnitClerkHeader/>
          <PatientHeader/>
          <View style = {styles.cardView90}>

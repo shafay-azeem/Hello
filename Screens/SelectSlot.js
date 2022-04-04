@@ -34,7 +34,7 @@ function Item({ item }) {
 
           </View>
 
-            <Text style={{ textAlign: 'left', fontSize: 22, color:"#075430", textAlign: 'center',     fontFamily:"Montserrat-Regular",}}>{item.slot}</Text>
+            <Text style={{ textAlign: 'left', fontSize: 22, color:"#3FB39B", textAlign: 'center',     fontFamily:"Montserrat-Regular",}}>{item.slot}</Text>
 
             
             <View style = {{padding: 5, width: '100%', height: '100%'}}>
@@ -70,7 +70,7 @@ function Item({ item }) {
 
 export default class SelectSlot extends Component {
    doctorName = "Dr Ahmed Khan";
-   specality = "MBBS";
+   specality = "Medicine";
    constructor(props){
    super(props);
    }
@@ -104,11 +104,11 @@ export default class SelectSlot extends Component {
     return (
   
         <View style={styles.container} >
-          <Header name="SELECT SLOT" class= ""/>
+          <Header name="Select Slot" class= ""/>
           
-            <PatientHeader/>
+           
             <UnitClerkHeader/>
-     
+            <PatientHeader/>
          <View style = {{flexDirection: 'row', alignItems:'center', justifyContent:'center' }}>
              <View style={{alignSelf: 'center',height: 120, width: 150,borderRadius: 150/2,justifyContent: 'center', }}>
              <Image

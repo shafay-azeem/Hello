@@ -8,7 +8,8 @@ import Header from './Header';
 import styles from './Styles/CompleteStyling';
 import CheckBox from 'react-native-check-box';
 import { Picker } from "@react-native-picker/picker";
-
+import Example1 from './Example1';
+import Example2 from './Example2';
 export default class CreateSlot extends Component {
 
     state={
@@ -37,26 +38,13 @@ export default class CreateSlot extends Component {
           <View style = {{marginBottom:0}}>
               <View style = {{alignItems: 'center'}}>
 
-              <Text style = {styles.mediumText}>Create new shedule request</Text>
+              <Text style = {styles.mediumText}>Create New Schedule request</Text>
               <View style = {{flexDirection:'row', marginTop:10}}>
-              <View style={{ borderWidth: 1.5, borderColor: "#075430", borderRadius: 15, marginRight: 30, width: 200, height: 40, justifyContent: 'center' }}>
-             <TextInput
-             placeholder="Start Date" 
-           keyboardType = 'numeric'
-           placeholderTextColor="#075430"
-            onChangeText={text => this.setState({phoneNumber:text})}>
-             </TextInput>
-           </View>  
+            <Example1/>
+            <Example2/>
 
-           <View style={{ borderWidth: 1.5, borderColor:"#075430", borderRadius: 15, marginRight: 30, width: 200, height: 40, justifyContent: 'center' }}>
-           <TextInput
-             placeholder="End Date" 
-           keyboardType = 'numeric'
-           placeholderTextColor="#075430"
-            onChangeText={text => this.setState({phoneNumber:text})}>
-             </TextInput>
-           </View>  
 
+       
 
  
            <View style= {{marginRight: 30, width: 120, flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', marginLeft:10}}>
@@ -122,9 +110,9 @@ export default class CreateSlot extends Component {
               <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="HH:mm" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -134,9 +122,9 @@ export default class CreateSlot extends Component {
               <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -145,9 +133,9 @@ export default class CreateSlot extends Component {
             <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -158,9 +146,9 @@ export default class CreateSlot extends Component {
             <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="HH:mm" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -171,9 +159,9 @@ export default class CreateSlot extends Component {
             <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -203,9 +191,9 @@ export default class CreateSlot extends Component {
               <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="HH:mm" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -215,9 +203,9 @@ export default class CreateSlot extends Component {
               <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -226,9 +214,9 @@ export default class CreateSlot extends Component {
             <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -239,9 +227,9 @@ export default class CreateSlot extends Component {
               <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="HH:mm" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -252,9 +240,9 @@ export default class CreateSlot extends Component {
             <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -282,9 +270,9 @@ export default class CreateSlot extends Component {
               <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="HH:mm" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -294,9 +282,9 @@ export default class CreateSlot extends Component {
               <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -305,9 +293,9 @@ export default class CreateSlot extends Component {
             <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -318,9 +306,9 @@ export default class CreateSlot extends Component {
             <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="HH:mm" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -331,9 +319,9 @@ export default class CreateSlot extends Component {
             <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -361,9 +349,9 @@ export default class CreateSlot extends Component {
               <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="HH:mm" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -373,9 +361,9 @@ export default class CreateSlot extends Component {
               <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -384,9 +372,9 @@ export default class CreateSlot extends Component {
             <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -397,9 +385,9 @@ export default class CreateSlot extends Component {
             <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="HH:mm" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -410,9 +398,9 @@ export default class CreateSlot extends Component {
             <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -440,9 +428,9 @@ export default class CreateSlot extends Component {
               <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="HH:mm" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -452,9 +440,9 @@ export default class CreateSlot extends Component {
               <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -463,9 +451,9 @@ export default class CreateSlot extends Component {
             <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -476,9 +464,9 @@ export default class CreateSlot extends Component {
             <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="HH:mm" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -489,9 +477,9 @@ export default class CreateSlot extends Component {
             <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -519,9 +507,9 @@ export default class CreateSlot extends Component {
               <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="HH:mm" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -531,9 +519,9 @@ export default class CreateSlot extends Component {
               <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -542,9 +530,9 @@ export default class CreateSlot extends Component {
             <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -555,9 +543,9 @@ export default class CreateSlot extends Component {
             <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="HH:mm" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -568,9 +556,9 @@ export default class CreateSlot extends Component {
             <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -598,9 +586,9 @@ export default class CreateSlot extends Component {
               <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="HH:mm" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -610,9 +598,9 @@ export default class CreateSlot extends Component {
               <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -621,9 +609,9 @@ export default class CreateSlot extends Component {
             <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -634,9 +622,9 @@ export default class CreateSlot extends Component {
             <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="HH:mm" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -647,9 +635,9 @@ export default class CreateSlot extends Component {
             <View style={styles.inputViewHeight40}>
                 <TextInput
                     // selectedValue={this.state.PickerSelectedVal}
-                    style={{textAlign:'center',color:'#075430', fontSize:17, justifyContent: 'center',padding:10}}
+                    style={{textAlign:'center',color:'#3FB39B', fontSize:17, justifyContent: 'center',padding:10}}
                     placeholder="" 
-                    placeholderTextColor="#075430" >
+                    placeholderTextColor="#3FB39B" >
                         
             </TextInput>
            </View>  
@@ -660,7 +648,7 @@ export default class CreateSlot extends Component {
 
 
 <TouchableOpacity style={[styles.buttonForm,{marginRight:30,marginTop:30}]}
-  //  onPress={() =>this.props.navigation.navigate("PatientDemographics")}
+   onPress={() =>this.props.navigation.navigate("HomeScreen")}
    > 
    <Text style={styles.Button_text_styling}>
    SAVE </Text>

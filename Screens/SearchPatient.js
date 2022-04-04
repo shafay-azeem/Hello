@@ -23,7 +23,7 @@ export default class SearchPatient extends Component {
  
    
       <View style={{backgroundColor:'#38AB94'}}> 
-           <Header style={{height:"20%"}} name="SEARCH PATIENT " class= ""/>
+           <Header style={{height:"20%"}} name="Search Patient " class= ""/>
            <UnitClerkHeader/>
 
 

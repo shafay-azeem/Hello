@@ -69,7 +69,7 @@ function Item({ item }) {
 
 export default class SelectSchedule extends Component {
    doctorName = "Dr Ahmed Khan";
-   specality = "MBBS";
+   specality = "Medicine";
    constructor(props){
    super(props);
    }
@@ -103,10 +103,11 @@ export default class SelectSchedule extends Component {
     return (
 
         <View style={styles.container}>
-          <Header name="SELECT SCHEDULE" class= ""/>
+          <Header name="Select Schedule" class= ""/>
           
-            <PatientHeader/>
+         
             <UnitClerkHeader/>
+            <PatientHeader/>
          {/* <View style= {{ height: '100%', width: '100%', alignSelf: 'center'}}> */}
          <View style = {{flexDirection: 'row', alignItems:'center', justifyContent:'center' }}>
              <View style={{alignSelf: 'center',height: 120, width: 150,borderRadius: 150/2,justifyContent: 'center', }}>

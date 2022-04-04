@@ -28,7 +28,7 @@ function Item({ item }) {
           <View style={{flex:1}}>
             
      <View style={{flexDirection:"row"}}>
-          <View style = {styles.roundIcon}>
+          <View style = {[styles.roundIcon,{marginRight:5}]}>
             <Image
               style={[styles.tinyLogo,]}
               source={require('../images/doctor.png')}
@@ -51,10 +51,10 @@ function Item({ item }) {
 
                     <View style={{flexDirection:"row"}}>
 
-                    <View style = {[styles.roundIcon,{ }]}>
+                    <View style = {[styles.roundIcon,{marginTop:10, marginRight:5}]}>
             <Image
               style={styles.tinyLogo}
-              source={require('../images/user-silhouette.png')}
+              source={require('../images/user.png')}
             />
          
 
@@ -71,18 +71,17 @@ function Item({ item }) {
                     <View style= {{flexDirection: "row"}}>
                   
                   <View style= {{flexDirection: "row",width:'50%'}}>
-                  <TouchableOpacity
-              onPress={() => navigation.navigate('PatientDemographics')} >
+
                   
                 
-                  <Text style={{ color:"black",marginTop:20,fontFamily:"Montserrat-Bold"}}>CONFIRMED</Text>
-                </TouchableOpacity>
+                  <Text style={{ color:"green",marginTop:20,fontFamily:"Montserrat-Bold",fontSize:12}}>CONFIRMED</Text>
+           
                 </View>
                 <View style= {{flexDirection: "row",width:'50%',alignSelf:'flex-end',justifyContent:'flex-end'}}>
                 <TouchableOpacity
                   // onPress={() => this.props.navigation.navigate('')}
                 >
-                  <Text style={{ textAlign:'right',color:"black",marginTop:20,fontFamily:"Montserrat-Bold"}}>VIEW DETAILS</Text>
+                  <Text style={{ textAlign:'right',color:"black",marginTop:20,fontFamily:"Montserrat-Bold",fontSize:12}}>VIEW DETAILS</Text>
                 </TouchableOpacity>
                   </View>
 
@@ -133,12 +132,12 @@ export default class UpcomingAppointmentSchedule extends Component {
     return (
   
         <View style={styles.container} >
-          <Header name="UPCOMMING APPOINTMENT SCHEDULE" class= ""/>
+          <Header name="Upcoming Appointment Schedule" class= ""/>
           
            
             <UnitClerkHeader/>
             <PatientHeader/>
-            <AppointmentHeading  name="UPCOMMING APPOINTMENTS" />
+            {/* <AppointmentHeading  name="Upcoming Appointments" /> */}
              <View style= {{flex:1 , height:"100%",width: '100%', alignSelf: 'center'}}>
              <SafeAreaView style={{flex:1}} >
         <FlatList

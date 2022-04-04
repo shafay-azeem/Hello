@@ -3,7 +3,6 @@ import { Button, View , Text, Touchable, TouchableOpacity, Image} from "react-na
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 import styles from './Styles/CompleteStyling';
 
-// import { COLORS } from '../styles/colors';
 
 
 const Example = () => {
@@ -20,13 +19,17 @@ const Example = () => {
   const handleConfirm = (date) => {
     console.warn("A date has been picked: ", date);
     hideDatePicker();
+    return(
+        <Text>
+            dadda
+        </Text>
+    )
   };
 
   return (
     <View>
       <TouchableOpacity
-       style = {{borderWidth: 1,   padding: 10,
-        marginTop:2, borderColor: "#3FB39B", borderRadius: 15, width: 300,justifyContent:'center', height: 50,padding:10, alignItems: 'flex-start',backgroundColor:'#F7F7F7' ,marginLeft:20}}
+       style = {{borderWidth: 1.5, borderColor: "#3FB39B", borderRadius: 25, marginRight: 30, width: 200, height: 40, justifyContent: 'center',padding:10, alignItems: 'flex-start', }}
        title="Show Date Picker" onPress={showDatePicker} >
       
       <DateTimePickerModal
@@ -36,8 +39,8 @@ const Example = () => {
         onConfirm={handleConfirm}
         onCancel={hideDatePicker}
       />
-       <View style = {[styles.roundIconSmall,{justifyContent: 'flex-start',  width: '100%', alignItems: 'center', marginRight: 10, flexDirection: 'row',}]}>
-               <Text style = {[styles.smallText, {color: "#3FB39B"},{marginRight:10}]}>Enter DOB</Text>
+       <View style = {[styles.roundIconSmall,{justifyContent: 'flex-end',  width: '100%', alignItems: 'center', marginRight: 10, flexDirection: 'row'}]}>
+               <Text style = {[styles.smallText, {color: "#3FB39B"},{marginRight:10}]}>Select Start Date</Text>
                 <Image
               style={[styles.detailLogo, {alignSelf: 'flex-end'},{width: 30, height:30},{marginBottom:5}]}
               source={require('../images/calendar.png')}

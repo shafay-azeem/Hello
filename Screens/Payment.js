@@ -65,7 +65,7 @@ export default class Payment extends Component {
   
 
 
-          <Header name="PAYMENT" class= ""/>
+          <Header name="Payment" class= ""/>
           <UnitClerkHeader/>
             <PatientHeader/>
       <View style = {styles.cardView90}>

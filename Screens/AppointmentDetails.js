@@ -51,7 +51,7 @@ export default class AppointmentDetails extends Component {
 
     return (
         <View style={styles.container}>
-        <Header name="APPOINTMENT DETAILS"/>
+        <Header name="Appointment Details"/>
         <UnitClerkHeader/>
          <PatientHeader/>
          <View style = {styles.cardView90}>

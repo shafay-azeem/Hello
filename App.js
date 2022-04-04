@@ -32,9 +32,9 @@ import modal from "./Screens/modal";
 import ConsultationPayment from "./Screens/ConsultationPayment";
 
 import PaymentSuccessfull from "./Screens/PaymentSuccessful";
+import Example from "./Screens/Example";
+
 import AppointmentDetails from "./Screens/AppointmentDetails";
-
-
 import UpdatePatient from "./Screens/UpdatePatient";
 import CreateSlot from "./Screens/CreateSlots";
 import OpeningBal from "./Screens/Openingbal";
@@ -54,6 +54,11 @@ const App = () => {
     <Stack.Navigator initialRouteName="SignInScreen"
       screenOptions={{headerShown:false}}>
 
+
+<Stack.Screen
+        name="Example"
+        component={Example}
+      />
 <Stack.Screen
         name="OpeningBal"
         component={OpeningBal}
