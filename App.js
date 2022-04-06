@@ -26,6 +26,7 @@ import Cash from "./Screens/Cash";
 import AppointmentConfirmation from "./Screens/AppointmentConfirmation";
 import SelectSchedule from "./Screens/SelectSchedule";
 import Payment from "./Screens/Payment";
+import selectDocbooking from "./Screens/selectDocbooking";
 
 import modal from "./Screens/modal";
 
@@ -38,10 +39,23 @@ import AppointmentDetails from "./Screens/AppointmentDetails";
 import UpdatePatient from "./Screens/UpdatePatient";
 import CreateSlot from "./Screens/CreateSlots";
 import OpeningBal from "./Screens/Openingbal";
+import Receipt from "./Screens/Receipt";
 
 
 
 import ConsultationPaymentcheque from "./Screens/ConsultationPaymentcheque";
+
+
+
+
+
+
+// import HomeScreen from './pages/HomeScreen';
+// import RegisterUser from './pages/RegisterUser';
+// import UpdateUser from './pages/UpdateUser';
+// import ViewUser from './pages/ViewUser';
+// import ViewAllUser from './pages/ViewAllUser';
+// import DeleteUser from './pages/DeleteUser';
 
 
 const Stack = createStackNavigator();
@@ -53,6 +67,121 @@ const App = () => {
     <NavigationContainer>
     <Stack.Navigator initialRouteName="SignInScreen"
       screenOptions={{headerShown:false}}>
+
+{/* 
+<Stack.Screen
+          name="HomeScreen"
+          component={HomeScreen}
+          options={{
+            title: 'Home', //Set Header Title
+            headerStyle: {
+              backgroundColor: '#f4511e', //Set Header color
+            },
+            headerTintColor: '#fff', //Set Header text color
+            headerTitleStyle: {
+              fontWeight: 'bold', //Set Header text style
+            },
+          }}
+        />
+        <Stack.Screen
+          name="View"
+          component={ViewUser}
+          options={{
+            title: 'View User', //Set Header Title
+            headerStyle: {
+              backgroundColor: '#f4511e', //Set Header color
+            },
+            headerTintColor: '#fff', //Set Header text color
+            headerTitleStyle: {
+              fontWeight: 'bold', //Set Header text style
+            },
+          }}
+        />
+        <Stack.Screen
+          name="ViewAll"
+          component={ViewAllUser}
+          options={{
+            title: 'View Users', //Set Header Title
+            headerStyle: {
+              backgroundColor: '#f4511e', //Set Header color
+            },
+            headerTintColor: '#fff', //Set Header text color
+            headerTitleStyle: {
+              fontWeight: 'bold', //Set Header text style
+            },
+          }}
+        />
+        <Stack.Screen
+          name="Update"
+          component={UpdateUser}
+          options={{
+            title: 'Update User', //Set Header Title
+            headerStyle: {
+              backgroundColor: '#f4511e', //Set Header color
+            },
+            headerTintColor: '#fff', //Set Header text color
+            headerTitleStyle: {
+              fontWeight: 'bold', //Set Header text style
+            },
+          }}
+        />
+        <Stack.Screen
+          name="Register"
+          component={RegisterUser}
+          options={{
+            title: 'Register User', //Set Header Title
+            headerStyle: {
+              backgroundColor: '#f4511e', //Set Header color
+            },
+            headerTintColor: '#fff', //Set Header text color
+            headerTitleStyle: {
+              fontWeight: 'bold', //Set Header text style
+            },
+          }}
+        />
+        <Stack.Screen
+          name="Delete"
+          component={DeleteUser}
+          options={{
+            title: 'Delete User', //Set Header Title
+            headerStyle: {
+              backgroundColor: '#f4511e', //Set Header color
+            },
+            headerTintColor: '#fff', //Set Header text color
+            headerTitleStyle: {
+              fontWeight: 'bold', //Set Header text style
+            },
+          }}
+        /> */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<Stack.Screen
+        name="selectDocbooking"
+        component={selectDocbooking}
+      />
+      
+<Stack.Screen
+        name="Receipt"
+        component={Receipt}
+      />
+
+
+
+
 
 
 <Stack.Screen

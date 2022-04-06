@@ -26,7 +26,7 @@ export default class PaymentSuccessfull extends Component {
           <Header name="Payment Successfully Done" class= ""/>
           <UnitClerkHeader/>
             <PatientHeader/>
-      <View style = {styles.cardView90}>
+      <View style = {styles.cardView91}>
          
         <View style={{width:'100%'}}>
         <View style={{backgroundColor:'#FFFFFF',padding:20,height:'20%',marginBottom:40}} >
@@ -88,32 +88,51 @@ export default class PaymentSuccessfull extends Component {
                
   <View style={{width:'50%',justifyContent:'center',alignSelf:'center',alignItems:'flex-start'}}>
 
-                <View style = {{flexDirection: 'row' ,marginTop: 20}}>
-                <Text style = {[{alignSelf:'flex-start',marginTop:10,fontSize:20,color:'black',fontFamily:"Montserrat-Regular"}]}>Invoice ID: </Text> 
-                <Text style = {[{alignSelf:'flex-start',marginTop:14,fontSize:15,color:'#3FB39B',fontFamily:"Montserrat-SemiBold"}]}>{invoice['InvoiceID '] }</Text>
+                <View style = {{flexDirection: 'row' ,marginTop: 5}}>
+                <Text style = {[{alignSelf:'flex-start',marginTop:10,fontSize:15,color:'black',fontFamily:"Montserrat-Regular"}]}>Invoice ID: </Text> 
+                <Text style = {[{alignSelf:'flex-start',marginTop:7,fontSize:20,color:'#3FB39B',fontFamily:"Montserrat-SemiBold"}]}>{invoice['InvoiceID '] }</Text>
                 </View>
 
 
                 <View style = {{flexDirection: 'row'}}>
-                <Text style = {[{marginTop:10,fontSize:20,color:'black',fontFamily:"Montserrat-Regular"}]}>Invoice Date: </Text>
-                <Text style = {[{marginTop:14,fontSize:15,color:'#3FB39B',fontFamily:"Montserrat-SemiBold"}]}>{invoice['InvoiceDate'] }</Text>
+                <Text style = {[{marginTop:10,fontSize:15,color:'black',fontFamily:"Montserrat-Regular"}]}>Invoice Date/Time: </Text>
+                <Text style = {[{marginTop:7,fontSize:20,color:'#3FB39B',fontFamily:"Montserrat-SemiBold"}]}>{invoice['InvoiceDate'] }</Text>
                 </View>
 
-                <View style = {{flexDirection: 'row'}}>
-                <Text style = {[{marginTop:10,fontSize:20,color:'black',fontFamily:"Montserrat-Regular"}]}>Issued by: </Text>
-                <Text style = {[{marginTop:14,fontSize:15,color:'#3FB39B',fontFamily:"Montserrat-SemiBold"}]}>{invoice['IssuedBy '] }</Text>
-
-                </View>
 
                 <View style = {{flexDirection: 'row'}}>
-                <Text style = {[{marginTop:10,fontSize:20,color:'black',fontFamily:"Montserrat-Regular"}]}>Patient Name: </Text>
-                <Text style = {[{marginTop:14,fontSize:15,color:'#3FB39B',fontFamily:"Montserrat-SemiBold"}]}>{invoice.patientName }</Text>
+                <Text style = {[{marginTop:10,fontSize:15,color:'black',fontFamily:"Montserrat-Regular"}]}>Patient ID: </Text>
+                <Text style = {[{marginTop:7,fontSize:20,color:'#3FB39B',fontFamily:"Montserrat-SemiBold"}]}>{invoice.PatientId }</Text>
 
                 </View>
 
                 <View style = {{flexDirection: 'row'}}>
-                <Text style = {[{marginTop:10,fontSize:20,color:'black',fontFamily:"Montserrat-Regular"}]}>Teleconsultation Payment: </Text>
-                <Text style = {[{marginTop:14,fontSize:15,color:'#3FB39B',fontFamily:"Montserrat-SemiBold"}]}>{invoice.TeleconsultationPayment }</Text>
+                <Text style = {[{marginTop:10,fontSize:15,color:'black',fontFamily:"Montserrat-Regular"}]}>Patient Name: </Text>
+                <Text style = {[{marginTop:7,fontSize:20,color:'#3FB39B',fontFamily:"Montserrat-SemiBold"}]}>{invoice.patientName }</Text>
+
+                </View>
+                
+                <View style = {{flexDirection: 'row'}}>
+                <Text style = {[{marginTop:10,fontSize:15,color:'black',fontFamily:"Montserrat-Regular"}]}>Appointment Date: </Text>
+                <Text style = {[{marginTop:7,fontSize:20,color:'#3FB39B',fontFamily:"Montserrat-SemiBold"}]}>{invoice.AppointmentDate }</Text>
+
+                </View>
+
+                <View style = {{flexDirection: 'row'}}>
+                <Text style = {[{marginTop:10,fontSize:15,color:'black',fontFamily:"Montserrat-Regular"}]}>Appointment Time: </Text>
+                <Text style = {[{marginTop:7,fontSize:20,color:'#3FB39B',fontFamily:"Montserrat-SemiBold"}]}>{invoice.AppointmentTime }</Text>
+
+                </View>
+
+                <View style = {{flexDirection: 'row'}}>
+                <Text style = {[{marginTop:10,fontSize:15,color:'black',fontFamily:"Montserrat-Regular"}]}>Teleconsultation Payment: </Text>
+                <Text style = {[{marginTop:7,fontSize:20,color:'#3FB39B',fontFamily:"Montserrat-SemiBold"}]}>{invoice.TeleconsultationPayment }</Text>
+
+                </View>
+                
+                <View style = {{flexDirection: 'row'}}>
+                <Text style = {[{marginTop:10,fontSize:15,color:'black',fontFamily:"Montserrat-Regular"}]}>Issued by: </Text>
+                <Text style = {[{marginTop:7,fontSize:20,color:'#3FB39B',fontFamily:"Montserrat-SemiBold"}]}>{invoice['IssuedBy '] }</Text>
 
                 </View>
 
@@ -144,8 +163,8 @@ export default class PaymentSuccessfull extends Component {
 
                 </View>
 
-                <TouchableOpacity style={[styles.buttonGeneral,{marginTop:30,width:"28%"}]}
-              onPress={() =>this.props.navigation.navigate("PatientDemographics")}
+                <TouchableOpacity style={[styles.buttonGeneral,{marginBottom:500,width:"28%"}]}
+              onPress={() =>this.props.navigation.navigate("Receipt")}
               > 
               <Text style={styles.Button_text_styling}>
               PRINTED INVOICE</Text>

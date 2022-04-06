@@ -128,7 +128,7 @@ export default class Payment extends Component {
 
   
 
-            <View style = {{height: '60%', width: '80%', flexDirection: 'row',alignSelf:'center',marginTop:20}}>
+            <View style = {{height: '60%', width: '80%', flexDirection: 'row',alignSelf:'center',marginTop:30}}>
 
             
               <View style = {{width: '50%' ,flex:1,justifyContent:'center'}}>
@@ -136,31 +136,36 @@ export default class Payment extends Component {
 
 
                 <View style = {{flexDirection: 'row' ,marginTop: 20}}>
-                <Text style = {[{alignSelf:'flex-start',marginTop:10,fontSize:20,color:'black',fontFamily:"Montserrat-Regular"}]}>Invoice ID: </Text> 
-                <Text style = {[{alignSelf:'flex-start',marginTop:14,fontFamily:"Montserrat-SemiBold",fontSize:15,color:'#3FB39B'}]}>{invoice['InvoiceID '] }</Text>
+                <Text style = {[{alignSelf:'flex-start',marginTop:10,fontSize:15,color:'black',fontFamily:"Montserrat-Regular"}]}>Invoice ID: </Text> 
+                <Text style = {[{alignSelf:'flex-start',marginTop:7,fontFamily:"Montserrat-SemiBold",fontSize:20,color:'#3FB39B'}]}>{invoice['InvoiceID '] }</Text>
                 </View>
 
 
                 <View style = {{flexDirection: 'row'}}>
-                <Text style = {[{alignSelf:'flex-start',marginTop:10,fontSize:20,color:'black',fontFamily:"Montserrat-Regular"}]}>Invoice Date: </Text>
-                <Text style = {[{alignSelf:'flex-start',marginTop:14,fontFamily:"Montserrat-SemiBold",fontSize:15,color:'#3FB39B'}]}>{invoice['InvoiceDate'] }</Text>
+                <Text style = {[{alignSelf:'flex-start',marginTop:10,fontSize:15,color:'black',fontFamily:"Montserrat-Regular"}]}>Invoice Date: </Text>
+                <Text style = {[{alignSelf:'flex-start',marginTop:7,fontFamily:"Montserrat-SemiBold",fontSize:20,color:'#3FB39B'}]}>{invoice['InvoiceDate'] }</Text>
                 </View>
 
                 <View style = {{flexDirection: 'row'}}>
-                <Text style = {[{alignSelf:'flex-start',marginTop:10,fontSize:20,color:'black',fontFamily:"Montserrat-Regular"}]}>Issued by: </Text>
-                <Text style = {[{alignSelf:'flex-start',marginTop:14,fontFamily:"Montserrat-SemiBold",fontSize:15,color:'#3FB39B'}]}>{invoice['IssuedBy '] }</Text>
+                <Text style = {[{alignSelf:'flex-start',marginTop:10,fontSize:15,color:'black',fontFamily:"Montserrat-Regular"}]}>Issued by: </Text>
+                <Text style = {[{alignSelf:'flex-start',marginTop:7,fontFamily:"Montserrat-SemiBold",fontSize:20,color:'#3FB39B'}]}>{invoice['IssuedBy '] }</Text>
+
+                </View>
+                <View style = {{flexDirection: 'row'}}>
+                <Text style = {[{marginTop:10,fontSize:15,color:'black',fontFamily:"Montserrat-Regular"}]}>Patient ID: </Text>
+                <Text style = {[{marginTop:7,fontSize:20,color:'#3FB39B',fontFamily:"Montserrat-SemiBold"}]}>{invoice.PatientId }</Text>
 
                 </View>
 
                 <View style = {{flexDirection: 'row'}}>
-                <Text style = {[{alignSelf:'flex-start',marginTop:10,fontSize:20,color:'black',fontFamily:"Montserrat-Regular"}]}>Patient Name: </Text>
-                <Text style = {[{alignSelf:'flex-start',marginTop:14,fontFamily:"Montserrat-SemiBold",fontSize:15,color:'#3FB39B'}]}>{invoice.patientName }</Text>
+                <Text style = {[{alignSelf:'flex-start',marginTop:10,fontSize:15,color:'black',fontFamily:"Montserrat-Regular"}]}>Patient Name: </Text>
+                <Text style = {[{alignSelf:'flex-start',marginTop:7,fontFamily:"Montserrat-SemiBold",fontSize:20,color:'#3FB39B'}]}>{invoice.patientName }</Text>
 
                 </View>
 
                 <View style = {{flexDirection: 'row'}}>
-                <Text style = {[{alignSelf:'flex-start',marginTop:10,fontSize:20,color:'black',fontFamily:"Montserrat-Regular"}]}>Teleconsultation Payment: </Text>
-                <Text style = {[{alignSelf:'flex-start',marginTop:14,fontFamily:"Montserrat-SemiBold",fontSize:15,color:'#3FB39B'}]}>{invoice.TeleconsultationPayment }</Text>
+                <Text style = {[{alignSelf:'flex-start',marginTop:10,fontSize:15,color:'black',fontFamily:"Montserrat-Regular"}]}>Teleconsultation Payment: </Text>
+                <Text style = {[{alignSelf:'flex-start',marginTop:7,fontFamily:"Montserrat-SemiBold",fontSize:20,color:'#3FB39B'}]}>{invoice.TeleconsultationPayment }</Text>
 
                 </View>
 

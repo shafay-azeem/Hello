@@ -147,7 +147,7 @@ export default class RegistrationScreen extends Component {
               placeholderTextColor="#30A28C"
             //   editable={false} 
               // selectTextOnFocus={false}
-              placeholder="Auto Generate" 
+              placeholder="Enter Sehat Safar Number" 
               onChangeText={text => this.setState({SehatSafarNumber:text})}/>
                </View>
          

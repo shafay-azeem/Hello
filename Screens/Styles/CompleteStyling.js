@@ -390,14 +390,14 @@ TextForInsideRowSidebySide:{
       // backgroundColor:COLORS.listItem,
       backgroundColor:'#FFFFFF',
       margin:10,
-      width:"2%",
+      // width:"2%",
       height: 250,
       flex:1,
       alignSelf:"center",
       borderRadius:15,
       padding: 15,
       // marginRight:30
-
+  
 
     },
     smallText: {
@@ -617,7 +617,7 @@ height:"80%",
     height: 50  ,
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 20,
+   
     alignSelf: 'center'
   },
 

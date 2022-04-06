@@ -33,7 +33,7 @@ function Item({ item }) {
 
 export default class AppointmentConfirmation extends Component {
    doctorName = "Dr Ahmed Khan";
-   specality = "Medicine";    
+   specality = "Family Medicine";    
    AppointmentDate = 'Tuesday, 07 September 2021';
    AppointmentTime = '05:30pm - 06:00pm'
 

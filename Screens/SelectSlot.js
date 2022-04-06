@@ -24,7 +24,7 @@ function Item({ item }) {
           <View style={{flex:1}}>
             
      
-          <View style = {styles.roundIcon}>
+          <View style = {[styles.roundIcon,{height:40,width:40,marginTop:20}]}>
             <Image
               style={styles.tinyLogo}
               source={require('../images/calendar.png')}
@@ -70,7 +70,7 @@ function Item({ item }) {
 
 export default class SelectSlot extends Component {
    doctorName = "Dr Ahmed Khan";
-   specality = "Medicine";
+   specality = "Family Medicine";
    constructor(props){
    super(props);
    }

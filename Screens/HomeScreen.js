@@ -248,7 +248,7 @@ export default class HomeScreen extends Component {
             </TouchableOpacity>
             
             <TouchableOpacity style={[styles.button_Side_by_Side,{width:300}]}
-              onPress={() =>this.props.navigation.navigate("CreateSlot")}
+              onPress={() =>this.props.navigation.navigate("selectDocbooking")}
               > 
               <Text style={styles.Button_text_styling}>
               BOOKING MANAGEMENT</Text>

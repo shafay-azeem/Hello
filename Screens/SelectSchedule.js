@@ -69,7 +69,7 @@ function Item({ item }) {
 
 export default class SelectSchedule extends Component {
    doctorName = "Dr Ahmed Khan";
-   specality = "Medicine";
+   specality = "Family Medicine";
    constructor(props){
    super(props);
    }

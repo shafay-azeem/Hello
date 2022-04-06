@@ -1,16 +1,16 @@
+
+
 import React, {Component, useState,useEffect } from 'react';
 import { Text, View, TouchableOpacity,TextInput, FlatList, Image}  from 'react-native';
 import UnitClerkHeader from './AllHeaders/UnitClerkHeader';
 import PatientHeader from './AllHeaders/PatientHeader';
 import Header from './Header';
 
-import Patientinfo from './DATA/patient.json';
 import styles from './Styles/CompleteStyling';
 // import GradientButton from 'react-native-gradient-buttons';
 import { useNavigation } from '@react-navigation/native';
 // import { COLORS } from '../styles/colors';
 import doctors from './DATA/selectdoc.json';
-import patientcomplete from './DATA/patientcomplete.json';
 import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -23,57 +23,54 @@ function Item({ item }) {
         
 
         <TouchableOpacity style={styles.listItemBox}
-        onPress={() => navigation.navigate('PatientDemographics')}
+        onPress={() => navigation.navigate('CreateSlot')}
         >
-          <View style={{flex:1}}>
-    
-          <View style = {styles.roundIcon}>
+          <View style={{flex:1,marginTop:30}}>
+            
+      {/* <View style = {{flexDirection: 'row', width: 80, height: 25,borderColor: 'orange' ,borderWidth:2, borderRadius: 25, alignSelf: 'flex-end', alignItems: 'center'}}>
+             <View style = {styles.dollarIcon}>
             <Image
               style={styles.tinyLogo}
-              source={require('../images/user.png')}
+              source={require('../images/dollar.png')}
+            />
+            </View> 
+             <Text style= {{textAlign: 'right',color: 'black'}}>500 PKR</Text> 
+            
+            
+            
+            </View> */}
+          <View style = {[styles.roundIcon]}>
+            <Image
+              style={styles.tinyLogo}
+              source={require('../images/doctor.png')}
             />
 
          
 
           </View>
 
-            <Text numberOfLines={1} style={{ textAlign: 'left', fontSize: 25, color:"#075430", textAlign: 'center',fontFamily:"Montserrat-Regular"}}>{item.patientName}</Text>
+            <Text numberOfLines={1} style={{ textAlign: 'left', fontSize: 25, color:"#075430", textAlign: 'center',fontFamily:"Montserrat-Regular"}}>Dr. {item.name}</Text>
 
             
             <View style = {{padding: 5, width: '100%', height: '100%'}}>
-            {/* <Text numberOfLines={1} style={{ textAlign: 'center', fontSize: 17,  color: 'grey',fontFamily:"Montserrat-Regular"}}> {item.PhoneNumber}</Text>
-            <Text numberOfLines={1} style={{ textAlign: 'center', fontSize: 17,  color: 'grey',fontFamily:"Montserrat-Regular"}}> {item.MRNumber}</Text>
-             */}
-
-<View style = {{flexDirection: 'row',justifyContent: 'flex-end',alignSelf:'center'}}>
-            <Text style={{lineHeight: 20, color: 'black',alignSelf:'flex-end',fontFamily:"Montserrat-Regular"}}>Phone Number : {"\n"}Mr Number </Text>
-              <Text style={{color:"#3FB39B",lineHeight: 20, alignSelf: 'flex-start',fontFamily:"Montserrat-SemiBold"}}>{item.PhoneNumber}{'\n'}{item.MRNumber}</Text>
-            </View>
-        
-            <View style= {{justifyContent: 'flex-end' }}> 
-        <View style= {{flexDirection: 'row', justifyContent:'center' }}>
+            <Text numberOfLines={1} style={{ textAlign: 'center', fontSize: 17,  color: 'grey',fontFamily:"Montserrat-Regular"}}>{item.profession}</Text>
             
- 
-       
-            <TouchableOpacity style={[styles.smallRoundedBlueRoundedNoMargin,{marginTop:10,marginBottom:40}]}
-                   onPress={() => navigation.navigate('PatientDemographics')} >
-              <Text style={[styles.cardText,{fontSize: 18},{color: 'white'}]}>SELECT </Text>
-            </TouchableOpacity>
-      
-
-
+        
+        <View style= {{flex: 1,justifyContent: 'flex-end', marginBottom: 80 }}> 
+        <View style= {{flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'center', }}>
+            {/* <View style={styles.circleView}>
+                <Text style = {styles.enabled}>M</Text>
+              </View> */}
+           
+              </View>
               </View>
 
-
-              </View>
-              
 
               </View>
           </View>
           <TouchableOpacity style={{height:50,width:50, justifyContent:"center",alignItems:"center"}}
         >
-             
-      
+          
         </TouchableOpacity>
         </TouchableOpacity>
        
@@ -81,7 +78,7 @@ function Item({ item }) {
     }
 
 
-export default class SelectPatient extends Component {
+export default class selectDocbooking extends Component {
    doctorName = "Dr Ahmed Khan";
    specality = "Family Medicine";
    
@@ -122,9 +119,9 @@ export default class SelectPatient extends Component {
     return (
     
         <View style={styles.container}>
-          <Header name="Select Patient" class= ""/>
+          <Header name="Select Doctor" class= ""/>
           
-      
+          
             <UnitClerkHeader/>
             <PatientHeader/>
          <View style= {{flex:1 ,width: '100%', alignSelf: 'center'}}>
@@ -132,7 +129,7 @@ export default class SelectPatient extends Component {
         <FlatList
   
           style={{flex:1, marginTop: 30, marginRight:30,marginLeft:30}}
-          data={ formatData(patientcomplete, this.numColumns)}
+          data={ formatData(doctors, this.numColumns)}
           renderItem={({ item }) => <Item item={item}/>}
           keyExtractor={item => item.email}
           numColumns = {this.numColumns}
