@@ -547,7 +547,7 @@ export default class CreateSlot extends Component {
 
 
 <TouchableOpacity style={[styles.buttonForm,{marginRight:30,marginTop:30}]}
-   onPress={() =>this.props.navigation.navigate("HomeScreen")}
+   onPress={() =>this.props.navigation.navigate("ScheduleManagement")}
    > 
    <Text style={styles.Button_text_styling}>
    SAVE </Text>

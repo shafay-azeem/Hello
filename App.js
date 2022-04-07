@@ -40,7 +40,7 @@ import UpdatePatient from "./Screens/UpdatePatient";
 import CreateSlot from "./Screens/CreateSlots";
 import OpeningBal from "./Screens/Openingbal";
 import Receipt from "./Screens/Receipt";
-
+import ScheduleManagement from "./Screens/ScheduleManagement";
 
 
 import ConsultationPaymentcheque from "./Screens/ConsultationPaymentcheque";
@@ -165,7 +165,10 @@ const App = () => {
 
 
 
-
+<Stack.Screen
+        name="ScheduleManagement"
+        component={ScheduleManagement}
+      />
 
 
 
