@@ -68,14 +68,16 @@ const RegisterUser = ({ navigation }) => {
               style={{ flex: 1, justifyContent: 'space-between' }}>
               <Mytextinput
                 placeholder="Enter Name"
-                onChangeText={
+                onChangeText=
+                {
                   (userName) => setUserName(userName)
                 }
                 style={{ padding: 10 }}
               />
               <Mytextinput
                 placeholder="Enter Contact No"
-                onChangeText={
+                onChangeText=
+                {
                   (userContact) => setUserContact(userContact)
                 }
                 maxLength={10}
@@ -84,7 +86,8 @@ const RegisterUser = ({ navigation }) => {
               />
               <Mytextinput
                 placeholder="Enter Address"
-                onChangeText={
+                onChangeText=
+                {
                   (userAddress) => setUserAddress(userAddress)
                 }
                 maxLength={225}

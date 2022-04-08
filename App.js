@@ -54,7 +54,7 @@ import ConsultationPaymentcheque from "./Screens/ConsultationPaymentcheque";
 // import RegisterUser from './pages/RegisterUser';
 // import UpdateUser from './pages/UpdateUser';
 // import ViewUser from './pages/ViewUser';
-// import ViewAllUser from './pages/ViewAllUser';
+import ViewAllUser from './pages/ViewAllUser';
 // import DeleteUser from './pages/DeleteUser';
 
 
@@ -65,7 +65,7 @@ const App = () => {
 
   return(
     <NavigationContainer>
-    <Stack.Navigator initialRouteName="SignInScreen"
+    <Stack.Navigator initialRouteName="RegistrationScreen"
       screenOptions={{headerShown:false}}>
 
 {/* 
@@ -97,20 +97,7 @@ const App = () => {
             },
           }}
         />
-        <Stack.Screen
-          name="ViewAll"
-          component={ViewAllUser}
-          options={{
-            title: 'View Users', //Set Header Title
-            headerStyle: {
-              backgroundColor: '#f4511e', //Set Header color
-            },
-            headerTintColor: '#fff', //Set Header text color
-            headerTitleStyle: {
-              fontWeight: 'bold', //Set Header text style
-            },
-          }}
-        />
+
         <Stack.Screen
           name="Update"
           component={UpdateUser}
@@ -152,16 +139,30 @@ const App = () => {
               fontWeight: 'bold', //Set Header text style
             },
           }}
-        /> */}
+        /> 
 
 
 
 
 
 
+ */}
 
 
-
+<Stack.Screen
+          name="ViewAll"
+          component={ViewAllUser}
+          options={{
+            title: 'View Users', //Set Header Title
+            headerStyle: {
+              backgroundColor: '#f4511e', //Set Header color
+            },
+            headerTintColor: '#fff', //Set Header text color
+            headerTitleStyle: {
+              fontWeight: 'bold', //Set Header text style
+            },
+          }}
+        />
 
 
 
@@ -322,11 +323,11 @@ const App = () => {
 
       />
 
-<Stack.Screen
+ <Stack.Screen
         name="HomeScreen"
         component={HomeScreen}
 
-      />
+      /> 
 
 
       <Stack.Screen
