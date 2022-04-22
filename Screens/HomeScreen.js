@@ -40,9 +40,18 @@ const ViewAllUser = () => {
         key={item.user_id}
         style={{ backgroundColor: 'white', padding: 20 }}>
         <Text>Id: {item.user_id}</Text>
-        <Text>Name: {item.user_name}</Text>
-        <Text>Contact: {item.user_contact}</Text>
-        <Text>Address: {item.user_address}</Text>
+        <Text>CNIC_Number: {item.CNIC_Number}</Text>
+        <Text>FirstName: {item.FirstName}</Text>
+        <Text>MiddleName: {item.MiddleName}</Text>
+        <Text>LastName: {item.LastName}</Text>
+        <Text>Phone_Number: {item.Phone_Number}</Text>
+        <Text>Alternate_phone_Number: {item.Alternate_phone_Number}</Text>
+        <Text>HomeAddress: {item.HomeAddress}</Text>
+        <Text>Email: {item.Email}</Text>
+        <Text>Age: {item.Age}</Text>
+        <Text>CityTown: {item.CityTown}</Text>
+        <Text>Province: {item.Province}</Text>
+        
       </View>
     );
   };

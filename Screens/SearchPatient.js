@@ -1,23 +1,23 @@
-import React, {Component} from 'react';
+import React, {Component,useState} from 'react';
 import {Text, View, TextInput, TouchableOpacity,ScrollView,SafeAreaView} from 'react-native';
 import styles from './Styles/CompleteStyling';
 
-
+import { useNavigation } from '@react-navigation/native';
 import Header from './Header';
 import UnitClerkHeader from './AllHeaders/UnitClerkHeader';
 
-export default class SearchPatient extends Component {
-  constructor(props){
-    super(props)
+const SearchPatient = () => {
+  
+  const navigation = useNavigation();
 
-   }
-    state={
-        Mr_Number:"",
-        CNIC:"",
-        QR_code:"",
-        Phone_Number:""
-  }
-   render(){
+
+  let [Mr_Number, setMr_Number] = useState('');
+    
+  let [CNIC, setCNIC] = useState('');
+  let [QRcode, setQRcode] = useState('');
+    
+  let [Phone_Number, setPhone_Number] = useState('');
+
     return (
   
       <SafeAreaView style={[styles.container,{flex: 1}]}>
@@ -36,14 +36,14 @@ export default class SearchPatient extends Component {
               style={styles.Edittext}
               placeholder="Enter Patient's MR Number" 
               placeholderTextColor="#30A28C"
-              onChangeText={text => this.setState({Mr_Number:text})}/>
+              onChangeText={ (Mr_Number)=> setMr_Number(Mr_Number)}/>  
          
            <Text style={styles.EdittextHeading}>CNIC</Text>
             <TextInput  
               style={styles.Edittext}
               placeholder="Enter Patient's CNIC Number" 
               placeholderTextColor="#30A28C"
-              onChangeText={text => this.setState({CNIC:text})}/>
+              onChangeText={ (CNIC)=> setCNIC(CNIC)}/>  
           
            
            <Text style={styles.EdittextHeading}>QRcode</Text>
@@ -51,7 +51,7 @@ export default class SearchPatient extends Component {
               style={styles.Edittext}
               placeholder="Enter Patient 16 digit QR code" 
               placeholderTextColor="#30A28C"
-              onChangeText={text => this.setState({QR_code:text})}/>
+              onChangeText={ (QRcode)=> setQRcode(QRcode)}/>  
 
 
 <Text style={styles.EdittextHeading}>Phone Number</Text>
@@ -60,10 +60,10 @@ export default class SearchPatient extends Component {
               placeholder="Search by Phone Number" 
               placeholderTextColor="#30A28C"
               keyboardType = 'numeric'
-              onChangeText={text => this.setState({Phone_Number:text})}/>
+              onChangeText={ (Phone_Number)=> setPhone_Number(Phone_Number)}/>  
          
              <TouchableOpacity style={styles.buttonForSearchPatient}
-             onPress={() =>this.props.navigation.navigate("SelectPatient")}
+             onPress={() =>navigation.navigate("SelectPatient")}
              > 
              <Text style={styles.Button_text_styling}>
              SEARCH </Text>
@@ -80,4 +80,6 @@ export default class SearchPatient extends Component {
      
      );
      }
-}
+
+
+     export default SearchPatient;

@@ -1,59 +1,97 @@
 // import styles from "../styles/stylesheet";
-import React, {Component} from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image,Button } from 'react-native';
+import React, {Component,useState,useEffect} from 'react';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image,Button ,Alert} from 'react-native';
 // import { COLORS } from "../styles/colors";
 import CheckBox from 'react-native-check-box';
-
+import { openDatabase } from 'react-native-sqlite-storage';
 import styles from './Styles/CompleteStyling';
+import { useNavigation } from '@react-navigation/native';
 
 
 
+var db = openDatabase({ name: 'patient.db' });
+
+const SinInScreen = () => {
+
+  const navigation = useNavigation();
 
 
-export default class SinInScreen extends Component {
-  constructor(props){
-    super(props)
+  useEffect(() => {
+    db.transaction(function (txn) {
+      txn.executeSql(
+        "SELECT name FROM sqlite_master WHERE type='table' AND name='Unitclerk'",
+        [],
+        function (tx, res) {
+          console.log('item:', res.rows.length);
+          if (res.rows.length == 0) {
+            txn.executeSql('DROP TABLE IF EXISTS Unitclerk', []);
+            txn.executeSql(
+              'CREATE TABLE IF NOT EXISTS Unitclerk(user_id INTEGER PRIMARY KEY AUTOINCREMENT,Email VARCHAR(30), Password VARCHAR(30))',
+              []
+            );
+          }
+        }
+      );
+    });
+  }, []);
 
-   }
-    state={
-        email:"",
-        password:""
-  }
+  let [Email, setEmail] = useState('');
+  
+  let [Password, setPassword] = useState('');
 
-  render(){
+  let register_user = () => {
+
+    
+    if (!Email) {
+      alert('Please fill Email');
+      return;
+    }
+
+    let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+    if (reg.test(Email) === false) {
+    alert('enter valid email address');
+    return;
+    }
+
+  
+    if (!Password) {
+      alert('Please Enter Password');
+      return;
+    }
+
+    db.transaction(function (tx) {
+      console.log(Email,Password);
+      tx.executeSql(
+        
+        'INSERT INTO Unitclerk (Email,Password) VALUES (?,?)',
+        [Email,Password],
+      
+        (tx, results) => {
+          console.log('Results', results.rowsAffected);
+        
+          if (results.rowsAffected > 0) {
+            Alert.alert(
+              'Success',
+              'You are SignIn Successfully',
+              [
+                {
+                  text: 'Ok',
+                  onPress: () => navigation.navigate('HomeScreen'),
+                },
+              ],
+              { cancelable: false }
+            );
+          } else alert('Registration Failed');
+        }
+      );
+    });
+  };
+
+
      return (
 
         <View style={styles.containerlogo}>
-         {/* <Image style={styles.logoImage}
-                source={require('../images/logo.png')}>
-                </Image>
-          <Text style={styles.logo}>EMR</Text>
-          <View style={styles.inputView} >
-            <TextInput  
-              style={styles.inputText}
-              placeholder="Email..." 
-              placeholderTextColor="grey"
-              onChangeText={text => this.setState({email:text})}/>
-          </View>
-          <View style={styles.inputView} >
-            <TextInput  
-              secureTextEntry
-              style={styles.inputText}
-              placeholder="Password..." 
-              placeholderTextColor="grey"
-              onChangeText={text => this.setState({password:text})}/>
-          </View>
-          <TouchableOpacity>
-            <Text style={styles.forgot}>Forgot Password?</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.LBtn}>
-            <Text style={styles.loginText}>Sign In</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.SBtn}
-          onPress={() => this.props.navigation.navigate('HomeScreen')} 
-          >
-            <Text style={styles.SText}>Login</Text>
-          </TouchableOpacity> */}
+     
 
           <View style = {{flexDirection: 'row', width:'100%', height:'100%'}}>
             <View style = {{width:'40%', height: '100%'}}>
@@ -85,33 +123,6 @@ export default class SinInScreen extends Component {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <View style = {{width:'60%', height: '100%', backgroundColor: 'white'}}>
             <View style = {{height: '22%', width: '50%', alignSelf: 'center', marginTop: 45}}>
                 <Image style={styles.logoImage}
@@ -130,8 +141,10 @@ export default class SinInScreen extends Component {
               style={[styles.Edittext,styles.MontserratSemiBold,{  width:450}]}
               placeholder="@ecample.edu.pk" 
               placeholderTextColor="#3FB39B"
-     
-              onChangeText={text => this.setState({Email:text})}/>
+              value={Email}
+              autoCorrect={false}
+              autoCapitalize="none"
+              onChangeText={ (Email) => setEmail(Email)}/>
               </View>
 
 
@@ -143,7 +156,7 @@ export default class SinInScreen extends Component {
               placeholder="Enter your password" 
               placeholderTextColor="#3FB39B"
               secureTextEntry={true}
-              onChangeText={text => this.setState({password:text})}/>
+              onChangeText={ (Password) => setPassword(Password)}/>
               </View>
               {/* </View> */}
 
@@ -151,7 +164,7 @@ export default class SinInScreen extends Component {
               
               <View style = {{marginTop: 10,alignSelf: 'center', flexDirection: 'row',width: 450 }}>
                 <View style = {{flexDirection: 'row', marginLeft: 2, width: '65%'}}>
-
+{/* 
                 <CheckBox
                     style={styles.checkBox}
 
@@ -162,7 +175,8 @@ export default class SinInScreen extends Component {
                     })
                   }}
                   isChecked={this.state.isChecked}
-                /><Text style = {[styles.smallText, {fontFamily: 'Montserrat-Light'}]}>Remember Me</Text>
+                /> */}
+                <Text style = {[styles.smallText, {fontFamily: 'Montserrat-Light'}]}>Remember Me</Text>
                 </View>
 
                
@@ -175,7 +189,7 @@ export default class SinInScreen extends Component {
 
               <View style={{marginTop: 40, alignSelf: 'center',  alignItems: 'center'}}>
               <TouchableOpacity style={[styles.buttonGeneralInForm,{width:300}]}
-              onPress={() =>this.props.navigation.navigate("HomeScreen")}
+             onPress={register_user}
               > 
               <Text style={styles.Button_text_styling}>
              SIGN IN </Text>
@@ -217,4 +231,5 @@ export default class SinInScreen extends Component {
       );
 
   }
-}
+
+  export default SinInScreen;

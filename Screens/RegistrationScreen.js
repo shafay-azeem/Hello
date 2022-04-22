@@ -1,157 +1,235 @@
 import {SafeAreaView,ScrollView, Text,StatusBar, View, TouchableOpacity,TextInput,Alert} from 'react-native';
-import React, {Component,Fragment,useEffect,useState} from 'react';
-import RadioForm  from 'react-native-simple-radio-button';
+import React, {Component,Fragment,useEffect,useState,Image} from 'react';
 import { Picker } from "@react-native-picker/picker";
-import QRCodeScanner from 'react-native-qrcode-scanner';
-import CheckBox from 'react-native-check-box';
-import DateTimePickerModal from "react-native-modal-datetime-picker";
 import { openDatabase } from 'react-native-sqlite-storage';
+import DateTimePickerModal from "react-native-modal-datetime-picker";
+import CheckBox from 'react-native-check-box';
 import Example from './Example';
 import styles from './Styles/CompleteStyling';
-import GlobalUserModel from './UserModal';
+
 
 import Header from './Header';
 import UnitClerkHeader from './AllHeaders/UnitClerkHeader';
 
-
-// var radio_props_sv = [
-//     {label: 'Clinical Visit', value: 1 },
-//     {label: 'Educational Visit', value: 0 },
-//     {label: 'Others', value: 2 }
-//   ];
-  
-
-  var db = openDatabase({ name: 'UserDatabase.db' });
-
+var db = openDatabase({ name: 'patient.db' });
 
 const RegistrationScreen = ({ navigation }) => {
-
-    // constructor(props){
-    //     super(props)
-    
-    //    }
-
-     
-      //   state={
-      //       MRNumber:"",
-      //       FamilyNumber:"",
-      //       SehatSafarNumber:"",
-      //       CNICNumber:"",
-      //       userName:'',
-      //       MiddleName:"",
-      //       LastName:'',
-      //       DOB:"",
-      //       Age:"",
-      //       MaritalStatus:"",
-      //       phoneNumber:"",
-      //       Alternate_phone_Number:"",
-      //       Email:"",
-      //      HomeAddress:"",
-      //      CityTown:'',
-      //      Province:"",
-      //      selectedLanguage : '',
-      //      setSelectedLanguage:"",
-      //        PickerSelectedVal : '',
-      //       //  barcodes: [],
-      //       scan: false,
-      //       ScanResult: false,
-      //       result: null
-    
-      // }
-    //   onSuccess = (e) => {
-    //     const check = e.data.substring(0, 4);
-    //     console.log('scanned data' + check);
-    //     this.setState({
-    //         result: e,
-    //         scan: false,
-    //         ScanResult: true
-    //     })
-    //     if (check === 'http') {
-    //         Linking
-    //             .openURL(e.data)
-    //             .catch(err => console.error('An error occured', err));
-    
-    
-    //     } else {
-    //         this.setState({
-    //             result: e,
-    //             scan: false,
-    //             ScanResult: true
-    //         })
-    //     }
-    
-    // }
-    
-    // activeQR = () => {
-    //     this.setState({
-    //         scan: true
-    //     })
-    // }
-    // scanAgain = () => {
-    //     this.setState({
-    //         scan: true,
-    //         ScanResult: false
-    //     })
-    // }
-    
-      
-
-  //  render(){
-
-    // const { scan, ScanResult, result } = this.state
-    // console.info(this.props.navigation)
-
-
-    
-
-    useEffect(() => {
-      db.transaction(function (txn) {
-        txn.executeSql(
-          "SELECT name FROM sqlite_master WHERE type='table' AND name='table_user'",
-          [],
-          function (tx, res) {
-            console.log('item:', res.rows.length);
-            if (res.rows.length == 0) {
-              txn.executeSql('DROP TABLE IF EXISTS table_user', []);
-              txn.executeSql(
-                'CREATE TABLE IF NOT EXISTS table_user(user_id INTEGER PRIMARY KEY AUTOINCREMENT, user_name VARCHAR(20), user_contact INT(10), user_address VARCHAR(255))',
-                []
-              );
-            }
-          }
-        );
-      });
-    }, []);
-
-
-    //  let [stateName ,setStateName] = GlobalUserModel.setStateName();
-    let [userContact, setUserContact] = useState('');
-    let [userAddress, setUserAddress] = useState('');
-    let [stateName, setStateName] = useState('');
-    let register_user = () => {
-      console.log(GlobalUserModel.stateName, userContact, userAddress);
+        
   
-      if (!GlobalUserModel.getStateName()) {
-        alert('Please fill name');
+  useEffect(() => {
+    db.transaction(function (txn) {
+      txn.executeSql(
+        "SELECT name FROM sqlite_master WHERE type='table' AND name='Pr'",
+        [],
+        function (tx, res) {
+          console.log('item:', res.rows.length);
+          if (res.rows.length == 0) {
+            txn.executeSql('DROP TABLE IF EXISTS Pr', []);
+            txn.executeSql(
+              'CREATE TABLE IF NOT EXISTS Pr(user_id INTEGER PRIMARY KEY AUTOINCREMENT, CNIC_Number VARCHAR(30) FOREIGN KEY,FirstName VARCHAR(30),MiddleName VARCHAR(30),LastName VARCHAR(30),Phone_Number VARCHAR(30),Alternate_phone_Number VARCHAR(30),Email VARCHAR(30),HomeAddress VARCHAR(30),Age VARCHAR(30),CityTown VARCHAR(30),Province VARCHAR(30),MaritalStatus VARCHAR(30) , Visit VARCHAR(30),date VARCHAR(30))',
+              []
+            );
+          }
+        }
+      );
+    });
+  }, []);
+
+
+    let [CNIC_Number, setCNIC_Number] = useState('');
+    let [FirstName, setFirstName] = useState('');
+    let [MiddleName, setMiddleName] = useState('');
+    let [LastName, setLastName] = useState('');
+    let [Phone_Number, setPhone_Number] = useState('');
+    let [Alternate_phone_Number, setAlternate_phone_Number] = useState('');
+    let [Email, setEmail] = useState('');
+    let[HomeAddress,setHomeAddress] = useState('')
+    let [Age, setAge] = useState('');
+    let [CityTown, setCityTown] = useState('');
+    let [Province, setProvince] = useState('');
+    let [Visit, setVisit] = useState('ClinicalVisit');
+    let [MaritalStatus, setMaritalStatus] = useState('Unmarried');
+    let [checked, setChecked] = useState(false);
+
+   
+    let [date, setDate] = useState('');
+    let [isDatePickerVisible, setDatePickerVisibility] = useState(false);
+  
+    const showDatePicker = () => {
+      setDatePickerVisibility(true);
+    };
+  
+    const hideDatePicker = () => {
+      setDatePickerVisibility(false);
+    };
+  
+    const handleConfirm = (date) => {
+      setDate(date);
+      hideDatePicker();
+    };
+  
+    const getDate = () => {
+      let tempDate = date.toString().split(' ');
+      return date !== ''
+        ? `${tempDate[0]} ${tempDate[1]} ${tempDate[2]} ${tempDate[3]}`
+        : '';
+    };
+   
+   
+    let register_user = () => {
+
+    
+
+
+      if (!CNIC_Number) {
+        alert('Please fill CNIC_Number');
         return;
       }
-      if (!userContact) {
-        alert('Please fill Contact Number');
+
+      if (CNIC_Number.trim().length < 15 || CNIC_Number.trim().length > 15) {
+        alert('CNIC must be of 15 digits with dashes');
+         return;
+       }
+
+       let regCnic=/^[0-9]{5}[-]{1}[0-9]{7}[-]{1}[0-9]{1}$/;
+       if (regCnic.test(CNIC_Number.toString())){
+       }
+       else{
+         alert('CNIC must include dashes');
+         return;
+       }
+  
+      if (!FirstName) {
+        alert('Please fill First Name');
         return;
       }
-      if (!userAddress) {
+
+      if (FirstName.trim().length < 3) {
+        alert('First Name must be minimum 3 characters');
+         return;
+        }
+
+      let regname=/^[A-Za-z]+(([,.] |[ '-])[A-Za-z]+)*([.,'-]?)$/;
+      if (regname.test(FirstName.toString())){
+      }
+      else{
+        alert('First Name should include only Alphabets');
+        return;
+      }
+
+      if (!MiddleName) {
+        alert('Please fill Middle Name');
+        return;
+      }
+      if (MiddleName.trim().length < 3) {
+        alert('Middle Name must be minimum 3 characters');
+         return;
+       }
+       if (regname.test(MiddleName.toString())){
+      }
+      else{
+        alert('Middle Name should include only Alphabets');
+        return;
+      }
+      if (!LastName) {
+        alert('Please fill Last Name');
+        return;
+      }
+      if (LastName.trim().length < 3) {
+        alert('Last Name must be minimum 3 characters');
+         return;
+       }
+
+       if (regname.test(LastName.toString())){
+       }
+      else{
+        alert('Last Name should include only Alphabets');
+        return;
+      }
+      if (!Phone_Number) {
+        alert('Please Enter Phone Number');
+        return;
+      }
+
+      if (Phone_Number.trim().length < 12 ||Phone_Number.trim().length > 12 ) {
+        alert('Phone Number must be of 11 digit');
+         return;
+       }
+         
+      let regNum=/^[0-9]{4}[-]{1}[0-9]{7}$/;
+      if (regNum.test(Phone_Number.toString())){
+
+      }
+      else{
+        alert('Please Enter Number Acc to our Hint')
+        return;
+      }
+
+      if (!Alternate_phone_Number) {
+        alert('Please Alternate_phone_Number');
+        return;
+      }
+      if (Alternate_phone_Number.trim().length < 12 ||Alternate_phone_Number.trim().length > 12) {
+        alert('Alternate_phone_Number must be of 11 digit');
+         return;
+       }
+       if (regNum.test(Phone_Number.toString())){
+
+      }
+      else{
+        alert('Please Enter Number Acc to our Hint')
+        return;
+      }
+      if(Phone_Number==Alternate_phone_Number){
+        alert('Please enter Different Numbers');
+        return;
+      }
+      if (!Email) {
+        alert('Please fill Email');
+        return;
+      }
+
+      let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+      if (reg.test(Email) === false) {
+      alert('enter valid email address');
+      return;
+      }
+  
+
+    
+      if (!Age) {
         alert('Please fill Address');
         return;
       }
-  
+
+       let regAge=/^100|[1-9]?\d$/
+       if (regAge.test(Age.toString())){
+
+       }
+       else{
+         alert('Enter Valid Age')
+         return;
+       }
+
+      if (!CityTown) {
+        alert('Please fill CityTown');
+        return;
+      }
+      if (!Province) {
+        alert('Please fill Province');
+        return;
+      }
+     
       db.transaction(function (tx) {
-        console.log(GlobalUserModel.getStateName(), userContact, userAddress);
+        console.log(CNIC_Number, FirstName,MiddleName,LastName,Phone_Number,Alternate_phone_Number,HomeAddress,Email,Age,CityTown,Province,MaritalStatus,Visit,date);
         tx.executeSql(
-          'INSERT INTO table_user (user_name, user_contact, user_address) VALUES (?,?,?)',
-          // [stateName, userContact, userAddress],
-         [GlobalUserModel.getStateName(), userContact, userAddress],
+          
+          'INSERT INTO Pr (CNIC_Number, FirstName,MiddleName,LastName,Phone_Number,Alternate_phone_Number,HomeAddress,Email,Age,CityTown,Province,MaritalStatus,Visit,date) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+          [CNIC_Number,FirstName,MiddleName,LastName,Phone_Number,Alternate_phone_Number,HomeAddress,Email,Age,CityTown,Province,MaritalStatus,Visit,date.toString()],
+        
           (tx, results) => {
             console.log('Results', results.rowsAffected);
+          
             if (results.rowsAffected > 0) {
               Alert.alert(
                 'Success',
@@ -159,7 +237,7 @@ const RegistrationScreen = ({ navigation }) => {
                 [
                   {
                     text: 'Ok',
-                    onPress: () => navigation.navigate('HomeScreen'),
+                    onPress: () => navigation.navigate('SelectPatient'),
                   },
                 ],
                 { cancelable: false }
@@ -170,6 +248,7 @@ const RegistrationScreen = ({ navigation }) => {
       });
     };
   
+
 
 
     return (
@@ -196,8 +275,7 @@ const RegistrationScreen = ({ navigation }) => {
           editable={false} 
           selectTextOnFocus={false}
           placeholderTextColor="#30A28C"
-          //  onChangeText={text => this.setState({MRNumber:text})}
-           />
+           onChangeText={text => this.setState({MRNumber:text})}/>
         </View>
 
         <View style={styles.inputWrap}>
@@ -205,15 +283,14 @@ const RegistrationScreen = ({ navigation }) => {
           <TextInput style={styles.Edittext}
            placeholder="Auto Generate" 
            keyboardType = 'numeric'
-          //  editable={false} 
-          //  selectTextOnFocus={false}
+           editable={false} 
+           selectTextOnFocus={false}
            placeholderTextColor="#30A28C"
-            // onChangeText=  {(stateName) => setStateName(stateName)} 
-            onChangeText=  {GlobalUserModel.setStateName("9090")}/>
+            onChangeText={text => this.setState({FamilyNumber:text})} />
         </View>
       </View>
     
-      
+
    
 
       <View style={styles.Side_by_side_EditText}>
@@ -223,11 +300,10 @@ const RegistrationScreen = ({ navigation }) => {
               style={styles.Edittext}
               keyboardType = 'numeric'
               placeholderTextColor="#30A28C"
-            //   editable={false} 
-              // selectTextOnFocus={false}
+              editable={false} 
+              selectTextOnFocus={false}
               placeholder="Enter Sehat Safar Number" 
-              // onChangeText={text => this.setState({SehatSafarNumber:text})}
-              
+              // onChangeText={(userName) => setCNIC_Number(userName)}
               />
                </View>
          
@@ -236,10 +312,12 @@ const RegistrationScreen = ({ navigation }) => {
            <Text style={styles.EdittextHeading}>CNIC Number </Text>
             <TextInput  
               style={styles.Edittext}
-              keyboardType = 'numeric'
+              keyboardType = "number-pad"
               placeholderTextColor="#30A28C"
-              placeholder="Enter CNIC Number" 
-              // onChangeText={text => this.setState({CNICNumber:text})}
+              placeholder="XXXXX-XXXXXXX-X"
+              maxLength={15}
+             
+              onChangeText={(CNIC_Number) => setCNIC_Number(CNIC_Number)}
               />
                   </View>
                   </View>
@@ -252,9 +330,13 @@ const RegistrationScreen = ({ navigation }) => {
               style={styles.Edittext}
               placeholder=" FirstName" 
               placeholderTextColor="#30A28C"
-              // onChangeText={text => this.setState({FirstName:text})}
-              />
+              onChangeText={(FirstName) => setFirstName(FirstName)}
+            />
                  </View>
+
+ 
+
+
 
                  <View style={styles.inputWrap}>
              <Text style={styles.EdittextHeading}>Middle Name</Text>
@@ -262,8 +344,7 @@ const RegistrationScreen = ({ navigation }) => {
               style={styles.Edittext}
               placeholder="MiddleName"
               placeholderTextColor="#30A28C" 
-              // onChangeText={text => this.setState({MiddleName:text})}
-              />
+              onChangeText={ (MiddleName) => setMiddleName(MiddleName)}/>
          </View>
 
          <View style={styles.inputWrap}>
@@ -272,22 +353,36 @@ const RegistrationScreen = ({ navigation }) => {
               style={styles.Edittext}
               placeholder="Enter your Last Name" 
               placeholderTextColor="#30A28C"
-              // onChangeText={text => this.setState({LastName:text})}
-              />
+              onChangeText={ (LastName) => setLastName(LastName)}/>
                      </View>
                      </View>
 
                      
    <View style={styles.Side_by_side_EditText}>
       <View style={styles.inputWrap}>
-
+      <TouchableOpacity  onPress={showDatePicker}>
              <Text style={styles.EdittextHeading}>DOB</Text>
-             <Example/>
-            {/* <TextInput  
-              style={styles.Edittext}
-              placeholder="Enter your DOB" 
-              placeholderTextColor="#30A28C"
-              onChangeText={text => this.setState({DOB:text})}/> */}
+             <View>
+               
+             <TextInput
+            style={styles.Edittext}
+            value={getDate()}
+            editable={false} 
+            selectTextOnFocus={false}
+            color="#000000"
+            placeholderTextColor="#30A28C"
+            placeholder="Date"/>
+
+<DateTimePickerModal
+        isVisible={isDatePickerVisible}
+        mode="date"
+        onConfirm={handleConfirm}
+        onCancel={hideDatePicker}
+      />
+     
+              </View>
+              </TouchableOpacity>
+           
 </View>
 
 <View style={styles.inputWrap}>
@@ -295,11 +390,10 @@ const RegistrationScreen = ({ navigation }) => {
             <TextInput  
               style={styles.Edittext}
               keyboardType = 'numeric'
-              placeholder="Enter your Phone Number" 
+              placeholder="03XX-XXXXXXX" 
               placeholderTextColor="#30A28C"
-              onChangeText=   {
-                (userContact) => setUserContact(userContact)
-              }/>
+              maxLength={12}
+              onChangeText={ (Phone_Number) => setPhone_Number(Phone_Number)}/>
               </View>
 
 
@@ -308,10 +402,10 @@ const RegistrationScreen = ({ navigation }) => {
             <TextInput  
               style={styles.Edittext}
               keyboardType = 'numeric'
-              placeholder="Enter your Alternate Phone Number" 
+              placeholder="03XX-XXXXXXX" 
               placeholderTextColor="#30A28C"
-              // onChangeText={text => this.setState({Alternate_phone_Number:text})}
-              />
+              maxLength={12}
+              onChangeText={ (Alternate_phone_Number) => setAlternate_phone_Number(Alternate_phone_Number)}/>
                   </View>
                   </View>
 
@@ -325,8 +419,12 @@ const RegistrationScreen = ({ navigation }) => {
               style={styles.Edittext}
               placeholder="Enter your Email" 
               placeholderTextColor="#30A28C"
-              // onChangeText={text => this.setState({Email:text})}
-              />
+              value={Email}
+             autoCorrect={false}
+             autoCapitalize="none"
+             onChangeText={ (Email) => setEmail(Email)}/>
+
+            
           </View>
            
 
@@ -336,9 +434,9 @@ const RegistrationScreen = ({ navigation }) => {
               style={styles.Edittext}
               placeholder="Age" 
               keyboardType = 'numeric'
+              maxLength={3}
               placeholderTextColor="#30A28C"
-              // onChangeText={text => this.setState({Age:text})}
-              />
+              onChangeText={ (Age) => setAge(Age)}/>
             </View>
             </View>
             
@@ -350,18 +448,15 @@ const RegistrationScreen = ({ navigation }) => {
               style={styles.Edittext}
               placeholder="City Town" 
               placeholderTextColor="#30A28C"
-              // onChangeText={text => this.setState({CityTown:text})}
-              
-              />
+              onChangeText={ (CityTown) => setCityTown(CityTown)}/>
 </View>
 <View style={styles.inputWrap}>
 <Text style={styles.EdittextHeading}>Province</Text>
             <TextInput  
               style={styles.Edittext}
-              placeholder="Province"      placeholderTextColor="#30A28C"
-  
-              // onChangeText={text => this.setState({Province:text})}
-              />
+              placeholder="Province"    
+              placeholderTextColor="#30A28C"
+              onChangeText={ (Province) => setProvince(Province)}/>
 
 
 </View>
@@ -375,9 +470,7 @@ const RegistrationScreen = ({ navigation }) => {
               style={styles.Edittext}
               placeholder="Home Address" 
               placeholderTextColor="#30A28C"
-              onChangeText=    {
-                (userAddress) => setUserAddress(userAddress)
-              }/>
+              onChangeText={ (HomeAddress) => setHomeAddress(HomeAddress)}/>
 
 
               
@@ -387,10 +480,13 @@ const RegistrationScreen = ({ navigation }) => {
 <View   style={{   borderColor: "#30A28C",
         backgroundColor:'#F7F7F7',     
            borderWidth: 1,  borderRadius: 15,  marginHorizontal:20,   marginTop:2, height:50}}> 
-          {/* <Picker  
-           selectedValue={this.state.PickerSelectedVal}
+                 
+
+           
+           <Picker  
+           selectedValue={MaritalStatus}
            placeholderTextColor="#30A28C"
-           onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
+            onValueChange={(itemValue, itemIndex) => setMaritalStatus(itemValue)} >
   
            <Picker.Item color='#30A28C' label="Married" value="Married" />
            <Picker.Item color='#30A28C' label="Unmarried" value="Unmarried" />
@@ -398,7 +494,7 @@ const RegistrationScreen = ({ navigation }) => {
            <Picker.Item  color='#30A28C' label="Widow" value="Widow" />
         
 
-           </Picker>  */}
+           </Picker>  
 
        
      
@@ -406,23 +502,24 @@ const RegistrationScreen = ({ navigation }) => {
      </View>
 
 
-<View style={register_user }>
+<View style={styles.inputWrap}>
       <Text style={styles.EdittextHeading}>TYPES OF VISIT</Text>
 <View   style={{   borderColor: "#30A28C",
         backgroundColor:'#F7F7F7',     
            borderWidth: 1,  borderRadius: 15,  marginHorizontal:20,   marginTop:2, height:50}}> 
-          {/* <Picker  
-           selectedValue={this.state.PickerSelectedVal}
+                 
+          <Picker  
+           selectedValue={Visit}
            placeholderTextColor="#30A28C"
-           onValueChange={(itemValue, itemIndex) => this.setState({PickerSelectedVal: itemValue})} >
+           onValueChange={(itemValue, itemIndex) => setVisit(itemValue)}>
   
-           <Picker.Item color='#30A28C' label="Clinical Visit" value="Clinical Visit" />
-           <Picker.Item color='#30A28C' label="Educational Visit" value="Educational Visit" />
+           <Picker.Item color='#30A28C' label="Clinical Visit" value="ClinicalVisit" />
+           <Picker.Item color='#30A28C' label="Educational Visit" value="EducationalVisit" />
            <Picker.Item color='#30A28C' label="Others" value="Others" />
       
         
 
-           </Picker>  */}
+           </Picker>  
 
        
      
@@ -435,21 +532,15 @@ const RegistrationScreen = ({ navigation }) => {
 <View style={{width:"50%",flexDirection:'row',alignSelf:'center',alignItems:'center',marginLeft:27}}>
 
 
-
-
            {/* <CheckBox
 
     
        
 style={{marginTop:3}}
-onClick={()=>{
-this.setState({
-isChecked:!this.state.isChecked
-})
-}}
-isChecked={this.state.isChecked}
-RightText={"Remember Me"} */}
-{/* 
+onChangeText={ (checked) => setChecked(checked)}
+isChecked={checked}
+RightText={"Remember Me"}
+
 /> */}
 
            <Text style= {[{fontFamily:"Montserrat-Bold",justifyContent:'center',color:"#30A28C",fontSize:15}]}>Please Verify above Information is Correct</Text>
@@ -463,12 +554,6 @@ RightText={"Remember Me"} */}
  <Text style={styles.Button_text_styling}>
  SUBMIT </Text>
 </TouchableOpacity>
-{/* <TouchableOpacity style={[styles.buttonForm,{marginBottom:10}]}
- onPress={ViewAllUser}
- > 
- <Text style={styles.Button_text_styling}>
- View </Text>
-</TouchableOpacity> */}
 </View>
 
 
@@ -479,77 +564,7 @@ RightText={"Remember Me"} */}
             </View> 
             
 
-      
 
-
-         
-          
-
-
-
-     
-
-          {/* <Fragment>
-                    <StatusBar barStyle="dark-content" />
-                    {!scan && !ScanResult &&
-                        <View  >
-                     
-
-                            <TouchableOpacity style={styles.buttonGeneral} onPress={this.activeQR} >
-                                <Text style={styles.Button_text_styling}>Click to Scan !</Text>
-                            </TouchableOpacity>
-
-                        </View>
-                    }
-
-                    {ScanResult &&
-                        <Fragment>
-                            <Text >Result !</Text>
-                            <View >
-                                <Text>Type : {result.type}</Text>
-                                <Text>Result : {result.data}</Text>
-                                <Text numberOfLines={1}>RawData: {result.rawData}</Text>
-                                <TouchableOpacity style={styles.button} onPress={this.scanAgain} >
-                                    <Text >Click to Scan again!</Text>
-                                </TouchableOpacity>
-
-                            </View>
-                        </Fragment>
-                    }
-
-
-                    {scan &&
-                        <QRCodeScanner
-                            reactivate={true}
-                            showMarker={true}
-                            ref={(node) => { this.scanner = node }}
-                            onRead={this.onSuccess}
-                            
-                                   
-                            
-                            bottomContent={
-                                <View style= {{flexDirection: "row", flex: 1,marginTop:50}}>
-                                  <View  style={{color: 'black',alignSelf: 'flex-start',justifyContent:'flex-start',alignItems:'flex-start'}} >
-                                    <TouchableOpacity  onPress={() => this.scanner.reactivate()}>
-                                        <Text style={{color: 'black',marginTop:20,fontWeight:'bold'}} >OK. Got it!</Text>
-                                    </TouchableOpacity>
-                                    </View>
-                                    <View style={{backgroundColor:'red',textAlign:'right', color: 'black',alignSelf: 'flex-end',justifyContent:'flex-end',alignItems:'flex-end'}} >
-                                    <TouchableOpacity  onPress={() => this.setState({ scan: false })}>
-                                        <Text style={{color: 'black',marginTop:20,fontWeight:'bold'}} >Stop Scan</Text>
-                                    </TouchableOpacity>
-                                </View>
-                                </View>
-
-                            }
-                        />
-                    }
-                </Fragment> */}
-
-
-     
-
-     
 </View>
 
 
@@ -565,6 +580,6 @@ RightText={"Remember Me"} */}
 
 
 
-export default RegistrationScreen;
 
 
+   export default RegistrationScreen;

@@ -44,7 +44,7 @@ import ScheduleManagement from "./Screens/ScheduleManagement";
 
 
 import ConsultationPaymentcheque from "./Screens/ConsultationPaymentcheque";
-
+import Api from "./Screens/Api";
 
 
 
@@ -54,7 +54,7 @@ import ConsultationPaymentcheque from "./Screens/ConsultationPaymentcheque";
 // import RegisterUser from './pages/RegisterUser';
 // import UpdateUser from './pages/UpdateUser';
 // import ViewUser from './pages/ViewUser';
-import ViewAllUser from './pages/ViewAllUser';
+// import ViewAllUser from './pages/ViewAllUser';
 // import DeleteUser from './pages/DeleteUser';
 
 
@@ -65,104 +65,12 @@ const App = () => {
 
   return(
     <NavigationContainer>
-    <Stack.Navigator initialRouteName="RegistrationScreen"
+    <Stack.Navigator initialRouteName="Api"
       screenOptions={{headerShown:false}}>
 
-{/* 
-<Stack.Screen
-          name="HomeScreen"
-          component={HomeScreen}
-          options={{
-            title: 'Home', //Set Header Title
-            headerStyle: {
-              backgroundColor: '#f4511e', //Set Header color
-            },
-            headerTintColor: '#fff', //Set Header text color
-            headerTitleStyle: {
-              fontWeight: 'bold', //Set Header text style
-            },
-          }}
-        />
-        <Stack.Screen
-          name="View"
-          component={ViewUser}
-          options={{
-            title: 'View User', //Set Header Title
-            headerStyle: {
-              backgroundColor: '#f4511e', //Set Header color
-            },
-            headerTintColor: '#fff', //Set Header text color
-            headerTitleStyle: {
-              fontWeight: 'bold', //Set Header text style
-            },
-          }}
-        />
-
-        <Stack.Screen
-          name="Update"
-          component={UpdateUser}
-          options={{
-            title: 'Update User', //Set Header Title
-            headerStyle: {
-              backgroundColor: '#f4511e', //Set Header color
-            },
-            headerTintColor: '#fff', //Set Header text color
-            headerTitleStyle: {
-              fontWeight: 'bold', //Set Header text style
-            },
-          }}
-        />
-        <Stack.Screen
-          name="Register"
-          component={RegisterUser}
-          options={{
-            title: 'Register User', //Set Header Title
-            headerStyle: {
-              backgroundColor: '#f4511e', //Set Header color
-            },
-            headerTintColor: '#fff', //Set Header text color
-            headerTitleStyle: {
-              fontWeight: 'bold', //Set Header text style
-            },
-          }}
-        />
-        <Stack.Screen
-          name="Delete"
-          component={DeleteUser}
-          options={{
-            title: 'Delete User', //Set Header Title
-            headerStyle: {
-              backgroundColor: '#f4511e', //Set Header color
-            },
-            headerTintColor: '#fff', //Set Header text color
-            headerTitleStyle: {
-              fontWeight: 'bold', //Set Header text style
-            },
-          }}
-        /> 
 
 
 
-
-
-
- */}
-
-
-<Stack.Screen
-          name="ViewAll"
-          component={ViewAllUser}
-          options={{
-            title: 'View Users', //Set Header Title
-            headerStyle: {
-              backgroundColor: '#f4511e', //Set Header color
-            },
-            headerTintColor: '#fff', //Set Header text color
-            headerTitleStyle: {
-              fontWeight: 'bold', //Set Header text style
-            },
-          }}
-        />
 
 
 
@@ -182,10 +90,15 @@ const App = () => {
         name="Receipt"
         component={Receipt}
       />
+      
 
+      
 
-
-
+      <Stack.Screen
+        name="Api"
+        component={Api}
+      />
+      
 
 
 <Stack.Screen
@@ -223,12 +136,6 @@ const App = () => {
         component={UpdatePatient}
       />
 
-
-      
-{/* <Stack.Screen
-        name="ExampleTwo"
-        component={ExampleTwo}
-      /> */}
 
 <Stack.Screen
         name="PaymentSuccessfull"
@@ -352,3 +259,100 @@ const App = () => {
 
 
 export default App;
+
+
+
+{/* 
+<Stack.Screen
+          name="HomeScreen"
+          component={HomeScreen}
+          options={{
+            title: 'Home', //Set Header Title
+            headerStyle: {
+              backgroundColor: '#f4511e', //Set Header color
+            },
+            headerTintColor: '#fff', //Set Header text color
+            headerTitleStyle: {
+              fontWeight: 'bold', //Set Header text style
+            },
+          }}
+        />
+        <Stack.Screen
+          name="View"
+          component={ViewUser}
+          options={{
+            title: 'View User', //Set Header Title
+            headerStyle: {
+              backgroundColor: '#f4511e', //Set Header color
+            },
+            headerTintColor: '#fff', //Set Header text color
+            headerTitleStyle: {
+              fontWeight: 'bold', //Set Header text style
+            },
+          }}
+        />
+
+        <Stack.Screen
+          name="Update"
+          component={UpdateUser}
+          options={{
+            title: 'Update User', //Set Header Title
+            headerStyle: {
+              backgroundColor: '#f4511e', //Set Header color
+            },
+            headerTintColor: '#fff', //Set Header text color
+            headerTitleStyle: {
+              fontWeight: 'bold', //Set Header text style
+            },
+          }}
+        />
+        <Stack.Screen
+          name="Register"
+          component={RegisterUser}
+          options={{
+            title: 'Register User', //Set Header Title
+            headerStyle: {
+              backgroundColor: '#f4511e', //Set Header color
+            },
+            headerTintColor: '#fff', //Set Header text color
+            headerTitleStyle: {
+              fontWeight: 'bold', //Set Header text style
+            },
+          }}
+        />
+        <Stack.Screen
+          name="Delete"
+          component={DeleteUser}
+          options={{
+            title: 'Delete User', //Set Header Title
+            headerStyle: {
+              backgroundColor: '#f4511e', //Set Header color
+            },
+            headerTintColor: '#fff', //Set Header text color
+            headerTitleStyle: {
+              fontWeight: 'bold', //Set Header text style
+            },
+          }}
+        /> 
+
+
+
+
+
+
+ */}
+
+//  <Stack.Screen
+//           name="ViewAll"
+//           component={ViewAllUser}
+//           options={{
+//             title: 'View Users', //Set Header Title
+//             headerStyle: {
+//               backgroundColor: '#f4511e', //Set Header color
+//             },
+//             headerTintColor: '#fff', //Set Header text color
+//             headerTitleStyle: {
+//               fontWeight: 'bold', //Set Header text style
+//             },
+//           }}
+//         />
